@@ -26,6 +26,7 @@
 		848EBBAC1F3D7A04002170F8 /* BaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBBA01F3D7A04002170F8 /* BaseHomeViewController.m */; };
 		848EBBAD1F3D7A04002170F8 /* BaseHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBBA41F3D7A04002170F8 /* BaseHomeViewModel.m */; };
 		848EBBBA1F3D7BCE002170F8 /* BaseBarItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBBB91F3D7BCE002170F8 /* BaseBarItemViewController.m */; };
+		848EBBC01F3DA2D4002170F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 848EBBBF1F3DA2D4002170F8 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		848EBBB91F3D7BCE002170F8 /* BaseBarItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseBarItemViewController.m; sourceTree = "<group>"; };
 		848EBBBC1F3D80AB002170F8 /* DefineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineHeader.h; sourceTree = "<group>"; };
 		848EBBBD1F3D80B5002170F8 /* ImportHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImportHeader.h; sourceTree = "<group>"; };
+		848EBBBF1F3DA2D4002170F8 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				848EBB0D1F3D3DDE002170F8 /* AppControl */,
 				848EBB7B1F3D7A04002170F8 /* CodeFeed */,
+				848EBBBE1F3D8A04002170F8 /* Utils */,
 				848EBB781F3D7966002170F8 /* Precompilation */,
 				848EBB081F3D3D57002170F8 /* Supporting Files */,
 				848EBAFA1F3D3CE6002170F8 /* Main.storyboard */,
@@ -112,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				848EBB091F3D3D57002170F8 /* Info.plist */,
+				848EBBBF1F3DA2D4002170F8 /* InfoPlist.strings */,
 				848EBB0A1F3D3D57002170F8 /* main.m */,
 			);
 			path = "Supporting Files";
@@ -120,7 +124,6 @@
 		848EBB0D1F3D3DDE002170F8 /* AppControl */ = {
 			isa = PBXGroup;
 			children = (
-				848EBB0E1F3D3DDE002170F8 /* Delegate */,
 				848EBB111F3D3DDE002170F8 /* M */,
 				848EBB121F3D3DDE002170F8 /* V */,
 				848EBB141F3D3DDE002170F8 /* VM */,
@@ -134,7 +137,8 @@
 				848EBB0F1F3D3DDE002170F8 /* AppDelegate.h */,
 				848EBB101F3D3DDE002170F8 /* AppDelegate.m */,
 			);
-			path = Delegate;
+			name = Delegate;
+			path = ../Delegate;
 			sourceTree = "<group>";
 		};
 		848EBB111F3D3DDE002170F8 /* M */ = {
@@ -165,6 +169,7 @@
 		848EBB141F3D3DDE002170F8 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				848EBB0E1F3D3DDE002170F8 /* Delegate */,
 				848EBB301F3D4EFF002170F8 /* AppControlModel.h */,
 				848EBB311F3D4EFF002170F8 /* AppControlModel.m */,
 			);
@@ -432,6 +437,13 @@
 			path = SuperCode;
 			sourceTree = "<group>";
 		};
+		848EBBBE1F3D8A04002170F8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -492,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				848EBB341F3D56ED002170F8 /* RootControllerConfiguration.plist in Resources */,
+				848EBBC01F3DA2D4002170F8 /* InfoPlist.strings in Resources */,
 				848EBB0B1F3D3D57002170F8 /* Info.plist in Resources */,
 				848EBB011F3D3CE6002170F8 /* LaunchScreen.storyboard in Resources */,
 				848EBAFE1F3D3CE6002170F8 /* Assets.xcassets in Resources */,
