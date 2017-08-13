@@ -37,7 +37,6 @@ About the mobile project architecture built using Objective-C
 ```
     ├── <SuperCode>         模块中所用到的通用的父视图的集合（尽可能的少）
     ├── <EntityCode>        项代码实体，包含所有的页面的构建
-    ├── <Supporting Files>  系统配置文件
     └── <PublicCode>        在多个页面用到的公共的页面（控制器）
 ```
 
