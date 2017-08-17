@@ -36,7 +36,16 @@ blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 // 随机色
 #define CUSTOM_COLOR_RANDOM RGBColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
+//打印信息
+#ifdef DEBUG
 
+#define MyLog(...)  NSLog(__VA_ARGS__)
+
+#else
+
+#define MyLog(...)
+
+#endif
 
 
 #endif /* DefineHeader_h */
