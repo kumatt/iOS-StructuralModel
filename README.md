@@ -4,15 +4,15 @@ About the mobile project architecture built using Objective-C
 仅以此，记录下当前想到的比较顺眼项目构架
 
 ```
-    ├── <AppControl>             直接在APP层面进行操作的模块
+    ├── <Router>                 负责APP层面业务的模块
     ├── <CodeFeed>               项目真正的构建内容
-    ├── <Precompilation>         预编译文件
+    ├── <PrefixHeader>           预编译文件
     ├── <Utils>                  适用于本项目的自定义类库。根据功能可以细分下去。
-    ├── <Supporting Files>       系统配置文件
+    ├── <Supporting Files>       系统配置文件及组成基础构架的文件
     └── <Pods（或Carthage）>工程   第三方SDK以及自己做的小工具
 ```
 
-# AppControl ——在APP层面进行操作的模块
+# Router ——在APP层面进行操作的模块
 
 以`MVVM`构架进行搭建，其下分为
 
@@ -28,7 +28,7 @@ About the mobile project architecture built using Objective-C
 
 `V`层存放和App相关的控制器和视图
 
-`VM`层存放处理和App相关的交互处理，其中`AppDelegate`进行逻辑接收。
+`VM`层负责App层面业务，
 
 # CodeFeed ——存放APP页面实际构建的代码
 
@@ -44,7 +44,7 @@ About the mobile project architecture built using Objective-C
 
 内部同样以`MVVM`构架进行搭建
 
-# Precompilation
+# PrefixHeader
 
 存放`.pch`文件及其它进行预编译的文件
 
@@ -58,7 +58,9 @@ About the mobile project architecture built using Objective-C
 
 # Supporting Files
 
-存放APP的配置文件 `info.plist`、`InfoPlist.strings`、`main.m`等
+存放APP的配置文件 `info.plist`、`InfoPlist.strings`、`main.m`、'Appdelegate'等
+
+窗口的根控制器
 
 # Pods（或Carthage）
 
