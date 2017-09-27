@@ -12,7 +12,6 @@
 		848EBB011F3D3CE6002170F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EBAFF1F3D3CE6002170F8 /* LaunchScreen.storyboard */; };
 		848EBB0B1F3D3D57002170F8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848EBB091F3D3D57002170F8 /* Info.plist */; };
 		848EBB0C1F3D3D57002170F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB0A1F3D3D57002170F8 /* main.m */; };
-		848EBB151F3D3DDE002170F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB101F3D3DDE002170F8 /* AppDelegate.m */; };
 		848EBB181F3D4145002170F8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB171F3D4145002170F8 /* RootViewController.m */; };
 		848EBB2F1F3D4525002170F8 /* RootKeyWindowDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB2E1F3D4525002170F8 /* RootKeyWindowDataModel.m */; };
 		848EBB321F3D4EFF002170F8 /* AppControlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB311F3D4EFF002170F8 /* AppControlModel.m */; };
@@ -36,8 +35,6 @@
 		848EBB001F3D3CE6002170F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		848EBB091F3D3D57002170F8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		848EBB0A1F3D3D57002170F8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		848EBB0F1F3D3DDE002170F8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		848EBB101F3D3DDE002170F8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		848EBB161F3D4145002170F8 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		848EBB171F3D4145002170F8 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		848EBB2D1F3D4525002170F8 /* RootKeyWindowDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootKeyWindowDataModel.h; sourceTree = "<group>"; };
@@ -67,6 +64,8 @@
 		848EBBBC1F3D80AB002170F8 /* DefineHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineHeader.h; sourceTree = "<group>"; };
 		848EBBBD1F3D80B5002170F8 /* ImportHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImportHeader.h; sourceTree = "<group>"; };
 		848EBBBF1F3DA2D4002170F8 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		8498615A1F7B9A8500DD8BA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8498615B1F7B9A8500DD8BA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +101,7 @@
 				848EBB0D1F3D3DDE002170F8 /* AppControl */,
 				848EBB7B1F3D7A04002170F8 /* CodeFeed */,
 				848EBBBE1F3D8A04002170F8 /* Utils */,
-				848EBB781F3D7966002170F8 /* Precompilation */,
+				848EBB781F3D7966002170F8 /* PrefixHeader */,
 				848EBB081F3D3D57002170F8 /* Supporting Files */,
 				848EBAFA1F3D3CE6002170F8 /* Main.storyboard */,
 				848EBAFD1F3D3CE6002170F8 /* Assets.xcassets */,
@@ -114,6 +113,8 @@
 		848EBB081F3D3D57002170F8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8498615D1F7B9AA700DD8BA0 /* TabBar */,
+				849861591F7B9A8500DD8BA0 /* APPDelegate */,
 				848EBB091F3D3D57002170F8 /* Info.plist */,
 				848EBBBF1F3DA2D4002170F8 /* InfoPlist.strings */,
 				848EBB0A1F3D3D57002170F8 /* main.m */,
@@ -131,20 +132,9 @@
 			path = AppControl;
 			sourceTree = "<group>";
 		};
-		848EBB0E1F3D3DDE002170F8 /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				848EBB0F1F3D3DDE002170F8 /* AppDelegate.h */,
-				848EBB101F3D3DDE002170F8 /* AppDelegate.m */,
-			);
-			name = Delegate;
-			path = ../Delegate;
-			sourceTree = "<group>";
-		};
 		848EBB111F3D3DDE002170F8 /* M */ = {
 			isa = PBXGroup;
 			children = (
-				848EBB2C1F3D4525002170F8 /* keyWindow */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -152,48 +142,27 @@
 		848EBB121F3D3DDE002170F8 /* V */ = {
 			isa = PBXGroup;
 			children = (
-				848EBB131F3D3DDE002170F8 /* C */,
 			);
 			path = V;
-			sourceTree = "<group>";
-		};
-		848EBB131F3D3DDE002170F8 /* C */ = {
-			isa = PBXGroup;
-			children = (
-				848EBB161F3D4145002170F8 /* RootViewController.h */,
-				848EBB171F3D4145002170F8 /* RootViewController.m */,
-			);
-			path = C;
 			sourceTree = "<group>";
 		};
 		848EBB141F3D3DDE002170F8 /* VM */ = {
 			isa = PBXGroup;
 			children = (
-				848EBB0E1F3D3DDE002170F8 /* Delegate */,
 				848EBB301F3D4EFF002170F8 /* AppControlModel.h */,
 				848EBB311F3D4EFF002170F8 /* AppControlModel.m */,
 			);
 			path = VM;
 			sourceTree = "<group>";
 		};
-		848EBB2C1F3D4525002170F8 /* keyWindow */ = {
-			isa = PBXGroup;
-			children = (
-				848EBB331F3D56ED002170F8 /* RootControllerConfiguration.plist */,
-				848EBB2D1F3D4525002170F8 /* RootKeyWindowDataModel.h */,
-				848EBB2E1F3D4525002170F8 /* RootKeyWindowDataModel.m */,
-			);
-			path = keyWindow;
-			sourceTree = "<group>";
-		};
-		848EBB781F3D7966002170F8 /* Precompilation */ = {
+		848EBB781F3D7966002170F8 /* PrefixHeader */ = {
 			isa = PBXGroup;
 			children = (
 				848EBB791F3D7966002170F8 /* PrefixHeader.pch */,
 				848EBBBC1F3D80AB002170F8 /* DefineHeader.h */,
 				848EBBBD1F3D80B5002170F8 /* ImportHeader.h */,
 			);
-			path = Precompilation;
+			path = PrefixHeader;
 			sourceTree = "<group>";
 		};
 		848EBB7B1F3D7A04002170F8 /* CodeFeed */ = {
@@ -444,6 +413,43 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		849861591F7B9A8500DD8BA0 /* APPDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				8498615A1F7B9A8500DD8BA0 /* AppDelegate.h */,
+				8498615B1F7B9A8500DD8BA0 /* AppDelegate.m */,
+			);
+			path = APPDelegate;
+			sourceTree = "<group>";
+		};
+		8498615D1F7B9AA700DD8BA0 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8498615F1F7B9AE500DD8BA0 /* M */,
+				8498615E1F7B9ACC00DD8BA0 /* C */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		8498615E1F7B9ACC00DD8BA0 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				848EBB161F3D4145002170F8 /* RootViewController.h */,
+				848EBB171F3D4145002170F8 /* RootViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		8498615F1F7B9AE500DD8BA0 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				848EBB331F3D56ED002170F8 /* RootControllerConfiguration.plist */,
+				848EBB2D1F3D4525002170F8 /* RootKeyWindowDataModel.h */,
+				848EBB2E1F3D4525002170F8 /* RootKeyWindowDataModel.m */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -531,7 +537,6 @@
 				848EBBA61F3D7A04002170F8 /* BaseAcctViewController.m in Sources */,
 				848EBBAB1F3D7A04002170F8 /* BaseFinaceViewModel.m in Sources */,
 				848EBBA91F3D7A04002170F8 /* BaseCarViewModel.m in Sources */,
-				848EBB151F3D3DDE002170F8 /* AppDelegate.m in Sources */,
 				848EBBAD1F3D7A04002170F8 /* BaseHomeViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
