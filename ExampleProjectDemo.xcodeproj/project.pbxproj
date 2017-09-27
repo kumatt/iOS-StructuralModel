@@ -98,7 +98,7 @@
 		848EBAF01F3D3CE6002170F8 /* ExampleProjectDemo */ = {
 			isa = PBXGroup;
 			children = (
-				848EBB0D1F3D3DDE002170F8 /* AppControl */,
+				848EBB0D1F3D3DDE002170F8 /* Router */,
 				848EBB7B1F3D7A04002170F8 /* CodeFeed */,
 				848EBBBE1F3D8A04002170F8 /* Utils */,
 				848EBB781F3D7966002170F8 /* PrefixHeader */,
@@ -122,14 +122,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		848EBB0D1F3D3DDE002170F8 /* AppControl */ = {
+		848EBB0D1F3D3DDE002170F8 /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				848EBB111F3D3DDE002170F8 /* M */,
 				848EBB121F3D3DDE002170F8 /* V */,
 				848EBB141F3D3DDE002170F8 /* VM */,
 			);
-			path = AppControl;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		848EBB111F3D3DDE002170F8 /* M */ = {
