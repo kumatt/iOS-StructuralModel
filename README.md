@@ -58,7 +58,7 @@ About the mobile project architecture built using Objective-C
 
 # Supporting Files
 
-存放APP的配置文件 `info.plist`、`InfoPlist.strings`、`main.m`、'Appdelegate'等
+存放APP的配置文件 `info.plist`、`InfoPlist.strings`、`main.m`、`Appdelegate`等
 
 窗口的根控制器
 
