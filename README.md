@@ -1,4 +1,4 @@
-# MobileProjectArchitectureDemo
+# MobileProjectStructureDemo
 
 仅以此，记录下当前想到的比较顺眼项目构架
 
