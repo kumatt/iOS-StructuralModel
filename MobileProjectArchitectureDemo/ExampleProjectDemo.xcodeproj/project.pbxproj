@@ -126,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				848EBB111F3D3DDE002170F8 /* M */,
-				848EBB121F3D3DDE002170F8 /* V */,
 				848EBB141F3D3DDE002170F8 /* VM */,
 			);
 			path = Router;
@@ -137,13 +136,6 @@
 			children = (
 			);
 			path = M;
-			sourceTree = "<group>";
-		};
-		848EBB121F3D3DDE002170F8 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = V;
 			sourceTree = "<group>";
 		};
 		848EBB141F3D3DDE002170F8 /* VM */ = {
