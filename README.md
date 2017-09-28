@@ -1,5 +1,4 @@
 # MobileProjectArchitectureDemo
-About the mobile project architecture built using Objective-C
 
 仅以此，记录下当前想到的比较顺眼项目构架
 
@@ -9,7 +8,7 @@ About the mobile project architecture built using Objective-C
     ├── <PrefixHeader>           预编译文件
     ├── <Utils>                  适用于本项目的自定义类库。根据功能可以细分下去。
     ├── <Supporting Files>       系统配置文件及组成基础构架的文件
-    └── <Pods（或Carthage）>工程   第三方SDK以及自己做的小工具
+    └── <Pods（或Carthage）>工程  第三方SDK以及自己做的小工具
 ```
 
 # Router ——负责APP层面业务的模块
@@ -18,7 +17,7 @@ About the mobile project architecture built using Objective-C
 
 ```
     ├── <M>  模型
-    └── <VM> 视图模型的业务处理
+    └── <VM> 模块间的业务处理
 ```
 
 其中
