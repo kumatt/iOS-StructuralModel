@@ -12,21 +12,18 @@ About the mobile project architecture built using Objective-C
     └── <Pods（或Carthage）>工程   第三方SDK以及自己做的小工具
 ```
 
-# Router ——在APP层面进行操作的模块
+# Router ——负责APP层面业务的模块
 
-以`MVVM`构架进行搭建，其下分为
+处理APP层面的业务，其下分为
 
 ```
     ├── <M>  模型
-    ├── <V>  视图
-    └── <VM> 视图模型的交互处理（appdelegate也放置在这里）
+    └── <VM> 视图模型的业务处理
 ```
 
 其中
 
 `M`层存放和App相关的模型信息
-
-`V`层存放和App相关的控制器和视图
 
 `VM`层负责App层面业务，
 
@@ -42,7 +39,21 @@ About the mobile project architecture built using Objective-C
 
 其中`<EntityCode>`和`<PublicCode>`
 
-内部同样以`MVVM`构架进行搭建
+内部以`MVVM`构架进行搭建，其下分为
+
+```
+    ├── <M>  模型
+    ├── <V>  视图
+    └── <VM> 视图模型的业务处理
+```
+
+其中
+
+`M`层存放模型信息
+
+`V`层存放模块相关的控制器和视图
+
+`VM`层负责处理模块内部的业务，
 
 # PrefixHeader
 
