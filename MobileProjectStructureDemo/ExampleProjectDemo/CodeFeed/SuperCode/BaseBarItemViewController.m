@@ -27,16 +27,16 @@
     [super viewWillDisappear:animated];
     
     if (self.navigationController.viewControllers.count > 1) {
-        CUSTOM_APP_DEFAULT_CONTROLMODEL.tabBarHidden = YES;
+        [CUSTOM_APP_DEFAULT_CONTROLMODEL.keyWindowMaster hiddenTabBar];
     }else {
-        CUSTOM_APP_DEFAULT_CONTROLMODEL.tabBarHidden = NO;
+        [CUSTOM_APP_DEFAULT_CONTROLMODEL.keyWindowMaster showTabBar];
     }
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    CUSTOM_APP_DEFAULT_CONTROLMODEL.tabBarHidden = NO;
+    [CUSTOM_APP_DEFAULT_CONTROLMODEL.keyWindowMaster showTabBar];
     
 }
 

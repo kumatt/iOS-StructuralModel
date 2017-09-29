@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		843B633A1F7E1C0400990954 /* ExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B63391F7E1C0400990954 /* ExampleAppDelegate.m */; };
+		843B63631F7E327B00990954 /* WKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B63621F7E327B00990954 /* WKRouter.m */; };
+		843B63681F7E339300990954 /* WKKeyWindowMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B63671F7E339300990954 /* WKKeyWindowMaster.m */; };
 		848EBAFC1F3D3CE6002170F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EBAFA1F3D3CE6002170F8 /* Main.storyboard */; };
 		848EBAFE1F3D3CE6002170F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848EBAFD1F3D3CE6002170F8 /* Assets.xcassets */; };
 		848EBB011F3D3CE6002170F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EBAFF1F3D3CE6002170F8 /* LaunchScreen.storyboard */; };
 		848EBB0C1F3D3D57002170F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB0A1F3D3D57002170F8 /* main.m */; };
 		848EBB181F3D4145002170F8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB171F3D4145002170F8 /* RootViewController.m */; };
 		848EBB2F1F3D4525002170F8 /* RootKeyWindowDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB2E1F3D4525002170F8 /* RootKeyWindowDataModel.m */; };
-		848EBB321F3D4EFF002170F8 /* AppControlModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB311F3D4EFF002170F8 /* AppControlModel.m */; };
 		848EBB341F3D56ED002170F8 /* RootControllerConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848EBB331F3D56ED002170F8 /* RootControllerConfiguration.plist */; };
 		848EBBA61F3D7A04002170F8 /* BaseAcctViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB821F3D7A04002170F8 /* BaseAcctViewController.m */; };
 		848EBBA71F3D7A04002170F8 /* BaseAcctViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 848EBB861F3D7A04002170F8 /* BaseAcctViewModel.m */; };
@@ -34,6 +35,10 @@
 		50E64361A4AA611D07D0702E /* Pods-ExampleProjectDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleProjectDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleProjectDemo/Pods-ExampleProjectDemo.release.xcconfig"; sourceTree = "<group>"; };
 		843B63381F7E1C0400990954 /* ExampleAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleAppDelegate.h; sourceTree = "<group>"; };
 		843B63391F7E1C0400990954 /* ExampleAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleAppDelegate.m; sourceTree = "<group>"; };
+		843B63611F7E327B00990954 /* WKRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKRouter.h; sourceTree = "<group>"; };
+		843B63621F7E327B00990954 /* WKRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKRouter.m; sourceTree = "<group>"; };
+		843B63661F7E339300990954 /* WKKeyWindowMaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKKeyWindowMaster.h; sourceTree = "<group>"; };
+		843B63671F7E339300990954 /* WKKeyWindowMaster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKKeyWindowMaster.m; sourceTree = "<group>"; };
 		848EBAEE1F3D3CE6002170F8 /* ExampleProjectDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProjectDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848EBAFB1F3D3CE6002170F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		848EBAFD1F3D3CE6002170F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,8 +49,6 @@
 		848EBB171F3D4145002170F8 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		848EBB2D1F3D4525002170F8 /* RootKeyWindowDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootKeyWindowDataModel.h; sourceTree = "<group>"; };
 		848EBB2E1F3D4525002170F8 /* RootKeyWindowDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootKeyWindowDataModel.m; sourceTree = "<group>"; };
-		848EBB301F3D4EFF002170F8 /* AppControlModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppControlModel.h; sourceTree = "<group>"; };
-		848EBB311F3D4EFF002170F8 /* AppControlModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppControlModel.m; sourceTree = "<group>"; };
 		848EBB331F3D56ED002170F8 /* RootControllerConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RootControllerConfiguration.plist; sourceTree = "<group>"; };
 		848EBB791F3D7966002170F8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		848EBB811F3D7A04002170F8 /* BaseAcctViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAcctViewController.h; sourceTree = "<group>"; };
@@ -92,12 +95,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		846706AF1F7CEEF8009D9523 /* M */ = {
+		843B63541F7E320100990954 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				843B63581F7E320100990954 /* Master */,
+				843B635E1F7E320100990954 /* Router */,
 			);
-			name = M;
-			path = "New Group";
+			path = Router;
+			sourceTree = "<group>";
+		};
+		843B63581F7E320100990954 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				843B63591F7E320100990954 /* keyWindow */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		843B63591F7E320100990954 /* keyWindow */ = {
+			isa = PBXGroup;
+			children = (
+				843B63661F7E339300990954 /* WKKeyWindowMaster.h */,
+				843B63671F7E339300990954 /* WKKeyWindowMaster.m */,
+			);
+			path = keyWindow;
+			sourceTree = "<group>";
+		};
+		843B635E1F7E320100990954 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				843B63611F7E327B00990954 /* WKRouter.h */,
+				843B63621F7E327B00990954 /* WKRouter.m */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		846706B01F7CEF44009D9523 /* Utils */ = {
@@ -128,7 +158,7 @@
 		848EBAF01F3D3CE6002170F8 /* ExampleProjectDemo */ = {
 			isa = PBXGroup;
 			children = (
-				848EBB0D1F3D3DDE002170F8 /* Router */,
+				843B63541F7E320100990954 /* Router */,
 				848EBB7B1F3D7A04002170F8 /* CodeFeed */,
 				846706B01F7CEF44009D9523 /* Utils */,
 				848EBB781F3D7966002170F8 /* PrefixHeader */,
@@ -150,24 +180,6 @@
 				848EBB0A1F3D3D57002170F8 /* main.m */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		848EBB0D1F3D3DDE002170F8 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				846706AF1F7CEEF8009D9523 /* M */,
-				848EBB141F3D3DDE002170F8 /* VM */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
-		848EBB141F3D3DDE002170F8 /* VM */ = {
-			isa = PBXGroup;
-			children = (
-				848EBB301F3D4EFF002170F8 /* AppControlModel.h */,
-				848EBB311F3D4EFF002170F8 /* AppControlModel.m */,
-			);
-			path = VM;
 			sourceTree = "<group>";
 		};
 		848EBB781F3D7966002170F8 /* PrefixHeader */ = {
@@ -599,13 +611,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848EBB321F3D4EFF002170F8 /* AppControlModel.m in Sources */,
+				843B63681F7E339300990954 /* WKKeyWindowMaster.m in Sources */,
 				843B633A1F7E1C0400990954 /* ExampleAppDelegate.m in Sources */,
 				848EBBAA1F3D7A04002170F8 /* BaseFinaceViewController.m in Sources */,
 				848EBBAC1F3D7A04002170F8 /* BaseHomeViewController.m in Sources */,
 				848EBBBA1F3D7BCE002170F8 /* BaseBarItemViewController.m in Sources */,
 				848EBB2F1F3D4525002170F8 /* RootKeyWindowDataModel.m in Sources */,
 				848EBBA81F3D7A04002170F8 /* BaseCarViewController.m in Sources */,
+				843B63631F7E327B00990954 /* WKRouter.m in Sources */,
 				848EBB0C1F3D3D57002170F8 /* main.m in Sources */,
 				848EBB181F3D4145002170F8 /* RootViewController.m in Sources */,
 				848EBBA71F3D7A04002170F8 /* BaseAcctViewModel.m in Sources */,

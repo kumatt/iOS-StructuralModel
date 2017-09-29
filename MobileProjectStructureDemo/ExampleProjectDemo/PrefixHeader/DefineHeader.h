@@ -50,6 +50,12 @@ blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
 ///强引用
 #define CUSTOM_TYPESTRONG(type)  __strong typeof(type) type = weak##type;
 
+//------------------APPInfo----------------
+///系统版本
+#define CUSTOM_APP_DEVICE [[[UIDevice currentDevice] systemVersion] doubleValue]
+
+///app store版本
+#define CUSTOM_APP_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
 ////------------------path----------------
 /////拼接Document路径
 //#define CUSTOM_PATHDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
