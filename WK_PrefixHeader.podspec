@@ -30,8 +30,8 @@ Pod::Spec.new do |s|
   s.source_files = "MobileProjectStructureDemo/**/PrefixHeader/*.h"
   
   # 引用头文件
-  s.public_header_files = 'PrefixHeader/DefineHeader.h','PrefixHeader/ImportHeader.h'
-  s.prefix_header_contents = '#import <PrefixHeader/DefineHeader.h>','#import <PrefixHeader/ImportHeader.h>'
+  s.public_header_files = 'MobileProjectStructureDemo/**/PrefixHeader/DefineHeader.h','MobileProjectStructureDemo/**/PrefixHeader/ImportHeader.h'
+  s.prefix_header_contents = '#import <MobileProjectStructureDemo/**/PrefixHeader/DefineHeader.h>','#import <MobileProjectStructureDemo/**/PrefixHeader/ImportHeader.h>'
   
   # 资源文件地址
   # s.resource_bundles = {
