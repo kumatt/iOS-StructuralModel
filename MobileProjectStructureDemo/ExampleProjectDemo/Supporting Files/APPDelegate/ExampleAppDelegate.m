@@ -1,19 +1,14 @@
 //
-//  AppDelegate.m
+//  ExampleAppDelegate.m
 //  ExampleProjectDemo
 //
-//  Created by admin on 2017/8/11.
+//  Created by admin on 2017/9/29.
 //  Copyright © 2017年 juyuanGroup. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "ExampleAppDelegate.h"
 
-@interface AppDelegate ()
-
-@end
-
-@implementation AppDelegate
-
+@implementation ExampleAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -52,6 +47,5 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end

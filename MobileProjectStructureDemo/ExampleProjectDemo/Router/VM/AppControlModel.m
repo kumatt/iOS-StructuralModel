@@ -24,47 +24,6 @@ static AppControlModel *_instance = nil;
     return _instance;
 }
 
-- (instancetype)init
-{
-    if (self = [super init]) {
-        [self creatInitData];
-    }
-    return self;
-}
-
-- (void)creatInitData
-{
-    [self creatRootControllerConfigurationModel];
-}
-
-#pragma mark-dataInit
-
-/**
- 创建根控制器配置模型
- */
-- (void)creatRootControllerConfigurationModel
-{
-    NSString *localPath = [[NSBundle mainBundle]pathForResource:@"RootControllerConfiguration" ofType:@"plist"];
-    NSArray *localData  = [NSArray arrayWithContentsOfFile:localPath];
-    NSArray<NSString*> *classArray = @[@"BaseHomeViewController",@"BaseCarViewController",@"BaseFinaceViewController",@"BaseAcctViewController"];
-    NSMutableArray *dataArray = [NSMutableArray new];
-    _feedRootControllerEntity = dataArray;
-    
-    if (localData == nil || [localData isKindOfClass:[NSArray class]] == NO) {
-        localData = [NSArray new];
-    }
-    [classArray enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        RootKeyWindowDataModel *model = [RootKeyWindowDataModel new];
-        if (idx < localData.count) {
-            NSDictionary *dict = localData[idx];
-            if ([dict isKindOfClass:[NSDictionary class]]) {
-                [model setValuesForKeysWithDictionary:dict];
-            }
-        }
-        model.class_name = obj;
-        [dataArray addObject:model];
-    }];
-}
 
 #pragma mark-app_data
 - (void)setTabBarHidden:(BOOL)tabBarHidden

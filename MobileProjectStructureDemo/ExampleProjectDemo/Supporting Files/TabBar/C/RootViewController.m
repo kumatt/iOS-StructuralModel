@@ -25,11 +25,40 @@
 }
 
 /**
+ 创建根控制器配置模型
+ */
+- (NSArray*)creatRootControllerConfigurationModel
+{
+    NSString *localPath = [[NSBundle mainBundle]pathForResource:@"RootControllerConfiguration" ofType:@"plist"];
+    NSArray *localData  = [NSArray arrayWithContentsOfFile:localPath];
+    NSArray<NSString*> *classArray = @[@"BaseHomeViewController",@"BaseCarViewController",@"BaseFinaceViewController",@"BaseAcctViewController"];
+    NSMutableArray *dataArray = [NSMutableArray new];
+    
+    if (localData == nil || [localData isKindOfClass:[NSArray class]] == NO) {
+        localData = [NSArray new];
+    }
+    
+    for (NSInteger idx = 0; idx < classArray.count; idx ++) {
+        RootKeyWindowDataModel *model = [RootKeyWindowDataModel new];
+        if (idx < localData.count) {
+            NSDictionary *dict = localData[idx];
+            if ([dict isKindOfClass:[NSDictionary class]]) {
+                [model setValuesForKeysWithDictionary:dict];
+            }
+        }
+        model.class_name = classArray[idx];
+        [dataArray addObject:model];
+    }
+    
+    return dataArray;
+}
+
+/**
  加载子控制器
  */
 - (void)theChildControllerAdd
 {
-    [CUSTOM_APP_DEFAULT_CONTROLMODEL.feedRootControllerEntity enumerateObjectsUsingBlock:^(RootKeyWindowDataModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [[self creatRootControllerConfigurationModel] enumerateObjectsUsingBlock:^(RootKeyWindowDataModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         UIViewController *viewController = [[NSClassFromString(obj.class_name)alloc]init];
         UINavigationController *naVC = [[UINavigationController alloc]initWithRootViewController:viewController];
         naVC.title = obj.title;
@@ -49,5 +78,7 @@
     
     
 }
+
+
 
 @end

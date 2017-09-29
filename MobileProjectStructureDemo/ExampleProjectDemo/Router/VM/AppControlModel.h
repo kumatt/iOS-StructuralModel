@@ -26,11 +26,6 @@
 
 #pragma mark-app_data
 /**
- 根控制器的 创建数据
- */
-@property (nonnull,nonatomic,strong,readonly) NSArray<RootKeyWindowDataModel*> *feedRootControllerEntity;
-
-/**
  分栏框 显示与否
  */
 @property (nonatomic,assign) BOOL tabBarHidden;

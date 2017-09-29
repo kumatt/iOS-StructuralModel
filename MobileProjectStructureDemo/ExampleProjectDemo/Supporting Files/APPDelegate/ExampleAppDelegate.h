@@ -1,17 +1,15 @@
 //
-//  AppDelegate.h
+//  ExampleAppDelegate.h
 //  ExampleProjectDemo
 //
-//  Created by admin on 2017/8/11.
+//  Created by admin on 2017/9/29.
 //  Copyright © 2017年 juyuanGroup. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface ExampleAppDelegate : UIResponder<UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-
 @end
-
