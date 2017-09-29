@@ -42,7 +42,10 @@
     if ([self canEditTabBarHidden:NO]) {
         return;
     }
-    
+    if (CUSTOM_APP_DEVICE >= 11.0) {
+        self.rootController.tabBar.hidden = NO;
+        return;
+    }
     // 显示tabbar
     [UIView animateWithDuration:UINavigationControllerHideShowBarDuration animations:^{
         self.rootController.tabBar.frame = CGRectMake(0, CUSTOM_SCREEN_HEIGHT-49, CUSTOM_SCREEN_WIDTH, 49);
@@ -52,6 +55,10 @@
 - (void)hiddenTabBar
 {
     if ([self canEditTabBarHidden:YES]) {
+        return;
+    }
+    if (CUSTOM_APP_DEVICE >= 11.0) {
+        self.rootController.tabBar.hidden = YES;
         return;
     }
     // 隐藏tabbar
