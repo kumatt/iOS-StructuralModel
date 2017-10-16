@@ -1,15 +1,15 @@
 //
-//  WKKeyWindowMaster.m
+//  PublicKeyWindowMaster.m
 //  ExampleProjectDemo
 //
-//  Created by admin on 2017/9/29.
+//  Created by admin on 2017/10/16.
 //  Copyright © 2017年 juyuanGroup. All rights reserved.
 //
 
-#import "WKKeyWindowMaster.h"
+#import "PublicKeyWindowMaster.h"
 #import <UIKit/UIKit.h>
 
-@interface WKKeyWindowMaster()
+@interface PublicKeyWindowMaster()
 /**
  tabBar的是否隐藏
  */
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation WKKeyWindowMaster
+@implementation PublicKeyWindowMaster
 
 #pragma mark-app_data
 - (BOOL)canEditTabBarHidden:(BOOL)tabBarHidden
@@ -75,4 +75,5 @@
     }
     return _rootController;
 }
+
 @end

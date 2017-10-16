@@ -1,8 +1,8 @@
 //
-//  WKRouter.h
+//  PublicRouter.h
 //  ExampleProjectDemo
 //
-//  Created by admin on 2017/9/29.
+//  Created by admin on 2017/10/16.
 //  Copyright © 2017年 juyuanGroup. All rights reserved.
 //
 /*
@@ -15,11 +15,13 @@
  修改描述：
  */
 #import <Foundation/Foundation.h>
-#import "WKKeyWindowMaster.h"
+#import "PublicKeyWindowMaster.h"
 ///控制模型
-#define CUSTOM_APP_DEFAULT_CONTROLMODEL [WKRouter sharedRouter]
-@interface WKRouter : NSObject
+#define CUSTOM_APP_DEFAULT_CONTROLMODEL [PublicRouter sharedRouter]
+@interface PublicRouter : NSObject
+
 + (instancetype _Nonnull)sharedRouter;
 
-@property (nonnull,nonatomic,strong) WKKeyWindowMaster *keyWindowMaster;
+@property (nonnull,nonatomic,strong) PublicKeyWindowMaster *master_keyWindow;
+
 @end

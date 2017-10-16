@@ -11,7 +11,7 @@
 #ifndef ImportHeader_h
 #define ImportHeader_h
 
-#import "WKRouter.h"
+#import "PublicRouter.h"
 
 
 #endif /* ImportHeader_h */

@@ -1,8 +1,8 @@
 //
-//  WKKeyWindowMaster.h
+//  PublicKeyWindowMaster.h
 //  ExampleProjectDemo
 //
-//  Created by admin on 2017/9/29.
+//  Created by admin on 2017/10/16.
 //  Copyright © 2017年 juyuanGroup. All rights reserved.
 //
 /*
@@ -16,7 +16,7 @@
  */
 #import <Foundation/Foundation.h>
 
-@interface WKKeyWindowMaster : NSObject
+@interface PublicKeyWindowMaster : NSObject
 /**
  显示tabBar
  */
