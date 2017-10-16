@@ -20,6 +20,20 @@ static PublicRouter *_instance = nil;
     return _instance;
 }
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        [self loadNetworkReachability];
+    }
+    return self;
+}
+
+#pragma mark-initload
+- (void)loadNetworkReachability
+{
+    _master_networkReachability = [PublicNetworkReachabilityMaster new];
+}
+
 #pragma mark-lazyload
 - (PublicKeyWindowMaster *)master_keyWindow
 {

@@ -16,12 +16,22 @@
  */
 #import <Foundation/Foundation.h>
 #import "PublicKeyWindowMaster.h"
+#import "PublicNetworkReachabilityMaster.h"
+
 ///控制模型
 #define CUSTOM_APP_DEFAULT_CONTROLMODEL [PublicRouter sharedRouter]
 @interface PublicRouter : NSObject
 
 + (instancetype _Nonnull)sharedRouter;
 
+/**
+ 主窗口相关
+ */
 @property (nonnull,nonatomic,strong) PublicKeyWindowMaster *master_keyWindow;
+
+/**
+ 网络数据状态相关业务
+ */
+@property (nonnull,nonatomic,strong) PublicNetworkReachabilityMaster *master_networkReachability;
 
 @end
