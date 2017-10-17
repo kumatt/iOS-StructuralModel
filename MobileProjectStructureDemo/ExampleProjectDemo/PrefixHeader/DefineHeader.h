@@ -18,6 +18,16 @@
 #define NSLog(...)
 #endif
 
+//状态栏高度
+#define CUSTOM_STATUSBAR_HEIGHT \
+({\
+CGRect StatusRect = [[UIApplication sharedApplication] statusBarFrame];\
+StatusRect.size.height;\
+})
+
+//底部栏高度
+#define CUSTOM_TABBAR_HEIGHT  ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+
 //屏幕宽
 #define CUSTOM_SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 
