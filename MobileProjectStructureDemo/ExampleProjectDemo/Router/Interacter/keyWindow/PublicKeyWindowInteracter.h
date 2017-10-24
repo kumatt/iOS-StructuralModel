@@ -1,8 +1,8 @@
 //
-//  PublicKeyWindowMaster.h
+//  PublicKeyWindowInteracter.h
 //  ExampleProjectDemo
 //
-//  Created by admin on 2017/10/16.
+//  Created by admin on 2017/10/24.
 //  Copyright © 2017年 juyuanGroup. All rights reserved.
 //
 /*
@@ -16,7 +16,8 @@
  */
 #import <Foundation/Foundation.h>
 
-@interface PublicKeyWindowMaster : NSObject
+@interface PublicKeyWindowInteracter : NSObject
+
 /**
  显示tabBar
  */
@@ -26,4 +27,5 @@
  隐藏tabBar
  */
 - (void)hiddenTabBar;
+
 @end

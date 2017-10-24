@@ -31,15 +31,15 @@ static PublicRouter *_instance = nil;
 #pragma mark-initload
 - (void)loadNetworkReachability
 {
-    _master_networkReachability = [PublicNetworkReachabilityMaster new];
+    _interacter_networkReachability = [PublicNetworkReachabilityInteracter new];
 }
 
 #pragma mark-lazyload
-- (PublicKeyWindowMaster *)master_keyWindow
+- (PublicKeyWindowInteracter *)interacter_keyWindow
 {
-    if (_master_keyWindow == nil) {
-        _master_keyWindow = [PublicKeyWindowMaster new];
+    if (_interacter_keyWindow == nil) {
+        _interacter_keyWindow = [PublicKeyWindowInteracter new];
     }
-    return _master_keyWindow;
+    return _interacter_keyWindow;
 }
 @end

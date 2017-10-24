@@ -1,14 +1,14 @@
 //
-//  PublicNetworkReachabilityMaster.m
+//  PublicNetworkReachabilityInteracter.m
 //  ExampleProjectDemo
 //
-//  Created by admin on 2017/10/16.
+//  Created by admin on 2017/10/24.
 //  Copyright © 2017年 juyuanGroup. All rights reserved.
 //
 
-#import "PublicNetworkReachabilityMaster.h"
+#import "PublicNetworkReachabilityInteracter.h"
 
-@implementation PublicNetworkReachabilityMaster
+@implementation PublicNetworkReachabilityInteracter
 - (instancetype)init
 {
     if (self = [super init]) {

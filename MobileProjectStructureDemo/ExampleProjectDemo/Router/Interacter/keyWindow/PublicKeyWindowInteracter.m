@@ -1,15 +1,15 @@
 //
-//  PublicKeyWindowMaster.m
+//  PublicKeyWindowInteracter.m
 //  ExampleProjectDemo
 //
-//  Created by admin on 2017/10/16.
+//  Created by admin on 2017/10/24.
 //  Copyright © 2017年 juyuanGroup. All rights reserved.
 //
 
-#import "PublicKeyWindowMaster.h"
+#import "PublicKeyWindowInteracter.h"
 #import <UIKit/UIKit.h>
 
-@interface PublicKeyWindowMaster()
+@interface PublicKeyWindowInteracter()
 /**
  tabBar的是否隐藏
  */
@@ -21,8 +21,7 @@
 @property (nullable,nonatomic,weak) UITabBarController *rootController;
 
 @end
-
-@implementation PublicKeyWindowMaster
+@implementation PublicKeyWindowInteracter
 
 #pragma mark-app_data
 - (BOOL)canEditTabBarHidden:(BOOL)tabBarHidden
@@ -42,7 +41,7 @@
     if ([self canEditTabBarHidden:NO]) {
         return;
     }
-    if (CUSTOM_APP_DEVICE >= 11.0) {
+    if (@available(iOS 11.0, *)) {
         self.rootController.tabBar.hidden = NO;
         return;
     }
@@ -57,7 +56,8 @@
     if ([self canEditTabBarHidden:YES]) {
         return;
     }
-    if (CUSTOM_APP_DEVICE >= 11.0) {
+    
+    if (@available(iOS 11.0, *)) {
         self.rootController.tabBar.hidden = YES;
         return;
     }

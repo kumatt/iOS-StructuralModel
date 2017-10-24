@@ -1,8 +1,8 @@
 //
-//  PublicNetworkReachabilityMaster.h
+//  PublicNetworkReachabilityInteracter.h
 //  ExampleProjectDemo
 //
-//  Created by admin on 2017/10/16.
+//  Created by admin on 2017/10/24.
 //  Copyright © 2017年 juyuanGroup. All rights reserved.
 //
 /*
@@ -17,7 +17,8 @@
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
 
-@interface PublicNetworkReachabilityMaster : NSObject
+@interface PublicNetworkReachabilityInteracter : NSObject
+
 /**
  网络状态切换
  */
@@ -27,4 +28,5 @@
  网络状态正常
  */
 @property (nonatomic,assign) BOOL networkVisiable;
+
 @end
