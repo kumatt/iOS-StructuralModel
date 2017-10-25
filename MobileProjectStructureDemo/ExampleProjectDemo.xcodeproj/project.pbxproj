@@ -933,7 +933,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/PrefixHeader/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ExampleProjectDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Blanbok.ExampleProjectDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = ocomme.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -948,7 +948,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/PrefixHeader/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ExampleProjectDemo/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Blanbok.ExampleProjectDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = ocomme.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
