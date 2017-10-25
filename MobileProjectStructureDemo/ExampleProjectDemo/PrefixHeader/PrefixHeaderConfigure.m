@@ -12,8 +12,7 @@
 
 + (void)load
 {
-    //    [UIView appearance]
-    [UIView appearance].opaque = YES;
+//    [UIView appearance].opaque = YES;
     [UINavigationBar appearance].translucent = NO;
     
     //解决iOS11，仅实现heightForHeaderInSection，没有实现viewForHeaderInSection方法时,section间距大的问题
