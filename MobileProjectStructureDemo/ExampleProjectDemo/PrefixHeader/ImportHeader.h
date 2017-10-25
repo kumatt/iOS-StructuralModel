@@ -12,6 +12,7 @@
 #define ImportHeader_h
 
 #import "PublicRouter.h"
+#import <ReactiveObjC.h>
 
 
 #endif /* ImportHeader_h */

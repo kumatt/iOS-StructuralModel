@@ -14,32 +14,23 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Masonry (1.1.0)
-  - MBProgressHUD (1.0.0)
-  - MJRefresh (3.1.12)
-  - SAMKeychain (1.5.2)
-  - UITableView+FDTemplateLayoutCell (1.6)
+  - Aspects (1.4.1)
+  - ReactiveObjC (3.0.0)
   - WKDataManager (0.0.1):
     - AFNetworking
 
 DEPENDENCIES:
   - AFNetworking
-  - Masonry
-  - MBProgressHUD
-  - MJRefresh
-  - SAMKeychain
-  - UITableView+FDTemplateLayoutCell
+  - Aspects
+  - ReactiveObjC
   - WKDataManager
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
-  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   WKDataManager: 0d0f06274af2fb21a4b89bf2f8a7c1f2cf1352fb
 
-PODFILE CHECKSUM: 6a221f11467137f3aa7a3a8f39316f12e7cc2220
+PODFILE CHECKSUM: fc075395a464f20a5a591fd8f29ee277f1db3da3
 
 COCOAPODS: 1.3.1
