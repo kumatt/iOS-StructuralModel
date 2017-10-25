@@ -38,7 +38,7 @@
 
 - (void)showTabBar
 {
-    if ([self canEditTabBarHidden:NO]) {
+    if (![self canEditTabBarHidden:NO]) {
         return;
     }
     if (@available(iOS 11.0, *)) {
@@ -53,7 +53,7 @@
 
 - (void)hiddenTabBar
 {
-    if ([self canEditTabBarHidden:YES]) {
+    if (![self canEditTabBarHidden:YES]) {
         return;
     }
     
