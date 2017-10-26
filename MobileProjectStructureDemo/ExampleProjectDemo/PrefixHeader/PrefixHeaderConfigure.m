@@ -16,11 +16,15 @@
 
 + (void)load
 {
-    [self setHookSelector];
+    [self init_setUIConfigure];
+    [self init_setHookSelector];
 }
 
-#pragma mark-initConfigure
-+ (void)setInitConfigure
+#pragma mark-init
+/**
+ 初始配置
+ */
++ (void)init_setUIConfigure
 {
     //    [UIView appearance].opaque = YES;
     [UINavigationBar appearance].translucent = NO;
@@ -36,44 +40,44 @@
     }
 }
 
-#pragma mark-hook
-+ (void)setHookSelector
+/**
+ 放置钩子
+ */
++ (void)init_setHookSelector
 {
     @weakify(self);
-    [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo) {
-        UIViewController *vc = aspectInfo.instance;
-        if (vc.navigationController == nil || vc.navigationController.viewControllers.count <= 1) {
+    [UIResponder aspect_hookSelector:@selector(init) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
+        if (![aspectInfo.instance conformsToProtocol:@protocol(UIApplicationDelegate)]) {
             return ;
         }
         @strongify(self);
-        [self addViewControllerLeftItemWithTarget:vc];
-    }  error:nil];
-    
-    [UIResponder aspect_hookSelector:@selector(init) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
-        if ([aspectInfo.instance conformsToProtocol:@protocol(UIApplicationDelegate)]) {
-            @strongify(self);
-            [self hookAppDelegate:aspectInfo.instance];
-        }
+        [self hook_ApplicationdelegateWithDelegate:aspectInfo.instance];
     } error:nil];
 }
 
-+ (void)hookAppDelegate:(UIResponder<UIApplicationDelegate>*)responer
+#pragma mark-hook
++ (void)hook_ApplicationdelegateWithDelegate:(UIResponder*)delegate
 {
     @weakify(self);
-    [responer aspect_hookSelector:@selector(application:didFinishLaunchingWithOptions:) withOptions:AspectPositionAfter usingBlock:^(){
+    [delegate aspect_hookSelector:@selector(application:didFinishLaunchingWithOptions:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo,NSDictionary *launchOptions){
         @strongify(self);
-        [self setInitConfigure];
-        
+        [self applicationDidFinishLaunchingWithOptions:launchOptions];
+    } error:nil];
+    
+    [delegate aspect_hookSelector:@selector(applicationWillTerminate:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo,NSDictionary *launchOptions){
+        @strongify(self);
+        [self applicationDidFinishLaunchingWithOptions:launchOptions];
     } error:nil];
 }
 
-+ (void)addViewControllerLeftItemWithTarget:(UIViewController*)vc
-{
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setImage:[UIImage imageNamed:@"arrow"] forState:UIControlStateNormal];
-    [button setTitle:vc.navigationController.viewControllers[vc.navigationController.viewControllers.count-2].title forState:UIControlStateNormal];
-    [button sizeToFit];
-    vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
+#pragma mark-appdele
++ (void)applicationDidFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+}
+
+
++ (void)applicationWillTerminate:(UIApplication *)application {
+
 }
 
 @end

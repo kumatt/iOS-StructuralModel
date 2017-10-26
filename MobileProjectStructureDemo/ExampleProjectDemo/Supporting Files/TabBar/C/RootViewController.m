@@ -21,13 +21,38 @@
     self.tabBar.barTintColor = [UIColor whiteColor];
     self.tabBar.backgroundColor = [UIColor whiteColor];
     
-    [self theChildControllerAdd];
+    [self add_childController];
 }
 
 /**
+ 加载子控制器
+ */
+- (void)add_childController
+{
+    [[self get_RootControllerConfigurationModel] enumerateObjectsUsingBlock:^(RootKeyWindowDataModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIViewController *viewController = [[NSClassFromString(obj.class_name)alloc]init];
+        UINavigationController *naVC = [[UINavigationController alloc]initWithRootViewController:viewController];
+        naVC.title = obj.title;
+        viewController.title = obj.title;
+        
+        naVC.tabBarItem.image = [[UIImage imageNamed:obj.normalImage_name]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        naVC.tabBarItem.selectedImage = [[UIImage imageNamed:obj.selectImage_name]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0x666666)} forState:UIControlStateNormal];
+        if (idx == 2) {
+            [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0xc38521)} forState:UIControlStateSelected];
+        }else{
+            [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0x59337b)} forState:UIControlStateSelected];
+        }
+        
+        [self addChildViewController:naVC];
+    }];
+}
+
+#pragma mark-get
+/**
  创建根控制器配置模型
  */
-- (NSArray*)creatRootControllerConfigurationModel
+- (NSArray*)get_RootControllerConfigurationModel
 {
     NSString *localPath = [[NSBundle mainBundle]pathForResource:@"RootControllerConfiguration" ofType:@"plist"];
     NSArray *localData  = [NSArray arrayWithContentsOfFile:localPath];
@@ -52,33 +77,5 @@
     
     return dataArray;
 }
-
-/**
- 加载子控制器
- */
-- (void)theChildControllerAdd
-{
-    [[self creatRootControllerConfigurationModel] enumerateObjectsUsingBlock:^(RootKeyWindowDataModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIViewController *viewController = [[NSClassFromString(obj.class_name)alloc]init];
-        UINavigationController *naVC = [[UINavigationController alloc]initWithRootViewController:viewController];
-        naVC.title = obj.title;
-        viewController.title = obj.title;
-        
-        naVC.tabBarItem.image = [[UIImage imageNamed:obj.normalImage_name]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        naVC.tabBarItem.selectedImage = [[UIImage imageNamed:obj.selectImage_name]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0x666666)} forState:UIControlStateNormal];
-        if (idx == 2) {
-            [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0xc38521)} forState:UIControlStateSelected];
-        }else{
-            [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0x59337b)} forState:UIControlStateSelected];
-        }
-        
-        [self addChildViewController:naVC];
-    }];
-    
-    
-}
-
-
 
 @end

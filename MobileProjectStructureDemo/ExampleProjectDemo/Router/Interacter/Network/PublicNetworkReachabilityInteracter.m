@@ -14,7 +14,7 @@
     if (self = [super init]) {
         self.networkReachabilityStatus = AFNetworkReachabilityStatusUnknown;
         self.networkVisiable = NO;
-        [self theReachabilityObserve];
+        [self init_observeReachability];
     }
     return self;
 }
@@ -22,7 +22,7 @@
 /**
  *  网络监控
  */
-- (void)theReachabilityObserve
+- (void)init_observeReachability
 {
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
     [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {

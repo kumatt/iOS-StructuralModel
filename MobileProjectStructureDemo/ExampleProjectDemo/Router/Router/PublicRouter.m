@@ -23,13 +23,13 @@ static PublicRouter *_instance = nil;
 - (instancetype)init
 {
     if (self = [super init]) {
-        [self loadNetworkReachability];
+        [self init_networkReachability];
     }
     return self;
 }
 
 #pragma mark-initload
-- (void)loadNetworkReachability
+- (void)init_networkReachability
 {
     _interacter_networkReachability = [PublicNetworkReachabilityInteracter new];
 }
