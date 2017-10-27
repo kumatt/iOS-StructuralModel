@@ -18,14 +18,17 @@ target 'ExampleProjectDemo' do
     pod 'Aspects'                             #进行AOP进行编程
     pod 'ReactiveObjC'                        #通过RAC简化响应式编程
 
-#    pod 'WKCategory', :git=> 'https://github.com/Blanbok/WKCategory' #一些类的常用拓展方法
+#    pod 'YYModel'                             #数据模型转换
 #    pod 'SDWebImage'                          #图片的异步加载
 #    pod 'MBProgressHUD'                       #加载动画
-#    pod 'YYModel'                             #数据模型转换
-#    pod 'YYKeyboardManager'                   #键盘监听
 #    pod 'CLImageEditor'                       #图片编辑/仅做使用参考 基于CoreImage的封装
+#    pod 'WKCategory', :git=> 'https://github.com/Blanbok/WKCategory' #一些类的常用拓展方法
+
+#    pod 'YYKeyboardManager'                   #键盘监听
 #    pod 'TTRangeSlider'                       #自定义silder
 #    pod 'MagicalRecord'                       #coreData使用第三方
 #    pod 'ICarousel'                           #旋转木马效果
 #    pod 'SDCycleScrollView'                   #轮播图
+#    pod 'CocoaLumberjack'                     #更高级的 log 功能
+
 end
