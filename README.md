@@ -1,4 +1,4 @@
-# MobileProjectStructureDemo
+# iOS-ProjectStructureDemo
 
 仅以此，记录下当前想到的比较顺眼项目构架
 
@@ -83,3 +83,5 @@
 # Pods（或Carthage）
 
 存放第三方工具及自己托管于第三方平台的工具
+
+
