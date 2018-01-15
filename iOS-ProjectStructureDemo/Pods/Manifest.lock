@@ -15,6 +15,8 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
+  - Masonry (1.1.0)
+  - PTPageRouter (0.0.2)
   - ReactiveObjC (3.0.0)
   - WKDataManager (0.0.1):
     - AFNetworking
@@ -22,15 +24,28 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Aspects
+  - Masonry
+  - PTPageRouter (from `https://github.com/OComme/PT-PageRouter`)
   - ReactiveObjC
   - WKDataManager
+
+EXTERNAL SOURCES:
+  PTPageRouter:
+    :git: https://github.com/OComme/PT-PageRouter
+
+CHECKOUT OPTIONS:
+  PTPageRouter:
+    :commit: 763cb8a0d6c14fa7e7927934350d7a0697002c19
+    :git: https://github.com/OComme/PT-PageRouter
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  PTPageRouter: 569f05e635d9b4b86422489ec35af4f7c44e6540
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   WKDataManager: 0d0f06274af2fb21a4b89bf2f8a7c1f2cf1352fb
 
-PODFILE CHECKSUM: fc075395a464f20a5a591fd8f29ee277f1db3da3
+PODFILE CHECKSUM: eee757675ba0af7783e62633c329fdf3a9050e5b
 
 COCOAPODS: 1.3.1

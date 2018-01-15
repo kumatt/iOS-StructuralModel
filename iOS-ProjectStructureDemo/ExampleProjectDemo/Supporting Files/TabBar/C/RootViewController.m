@@ -9,7 +9,14 @@
 #import "RootViewController.h"
 #import "RootKeyWindowDataModel.h"
 
+#import <Aspects.h>
+
 @interface RootViewController ()
+
+/**
+ tabBar的是否隐藏
+ */
+@property (nonatomic,assign) BOOL bool_tabBarHidden;
 
 @end
 
@@ -44,6 +51,7 @@
             [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0x59337b)} forState:UIControlStateSelected];
         }
         
+        [self aspect_ViewController:viewController];
         [self addChildViewController:naVC];
     }];
 }
@@ -56,7 +64,7 @@
 {
     NSString *localPath = [[NSBundle mainBundle]pathForResource:@"RootControllerConfiguration" ofType:@"plist"];
     NSArray *localData  = [NSArray arrayWithContentsOfFile:localPath];
-    NSArray<NSString*> *classArray = @[@"BaseHomeViewController",@"BaseCarViewController",@"BaseFinaceViewController",@"BaseAcctViewController"];
+    NSArray<NSString*> *classArray = @[@"BaseHomeViewController",@"BaseAcctViewController"];
     NSMutableArray *dataArray = [NSMutableArray new];
     
     if (localData == nil || [localData isKindOfClass:[NSArray class]] == NO) {
@@ -76,6 +84,59 @@
     }
     
     return dataArray;
+}
+
+#pragma mark-configure
+- (void)aspect_ViewController:(UIViewController *)vc
+{
+    @weakify(vc);
+    [vc aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^{
+        [self showTabBar];
+    } error:nil];
+    [vc aspect_hookSelector:@selector(viewWillDisappear:) withOptions:AspectPositionBefore usingBlock:^{
+        @strongify(vc);
+        if (vc.navigationController == nil) {
+            return;
+        }
+        if (vc.navigationController.viewControllers.count > 1) {
+            [self hiddenTabBar];
+        }else {
+            [self showTabBar];
+        }
+    } error:nil];
+}
+
+#pragma mark-tabBarHidden
+- (void)showTabBar
+{
+    if (self.bool_tabBarHidden == YES) {
+        return;
+    }
+    self.bool_tabBarHidden = YES;
+    if (@available(iOS 11.0, *)) {
+        self.tabBar.hidden = NO;
+        return;
+    }
+    // 显示tabbar
+    [UIView animateWithDuration:UINavigationControllerHideShowBarDuration animations:^{
+        self.tabBar.frame = CGRectMake(0, CUSTOM_SCREEN_HEIGHT-49, CUSTOM_SCREEN_WIDTH, 49);
+    }];
+}
+
+- (void)hiddenTabBar
+{
+    if (self.bool_tabBarHidden == NO) {
+        return;
+    }
+    self.bool_tabBarHidden = NO;
+    if (@available(iOS 11.0, *)) {
+        self.tabBar.hidden = YES;
+        return;
+    }
+    // 隐藏tabbar
+    [UIView animateWithDuration:UINavigationControllerHideShowBarDuration animations:^{
+        self.tabBar.frame = CGRectMake(0, CUSTOM_SCREEN_HEIGHT, CUSTOM_SCREEN_WIDTH, 49);
+    }];
 }
 
 @end

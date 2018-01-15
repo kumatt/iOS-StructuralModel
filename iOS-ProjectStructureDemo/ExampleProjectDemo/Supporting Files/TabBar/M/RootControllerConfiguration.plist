@@ -12,22 +12,6 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>购车</string>
-		<key>normalImage_name</key>
-		<string>car_normal</string>
-		<key>selectImage_name</key>
-		<string>car_selected</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>金融</string>
-		<key>normalImage_name</key>
-		<string>finance_normal</string>
-		<key>selectImage_name</key>
-		<string>finance_selected</string>
-	</dict>
-	<dict>
-		<key>title</key>
 		<string>我的</string>
 		<key>normalImage_name</key>
 		<string>acct_normal</string>

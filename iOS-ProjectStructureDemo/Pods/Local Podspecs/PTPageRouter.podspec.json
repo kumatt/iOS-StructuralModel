@@ -1,0 +1,19 @@
+{
+  "name": "PTPageRouter",
+  "version": "0.0.2",
+  "summary": "something about prefix header of WKPrefixHeader.",
+  "homepage": "https://github.com/OComme/PT-PageRouter",
+  "license": "MIT",
+  "authors": {
+    "OComme": "a163913692@icloud.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true,
+  "source": {
+    "git": "https://github.com/OComme/PT-PageRouter.git",
+    "tag": "0.0.2"
+  },
+  "source_files": "PT-PageRouterDemo/Router/*"
+}

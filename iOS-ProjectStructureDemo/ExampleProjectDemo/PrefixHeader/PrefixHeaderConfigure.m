@@ -7,7 +7,6 @@
 //
 
 #import "PrefixHeaderConfigure.h"
-#import <Aspects.h>
 #import <UIKit/UIKit.h>
 
 #import "ExampleAppDelegate.h"
@@ -17,7 +16,6 @@
 + (void)load
 {
     [self init_setUIConfigure];
-    [self init_setHookSelector];
 }
 
 #pragma mark-init
@@ -26,9 +24,6 @@
  */
 + (void)init_setUIConfigure
 {
-    //    [UIView appearance].opaque = YES;
-    [UINavigationBar appearance].translucent = NO;
-    
     //解决iOS11，仅实现heightForHeaderInSection，没有实现viewForHeaderInSection方法时,section间距大的问题
     [UITableView appearance].estimatedRowHeight = 0;
     [UITableView appearance].estimatedSectionHeaderHeight = 0;
@@ -38,46 +33,15 @@
     if (@available(iOS 11, *)) {
         [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever; //iOS11 解决SafeArea的问题，同时能解决pop时上级页面scrollView抖动的问题
     }
-}
-
-/**
- 放置钩子
- */
-+ (void)init_setHookSelector
-{
-    @weakify(self);
-    [UIResponder aspect_hookSelector:@selector(init) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
-        if (![aspectInfo.instance conformsToProtocol:@protocol(UIApplicationDelegate)]) {
-            return ;
-        }
-        @strongify(self);
-        [self hook_ApplicationdelegateWithDelegate:aspectInfo.instance];
-    } error:nil];
-}
-
-#pragma mark-hook
-+ (void)hook_ApplicationdelegateWithDelegate:(UIResponder*)delegate
-{
-    @weakify(self);
-    [delegate aspect_hookSelector:@selector(application:didFinishLaunchingWithOptions:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo,NSDictionary *launchOptions){
-        @strongify(self);
-        [self applicationDidFinishLaunchingWithOptions:launchOptions];
-    } error:nil];
     
-    [delegate aspect_hookSelector:@selector(applicationWillTerminate:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo,NSDictionary *launchOptions){
-        @strongify(self);
-        [self applicationDidFinishLaunchingWithOptions:launchOptions];
-    } error:nil];
-}
-
-#pragma mark-appdele
-+ (void)applicationDidFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-}
-
-
-+ (void)applicationWillTerminate:(UIApplication *)application {
-
+    [UINavigationBar appearance].translucent = NO;
+    //自定义返回按钮
+    UIImage *resultImage = [UIImage imageNamed:@"return"];
+    [[UINavigationBar appearance] setBackIndicatorImage:resultImage];
+    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:resultImage];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:42/255.0 green:42/255.0 blue:42/255.0 alpha:1]];
+    //    //将返回按钮的文字position设置不在屏幕上显示
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-100, 0) forBarMetrics:UIBarMetricsDefault];
 }
 
 @end

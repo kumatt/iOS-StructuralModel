@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '8.0'
+platform :ios, '9.0'
 #source 'http://BlanBok:MbWQy8Xs@git.coding.net/BlanBok/WKSpecs.git'
 #source 'https://github.com/CocoaPods/Specs.git'
 
@@ -10,7 +10,7 @@ target 'ExampleProjectDemo' do
     pod 'AFNetworking'                        #网络请求
     pod 'WKDataManager'                       #网络请求AFNetworking二次封装
 #
-#    pod 'Masonry'                             #设置约束
+    pod 'Masonry'                             #设置约束
 #    pod 'MJRefresh'                           #scrollview上下拉刷新
 #    pod 'SAMKeychain'                          #钥匙串访问存储账户密码
 #    pod 'UITableView+FDTemplateLayoutCell'    #uitableviewcell获取cell高度
@@ -30,5 +30,7 @@ target 'ExampleProjectDemo' do
 #    pod 'ICarousel'                           #旋转木马效果
 #    pod 'SDCycleScrollView'                   #轮播图
 #    pod 'CocoaLumberjack'                     #更高级的 log 功能
+
+    pod 'PTPageRouter', :git=> 'https://github.com/OComme/PT-PageRouter'  #页面跳转规范
 
 end
