@@ -12,6 +12,12 @@
 		019C7C4C200C9F7D00C8A423 /* PublicPageRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C49200C9F7D00C8A423 /* PublicPageRouter.m */; };
 		019C7C4D200C9F7D00C8A423 /* RouterForm.plist in Resources */ = {isa = PBXBuildFile; fileRef = 019C7C4A200C9F7D00C8A423 /* RouterForm.plist */; };
 		019C7C56200CA1B400C8A423 /* PublicListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C55200CA1B400C8A423 /* PublicListViewModel.m */; };
+		01E936F3200F430C000857DE /* BaseHomeDataModelIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E936F2200F430C000857DE /* BaseHomeDataModelIndex.m */; };
+		01E936F6200F4322000857DE /* BaseHomeViewIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E936F5200F4322000857DE /* BaseHomeViewIndex.m */; };
+		01E936F9200F4332000857DE /* BaseHomeViewModelIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E936F8200F4332000857DE /* BaseHomeViewModelIndex.m */; };
+		01E936FC200F4345000857DE /* BaseAcctDataModelIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E936FB200F4345000857DE /* BaseAcctDataModelIndex.m */; };
+		01E936FF200F4352000857DE /* BaseAcctViewIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E936FE200F4352000857DE /* BaseAcctViewIndex.m */; };
+		01E93702200F4361000857DE /* BaseAcctViewModelIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E93701200F4361000857DE /* BaseAcctViewModelIndex.m */; };
 		84169FFA1F99E9140082D5D1 /* PrefixHeaderConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 84169FF91F99E9140082D5D1 /* PrefixHeaderConfigure.m */; };
 		843B633A1F7E1C0400990954 /* ExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 843B63391F7E1C0400990954 /* ExampleAppDelegate.m */; };
 		848EBAFC1F3D3CE6002170F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848EBAFA1F3D3CE6002170F8 /* Main.storyboard */; };
@@ -36,6 +42,18 @@
 		019C7C53200CA12400C8A423 /* PublicListViewModelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicListViewModelDelegate.h; sourceTree = "<group>"; };
 		019C7C54200CA1B400C8A423 /* PublicListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicListViewModel.h; sourceTree = "<group>"; };
 		019C7C55200CA1B400C8A423 /* PublicListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicListViewModel.m; sourceTree = "<group>"; };
+		01E936F1200F430C000857DE /* BaseHomeDataModelIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHomeDataModelIndex.h; sourceTree = "<group>"; };
+		01E936F2200F430C000857DE /* BaseHomeDataModelIndex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHomeDataModelIndex.m; sourceTree = "<group>"; };
+		01E936F4200F4322000857DE /* BaseHomeViewIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHomeViewIndex.h; sourceTree = "<group>"; };
+		01E936F5200F4322000857DE /* BaseHomeViewIndex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHomeViewIndex.m; sourceTree = "<group>"; };
+		01E936F7200F4332000857DE /* BaseHomeViewModelIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHomeViewModelIndex.h; sourceTree = "<group>"; };
+		01E936F8200F4332000857DE /* BaseHomeViewModelIndex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHomeViewModelIndex.m; sourceTree = "<group>"; };
+		01E936FA200F4345000857DE /* BaseAcctDataModelIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAcctDataModelIndex.h; sourceTree = "<group>"; };
+		01E936FB200F4345000857DE /* BaseAcctDataModelIndex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAcctDataModelIndex.m; sourceTree = "<group>"; };
+		01E936FD200F4352000857DE /* BaseAcctViewIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAcctViewIndex.h; sourceTree = "<group>"; };
+		01E936FE200F4352000857DE /* BaseAcctViewIndex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAcctViewIndex.m; sourceTree = "<group>"; };
+		01E93700200F4361000857DE /* BaseAcctViewModelIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAcctViewModelIndex.h; sourceTree = "<group>"; };
+		01E93701200F4361000857DE /* BaseAcctViewModelIndex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAcctViewModelIndex.m; sourceTree = "<group>"; };
 		3CC2BE004D0DA353803AF8EF /* libPods-ExampleProjectDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ExampleProjectDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E64361A4AA611D07D0702E /* Pods-ExampleProjectDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleProjectDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleProjectDemo/Pods-ExampleProjectDemo.release.xcconfig"; sourceTree = "<group>"; };
 		84169FF81F99E9140082D5D1 /* PrefixHeaderConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeaderConfigure.h; sourceTree = "<group>"; };
@@ -84,6 +102,8 @@
 		019C7C31200C9A8700C8A423 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				01E93700200F4361000857DE /* BaseAcctViewModelIndex.h */,
+				01E93701200F4361000857DE /* BaseAcctViewModelIndex.m */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -91,6 +111,8 @@
 		019C7C32200C9A8F00C8A423 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				01E936FD200F4352000857DE /* BaseAcctViewIndex.h */,
+				01E936FE200F4352000857DE /* BaseAcctViewIndex.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -98,6 +120,8 @@
 		019C7C33200C9A9300C8A423 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				01E936FA200F4345000857DE /* BaseAcctDataModelIndex.h */,
+				01E936FB200F4345000857DE /* BaseAcctDataModelIndex.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -116,8 +140,8 @@
 		019C7C3E200C9B3A00C8A423 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				019C7C3F200C9B3A00C8A423 /* BaseHomeViewController.m */,
 				019C7C40200C9B3A00C8A423 /* BaseHomeViewController.h */,
+				019C7C3F200C9B3A00C8A423 /* BaseHomeViewController.m */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -125,6 +149,8 @@
 		019C7C42200C9B4800C8A423 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				01E936F7200F4332000857DE /* BaseHomeViewModelIndex.h */,
+				01E936F8200F4332000857DE /* BaseHomeViewModelIndex.m */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -132,6 +158,8 @@
 		019C7C43200C9B4D00C8A423 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				01E936F4200F4322000857DE /* BaseHomeViewIndex.h */,
+				01E936F5200F4322000857DE /* BaseHomeViewIndex.m */,
 			);
 			path = V;
 			sourceTree = "<group>";
@@ -139,6 +167,8 @@
 		019C7C44200C9B5200C8A423 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				01E936F1200F430C000857DE /* BaseHomeDataModelIndex.h */,
+				01E936F2200F430C000857DE /* BaseHomeDataModelIndex.m */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -240,9 +270,9 @@
 			isa = PBXGroup;
 			children = (
 				019C7C48200C9F7D00C8A423 /* Router */,
-				019C7C47200C9F5D00C8A423 /* Utils */,
 				848EBB7B1F3D7A04002170F8 /* CodeFeed */,
 				848EBB781F3D7966002170F8 /* PrefixHeader */,
+				019C7C47200C9F5D00C8A423 /* Utils */,
 				848EBB081F3D3D57002170F8 /* Supporting Files */,
 				848EBAFA1F3D3CE6002170F8 /* Main.storyboard */,
 				848EBAFD1F3D3CE6002170F8 /* Assets.xcassets */,
@@ -483,14 +513,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E936FC200F4345000857DE /* BaseAcctDataModelIndex.m in Sources */,
 				843B633A1F7E1C0400990954 /* ExampleAppDelegate.m in Sources */,
 				84169FFA1F99E9140082D5D1 /* PrefixHeaderConfigure.m in Sources */,
 				019C7C56200CA1B400C8A423 /* PublicListViewModel.m in Sources */,
 				019C7C4C200C9F7D00C8A423 /* PublicPageRouter.m in Sources */,
+				01E936F6200F4322000857DE /* BaseHomeViewIndex.m in Sources */,
 				848EBB2F1F3D4525002170F8 /* RootKeyWindowDataModel.m in Sources */,
+				01E93702200F4361000857DE /* BaseAcctViewModelIndex.m in Sources */,
 				848EBB0C1F3D3D57002170F8 /* main.m in Sources */,
+				01E936F9200F4332000857DE /* BaseHomeViewModelIndex.m in Sources */,
+				01E936FF200F4352000857DE /* BaseAcctViewIndex.m in Sources */,
 				019C7C41200C9B3A00C8A423 /* BaseHomeViewController.m in Sources */,
 				019C7C2F200C9A3B00C8A423 /* BaseAcctViewController.m in Sources */,
+				01E936F3200F430C000857DE /* BaseHomeDataModelIndex.m in Sources */,
 				848EBB181F3D4145002170F8 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

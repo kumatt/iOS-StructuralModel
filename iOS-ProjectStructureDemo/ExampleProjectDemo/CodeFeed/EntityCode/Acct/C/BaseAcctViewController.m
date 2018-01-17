@@ -7,31 +7,78 @@
 //
 
 #import "BaseAcctViewController.h"
+#import "BaseAcctDataModelIndex.h"
+#import "BaseAcctViewIndex.h"
+#import "BaseAcctViewModelIndex.h"
 
 @interface BaseAcctViewController ()
+
+@property (nonnull,nonatomic,strong) BaseAcctDataModelIndex *index_dataModel;
+
+@property (nonnull,nonatomic,strong) BaseAcctViewIndex *index_view;
+
+@property (nonnull,nonatomic,strong) BaseAcctViewModelIndex *index_viewModel;
+
 
 @end
 
 @implementation BaseAcctViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = CUSTOM_COLOR_HEX(0xf4f4f4);
+    [self init_commit];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)init_commit
+{
+    [self setIndex_dataModel];
+    [self setIndex_view];
+    [self setIndex_viewModel];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark-init
+- (void)setIndex_dataModel
+{
+    
 }
-*/
+
+- (void)setIndex_view
+{
+    self.index_view.container = self.view;
+}
+
+- (void)setIndex_viewModel
+{
+    
+}
+
+#pragma mark-lazyload
+- (BaseAcctDataModelIndex *)index_dataModel
+{
+    if (_index_dataModel == nil) {
+        _index_dataModel = [BaseAcctDataModelIndex new];
+    }
+    return _index_dataModel;
+}
+
+- (BaseAcctViewIndex *)index_view
+{
+    if (_index_view == nil) {
+        _index_view = [BaseAcctViewIndex new];
+    }
+    return _index_view;
+}
+
+- (BaseAcctViewModelIndex *)index_viewModel
+{
+    if (_index_viewModel == nil) {
+        _index_viewModel = [BaseAcctViewModelIndex new];
+    }
+    return _index_viewModel;
+}
+
 
 @end
