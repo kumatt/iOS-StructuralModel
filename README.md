@@ -19,7 +19,7 @@
 
 2. APP内部添加关于跳转页面的注册表单，包含以下内容。
 
-3. 向`PTPageRouter`传入‘表单地址 ? _className=控制器类名 & _keyPath=目标路径’,以实现跳转。
+3. `PTPageRouter`注册用表单地址 ? _className=控制器类名 & _keyPath=目标路径’,以实现跳转。
 
 ```Objective-C
 /*
@@ -105,6 +105,8 @@ static NSString * _Nullable const PTPublicPageRouterNotification    = @"_pageRou
     ├── <V>          通用的显示层
     └── <VM>         通用的业务模型
 ```
+
+若是需要本地造测试数据方便开发，可以在`VM`中添加`LocalHost`以便开发及调试
 
 # 5. Supporting Files
 
