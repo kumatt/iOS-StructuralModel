@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0119105F2018D49E004CE682 /* PublicLocalHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0119105E2018D49E004CE682 /* PublicLocalHost.m */; };
 		019C7C2F200C9A3B00C8A423 /* BaseAcctViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C2E200C9A3B00C8A423 /* BaseAcctViewController.m */; };
 		019C7C41200C9B3A00C8A423 /* BaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C3F200C9B3A00C8A423 /* BaseHomeViewController.m */; };
 		019C7C4C200C9F7D00C8A423 /* PublicPageRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C49200C9F7D00C8A423 /* PublicPageRouter.m */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0119105D2018D49E004CE682 /* PublicLocalHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicLocalHost.h; sourceTree = "<group>"; };
+		0119105E2018D49E004CE682 /* PublicLocalHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicLocalHost.m; sourceTree = "<group>"; };
 		019C7C2D200C9A3B00C8A423 /* BaseAcctViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAcctViewController.h; sourceTree = "<group>"; };
 		019C7C2E200C9A3B00C8A423 /* BaseAcctViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAcctViewController.m; sourceTree = "<group>"; };
 		019C7C3F200C9B3A00C8A423 /* BaseHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHomeViewController.m; sourceTree = "<group>"; };
@@ -90,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0119105C2018D463004CE682 /* localHost */ = {
+			isa = PBXGroup;
+			children = (
+				0119105D2018D49E004CE682 /* PublicLocalHost.h */,
+				0119105E2018D49E004CE682 /* PublicLocalHost.m */,
+			);
+			path = localHost;
+			sourceTree = "<group>";
+		};
 		019C7C2C200C9A2E00C8A423 /* C */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +216,7 @@
 		019C7C4E200CA0E500C8A423 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				0119105C2018D463004CE682 /* localHost */,
 				019C7C52200CA11200C8A423 /* List */,
 			);
 			path = VM;
@@ -409,7 +422,7 @@
 		848EBAE61F3D3CE6002170F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = juyuanGroup;
 				TargetAttributes = {
 					848EBAED1F3D3CE6002170F8 = {
@@ -517,6 +530,7 @@
 				843B633A1F7E1C0400990954 /* ExampleAppDelegate.m in Sources */,
 				84169FFA1F99E9140082D5D1 /* PrefixHeaderConfigure.m in Sources */,
 				019C7C56200CA1B400C8A423 /* PublicListViewModel.m in Sources */,
+				0119105F2018D49E004CE682 /* PublicLocalHost.m in Sources */,
 				019C7C4C200C9F7D00C8A423 /* PublicPageRouter.m in Sources */,
 				01E936F6200F4322000857DE /* BaseHomeViewIndex.m in Sources */,
 				848EBB2F1F3D4525002170F8 /* RootKeyWindowDataModel.m in Sources */,
@@ -563,7 +577,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -571,7 +587,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -612,7 +632,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -620,7 +642,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
