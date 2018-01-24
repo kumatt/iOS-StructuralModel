@@ -11,7 +11,7 @@
     └── <Pods（或Carthage）>工程   第三方SDK以及自己做的小工具
 ```
 
-# 1. Router——APP的页面跳转规范
+# 1. router——APP的页面跳转规范
 
 通过已实现的跳转工具[PTPageRouter](https://github.com/OComme/PT-PageRouter)来规范跳转。
 
@@ -56,7 +56,7 @@ static NSString * _Nullable const PTPublicPageRouterNotification    = @"_pageRou
 
 来便捷实现。
 
-# 2. CodeFeed ——存放APP页面实际构建的代码
+# 2. codeFeed ——存放APP页面实际构建的代码
 
 其内部分
 
@@ -86,13 +86,13 @@ static NSString * _Nullable const PTPublicPageRouterNotification    = @"_pageRou
 
 `C`层，存放'M、V、VM'的容器，暂时也用做`VM`层的补充，存放少量逻辑
 
-# 3. PrefixHeader
+# 3. prefixHeader
 
 存放`.pch`文件及其它进行预编译的文件
 
 例如：重写 `+ (void)load`以进行属性预处理的类。
 
-# 4. Utils
+# 4. utils
 
 存放只适用于当前项目的类（可以通用的类，应该提取出去，放在托管平台进行维护）
 
@@ -108,13 +108,13 @@ static NSString * _Nullable const PTPublicPageRouterNotification    = @"_pageRou
 
 若是需要本地造测试数据方便开发，可以在`VM`中添加`LocalHost`以便开发及调试
 
-# 5. Supporting Files
+# 5. supporting Files
 
 存放APP的配置文件 `info.plist`、`InfoPlist.strings`、`main.m`、`Appdelegate`等
 
 窗口的根控制器
 
-# 6. Pods（或Carthage）
+# 6. pods（或carthage）
 
 存放第三方工具及自己托管于第三方平台的工具
 
