@@ -12,7 +12,9 @@
 
 + (void)Fetch_TestDataWithParaments:(NSDictionary *)paraments completion:(void (^)(NSDictionary * _Nonnull))completion
 {
-    
+    if (completion) {
+        completion(@{@"object":@[]});
+    }
 }
 
 @end

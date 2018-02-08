@@ -8,6 +8,7 @@
 
 #import "PrefixHeaderConfigure.h"
 #import <UIKit/UIKit.h>
+#import <Aspects.h>
 
 #import "ExampleAppDelegate.h"
 
@@ -16,6 +17,7 @@
 + (void)load
 {
     [self init_setUIConfigure];
+    [self init_setHookSelector];
 }
 
 #pragma mark-init
@@ -41,7 +43,28 @@
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:resultImage];
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:42/255.0 green:42/255.0 blue:42/255.0 alpha:1]];
     //    //将返回按钮的文字position设置不在屏幕上显示
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-100, 0) forBarMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-CGFLOAT_MAX, 0) forBarMetrics:UIBarMetricsDefault];
+}
+
+/**
+ 放置钩子
+ */
++ (void)init_setHookSelector
+{
+    if (@available(iOS 11, *)) {
+        return ;
+    }
+    [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
+        UIViewController *vc = aspectInfo.instance;
+        vc.automaticallyAdjustsScrollViewInsets = NO;
+    } error:nil];
+    
+    [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionInstead usingBlock:(NSNumber*)^(id<AspectInfo> aspectInfo){
+        return @(UIInterfaceOrientationMaskAllButUpsideDown);
+    } error:nil];
+    [UIViewController aspect_hookSelector:@selector(shouldAutorotate) withOptions:AspectPositionInstead usingBlock:(NSNumber*)^(id<AspectInfo> aspectInfo){
+        return @(NO);
+    } error:nil];
 }
 
 @end
