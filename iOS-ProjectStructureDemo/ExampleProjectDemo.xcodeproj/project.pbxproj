@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0111DA8B202D2ACF00459D12 /* BaseTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111DA8A202D2ACF00459D12 /* BaseTransformViewController.m */; };
+		0111DA94202D2C2F00459D12 /* LocalHostData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0111DA93202D2C2F00459D12 /* LocalHostData.plist */; };
+		0111DA98202D2FF400459D12 /* BaseTransformMagicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111DA97202D2FF400459D12 /* BaseTransformMagicViewController.m */; };
+		0111DA9C202D364700459D12 /* BaseTransformMagicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111DA9B202D364700459D12 /* BaseTransformMagicCell.m */; };
 		0119105F2018D49E004CE682 /* PublicLocalHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0119105E2018D49E004CE682 /* PublicLocalHost.m */; };
 		019C7C2F200C9A3B00C8A423 /* BaseAcctViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C2E200C9A3B00C8A423 /* BaseAcctViewController.m */; };
 		019C7C41200C9B3A00C8A423 /* BaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C3F200C9B3A00C8A423 /* BaseHomeViewController.m */; };
 		019C7C4C200C9F7D00C8A423 /* PublicPageRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C49200C9F7D00C8A423 /* PublicPageRouter.m */; };
 		019C7C4D200C9F7D00C8A423 /* RouterForm.plist in Resources */ = {isa = PBXBuildFile; fileRef = 019C7C4A200C9F7D00C8A423 /* RouterForm.plist */; };
 		019C7C56200CA1B400C8A423 /* PublicListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C55200CA1B400C8A423 /* PublicListViewModel.m */; };
+		01DE15EF202E97A900DA73D0 /* BaseTransformDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DE15EE202E97A900DA73D0 /* BaseTransformDetailViewController.m */; };
+		01DE15F4202E9C1C00DA73D0 /* PublicPageMagicTransformViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DE15F2202E9C1C00DA73D0 /* PublicPageMagicTransformViewModel.m */; };
+		01DE15FA202EB7B200DA73D0 /* BaseTransformDetailViewIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DE15F9202EB7B200DA73D0 /* BaseTransformDetailViewIndex.m */; };
+		01DE1602202ECD2500DA73D0 /* PublicPageCircleSpreadTransformViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DE1601202ECD2500DA73D0 /* PublicPageCircleSpreadTransformViewModel.m */; };
+		01DE160B202ED14E00DA73D0 /* BaseTransformCircleSpreadViewIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DE160A202ED14E00DA73D0 /* BaseTransformCircleSpreadViewIndex.m */; };
+		01DE160E202ED54A00DA73D0 /* BaseTransformCircleSpreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DE160D202ED54A00DA73D0 /* BaseTransformCircleSpreadViewController.m */; };
+		01DE1615202EDCB200DA73D0 /* UIViewController+PTGetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DE1614202EDCB200DA73D0 /* UIViewController+PTGetController.m */; };
 		01E936F3200F430C000857DE /* BaseHomeDataModelIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E936F2200F430C000857DE /* BaseHomeDataModelIndex.m */; };
 		01E936F6200F4322000857DE /* BaseHomeViewIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E936F5200F4322000857DE /* BaseHomeViewIndex.m */; };
 		01E936F9200F4332000857DE /* BaseHomeViewModelIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E936F8200F4332000857DE /* BaseHomeViewModelIndex.m */; };
@@ -33,6 +44,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0111DA89202D2ACF00459D12 /* BaseTransformViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTransformViewController.h; sourceTree = "<group>"; };
+		0111DA8A202D2ACF00459D12 /* BaseTransformViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTransformViewController.m; sourceTree = "<group>"; };
+		0111DA93202D2C2F00459D12 /* LocalHostData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LocalHostData.plist; sourceTree = "<group>"; };
+		0111DA96202D2FF400459D12 /* BaseTransformMagicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTransformMagicViewController.h; sourceTree = "<group>"; };
+		0111DA97202D2FF400459D12 /* BaseTransformMagicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTransformMagicViewController.m; sourceTree = "<group>"; };
+		0111DA9A202D364700459D12 /* BaseTransformMagicCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTransformMagicCell.h; sourceTree = "<group>"; };
+		0111DA9B202D364700459D12 /* BaseTransformMagicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTransformMagicCell.m; sourceTree = "<group>"; };
 		0119105D2018D49E004CE682 /* PublicLocalHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicLocalHost.h; sourceTree = "<group>"; };
 		0119105E2018D49E004CE682 /* PublicLocalHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicLocalHost.m; sourceTree = "<group>"; };
 		019C7C2D200C9A3B00C8A423 /* BaseAcctViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAcctViewController.h; sourceTree = "<group>"; };
@@ -45,6 +63,22 @@
 		019C7C53200CA12400C8A423 /* PublicListViewModelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicListViewModelDelegate.h; sourceTree = "<group>"; };
 		019C7C54200CA1B400C8A423 /* PublicListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicListViewModel.h; sourceTree = "<group>"; };
 		019C7C55200CA1B400C8A423 /* PublicListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicListViewModel.m; sourceTree = "<group>"; };
+		01DE15ED202E97A900DA73D0 /* BaseTransformDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTransformDetailViewController.h; sourceTree = "<group>"; };
+		01DE15EE202E97A900DA73D0 /* BaseTransformDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTransformDetailViewController.m; sourceTree = "<group>"; };
+		01DE15F2202E9C1C00DA73D0 /* PublicPageMagicTransformViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicPageMagicTransformViewModel.m; sourceTree = "<group>"; };
+		01DE15F3202E9C1C00DA73D0 /* PublicPageMagicTransformViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicPageMagicTransformViewModel.h; sourceTree = "<group>"; };
+		01DE15F5202E9C6E00DA73D0 /* PublicPageMagicTransformDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicPageMagicTransformDelegate.h; sourceTree = "<group>"; };
+		01DE15F8202EB7B200DA73D0 /* BaseTransformDetailViewIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTransformDetailViewIndex.h; sourceTree = "<group>"; };
+		01DE15F9202EB7B200DA73D0 /* BaseTransformDetailViewIndex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTransformDetailViewIndex.m; sourceTree = "<group>"; };
+		01DE15FF202ECC8B00DA73D0 /* PublicPageCircleSpreadTransformDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicPageCircleSpreadTransformDelegate.h; sourceTree = "<group>"; };
+		01DE1600202ECD2500DA73D0 /* PublicPageCircleSpreadTransformViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicPageCircleSpreadTransformViewModel.h; sourceTree = "<group>"; };
+		01DE1601202ECD2500DA73D0 /* PublicPageCircleSpreadTransformViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicPageCircleSpreadTransformViewModel.m; sourceTree = "<group>"; };
+		01DE1609202ED14E00DA73D0 /* BaseTransformCircleSpreadViewIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTransformCircleSpreadViewIndex.h; sourceTree = "<group>"; };
+		01DE160A202ED14E00DA73D0 /* BaseTransformCircleSpreadViewIndex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTransformCircleSpreadViewIndex.m; sourceTree = "<group>"; };
+		01DE160C202ED54A00DA73D0 /* BaseTransformCircleSpreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTransformCircleSpreadViewController.h; sourceTree = "<group>"; };
+		01DE160D202ED54A00DA73D0 /* BaseTransformCircleSpreadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTransformCircleSpreadViewController.m; sourceTree = "<group>"; };
+		01DE1613202EDCB200DA73D0 /* UIViewController+PTGetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PTGetController.h"; sourceTree = "<group>"; };
+		01DE1614202EDCB200DA73D0 /* UIViewController+PTGetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PTGetController.m"; sourceTree = "<group>"; };
 		01E936F1200F430C000857DE /* BaseHomeDataModelIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHomeDataModelIndex.h; sourceTree = "<group>"; };
 		01E936F2200F430C000857DE /* BaseHomeDataModelIndex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseHomeDataModelIndex.m; sourceTree = "<group>"; };
 		01E936F4200F4322000857DE /* BaseHomeViewIndex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseHomeViewIndex.h; sourceTree = "<group>"; };
@@ -93,9 +127,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0111DA84202D2A5700459D12 /* ModuleTransform */ = {
+			isa = PBXGroup;
+			children = (
+				0111DA8C202D2AFA00459D12 /* transform */,
+				0111DA8F202D2B3200459D12 /* magic */,
+				01DE1603202ED09400DA73D0 /* circleSpread */,
+				01DE15EC202E976900DA73D0 /* detail */,
+			);
+			path = ModuleTransform;
+			sourceTree = "<group>";
+		};
+		0111DA8C202D2AFA00459D12 /* transform */ = {
+			isa = PBXGroup;
+			children = (
+				0111DA89202D2ACF00459D12 /* BaseTransformViewController.h */,
+				0111DA8A202D2ACF00459D12 /* BaseTransformViewController.m */,
+			);
+			path = transform;
+			sourceTree = "<group>";
+		};
+		0111DA8D202D2B1100459D12 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				019C7C3E200C9B3A00C8A423 /* C */,
+				019C7C44200C9B5200C8A423 /* M */,
+				019C7C43200C9B4D00C8A423 /* V */,
+				019C7C42200C9B4800C8A423 /* VM */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		0111DA8E202D2B1D00459D12 /* acct */ = {
+			isa = PBXGroup;
+			children = (
+				019C7C2C200C9A2E00C8A423 /* C */,
+				019C7C33200C9A9300C8A423 /* M */,
+				019C7C32200C9A8F00C8A423 /* V */,
+				019C7C31200C9A8700C8A423 /* VM */,
+			);
+			path = acct;
+			sourceTree = "<group>";
+		};
+		0111DA8F202D2B3200459D12 /* magic */ = {
+			isa = PBXGroup;
+			children = (
+				0111DA95202D2FCF00459D12 /* C */,
+				0111DA99202D344700459D12 /* V */,
+			);
+			path = magic;
+			sourceTree = "<group>";
+		};
+		0111DA95202D2FCF00459D12 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				0111DA96202D2FF400459D12 /* BaseTransformMagicViewController.h */,
+				0111DA97202D2FF400459D12 /* BaseTransformMagicViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		0111DA99202D344700459D12 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				0111DA9A202D364700459D12 /* BaseTransformMagicCell.h */,
+				0111DA9B202D364700459D12 /* BaseTransformMagicCell.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
 		0119105C2018D463004CE682 /* localHost */ = {
 			isa = PBXGroup;
 			children = (
+				0111DA93202D2C2F00459D12 /* LocalHostData.plist */,
 				0119105D2018D49E004CE682 /* PublicLocalHost.h */,
 				0119105E2018D49E004CE682 /* PublicLocalHost.m */,
 			);
@@ -138,15 +242,12 @@
 			path = M;
 			sourceTree = "<group>";
 		};
-		019C7C3D200C9B3A00C8A423 /* Home */ = {
+		019C7C3D200C9B3A00C8A423 /* ModuleHome */ = {
 			isa = PBXGroup;
 			children = (
-				019C7C44200C9B5200C8A423 /* M */,
-				019C7C43200C9B4D00C8A423 /* V */,
-				019C7C42200C9B4800C8A423 /* VM */,
-				019C7C3E200C9B3A00C8A423 /* C */,
+				0111DA8D202D2B1100459D12 /* home */,
 			);
-			path = Home;
+			path = ModuleHome;
 			sourceTree = "<group>";
 		};
 		019C7C3E200C9B3A00C8A423 /* C */ = {
@@ -216,6 +317,7 @@
 		019C7C4E200CA0E500C8A423 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				01DE15F0202E9C1C00DA73D0 /* pageTransform */,
 				0119105C2018D463004CE682 /* localHost */,
 				019C7C52200CA11200C8A423 /* List */,
 			);
@@ -251,6 +353,99 @@
 				019C7C55200CA1B400C8A423 /* PublicListViewModel.m */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		01DE15EC202E976900DA73D0 /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				01DE15F7202EB78300DA73D0 /* C */,
+				01DE15F6202EB77900DA73D0 /* V */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		01DE15F0202E9C1C00DA73D0 /* pageTransform */ = {
+			isa = PBXGroup;
+			children = (
+				01DE15FB202ECC4C00DA73D0 /* circleSpread */,
+				01DE15F1202E9C1C00DA73D0 /* magic */,
+			);
+			path = pageTransform;
+			sourceTree = "<group>";
+		};
+		01DE15F1202E9C1C00DA73D0 /* magic */ = {
+			isa = PBXGroup;
+			children = (
+				01DE15F5202E9C6E00DA73D0 /* PublicPageMagicTransformDelegate.h */,
+				01DE15F3202E9C1C00DA73D0 /* PublicPageMagicTransformViewModel.h */,
+				01DE15F2202E9C1C00DA73D0 /* PublicPageMagicTransformViewModel.m */,
+			);
+			path = magic;
+			sourceTree = "<group>";
+		};
+		01DE15F6202EB77900DA73D0 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				01DE15F8202EB7B200DA73D0 /* BaseTransformDetailViewIndex.h */,
+				01DE15F9202EB7B200DA73D0 /* BaseTransformDetailViewIndex.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		01DE15F7202EB78300DA73D0 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				01DE15ED202E97A900DA73D0 /* BaseTransformDetailViewController.h */,
+				01DE15EE202E97A900DA73D0 /* BaseTransformDetailViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		01DE15FB202ECC4C00DA73D0 /* circleSpread */ = {
+			isa = PBXGroup;
+			children = (
+				01DE160F202EDC6200DA73D0 /* viewController */,
+				01DE15FF202ECC8B00DA73D0 /* PublicPageCircleSpreadTransformDelegate.h */,
+				01DE1600202ECD2500DA73D0 /* PublicPageCircleSpreadTransformViewModel.h */,
+				01DE1601202ECD2500DA73D0 /* PublicPageCircleSpreadTransformViewModel.m */,
+			);
+			path = circleSpread;
+			sourceTree = "<group>";
+		};
+		01DE1603202ED09400DA73D0 /* circleSpread */ = {
+			isa = PBXGroup;
+			children = (
+				01DE1605202ED0E200DA73D0 /* C */,
+				01DE1604202ED0DF00DA73D0 /* V */,
+			);
+			path = circleSpread;
+			sourceTree = "<group>";
+		};
+		01DE1604202ED0DF00DA73D0 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				01DE1609202ED14E00DA73D0 /* BaseTransformCircleSpreadViewIndex.h */,
+				01DE160A202ED14E00DA73D0 /* BaseTransformCircleSpreadViewIndex.m */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		01DE1605202ED0E200DA73D0 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				01DE160C202ED54A00DA73D0 /* BaseTransformCircleSpreadViewController.h */,
+				01DE160D202ED54A00DA73D0 /* BaseTransformCircleSpreadViewController.m */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		01DE160F202EDC6200DA73D0 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				01DE1613202EDCB200DA73D0 /* UIViewController+PTGetController.h */,
+				01DE1614202EDCB200DA73D0 /* UIViewController+PTGetController.m */,
+			);
+			path = viewController;
 			sourceTree = "<group>";
 		};
 		6991933FEE9A937432B64A14 /* Frameworks */ = {
@@ -330,21 +525,19 @@
 		848EBB7C1F3D7A04002170F8 /* EntityCode */ = {
 			isa = PBXGroup;
 			children = (
-				019C7C3D200C9B3A00C8A423 /* Home */,
-				848EBB7D1F3D7A04002170F8 /* Acct */,
+				0111DA84202D2A5700459D12 /* ModuleTransform */,
+				019C7C3D200C9B3A00C8A423 /* ModuleHome */,
+				848EBB7D1F3D7A04002170F8 /* ModuleAcct */,
 			);
 			path = EntityCode;
 			sourceTree = "<group>";
 		};
-		848EBB7D1F3D7A04002170F8 /* Acct */ = {
+		848EBB7D1F3D7A04002170F8 /* ModuleAcct */ = {
 			isa = PBXGroup;
 			children = (
-				019C7C33200C9A9300C8A423 /* M */,
-				019C7C32200C9A8F00C8A423 /* V */,
-				019C7C31200C9A8700C8A423 /* VM */,
-				019C7C2C200C9A2E00C8A423 /* C */,
+				0111DA8E202D2B1D00459D12 /* acct */,
 			);
-			path = Acct;
+			path = ModuleAcct;
 			sourceTree = "<group>";
 		};
 		849861591F7B9A8500DD8BA0 /* APPDelegate */ = {
@@ -458,6 +651,7 @@
 				848EBB341F3D56ED002170F8 /* RootControllerConfiguration.plist in Resources */,
 				019C7C4D200C9F7D00C8A423 /* RouterForm.plist in Resources */,
 				848EBBC01F3DA2D4002170F8 /* InfoPlist.strings in Resources */,
+				0111DA94202D2C2F00459D12 /* LocalHostData.plist in Resources */,
 				848EBB011F3D3CE6002170F8 /* LaunchScreen.storyboard in Resources */,
 				848EBAFE1F3D3CE6002170F8 /* Assets.xcassets in Resources */,
 				848EBAFC1F3D3CE6002170F8 /* Main.storyboard in Resources */,
@@ -527,17 +721,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				01E936FC200F4345000857DE /* BaseAcctDataModelIndex.m in Sources */,
+				01DE1615202EDCB200DA73D0 /* UIViewController+PTGetController.m in Sources */,
 				843B633A1F7E1C0400990954 /* ExampleAppDelegate.m in Sources */,
+				01DE1602202ECD2500DA73D0 /* PublicPageCircleSpreadTransformViewModel.m in Sources */,
 				84169FFA1F99E9140082D5D1 /* PrefixHeaderConfigure.m in Sources */,
 				019C7C56200CA1B400C8A423 /* PublicListViewModel.m in Sources */,
 				0119105F2018D49E004CE682 /* PublicLocalHost.m in Sources */,
 				019C7C4C200C9F7D00C8A423 /* PublicPageRouter.m in Sources */,
 				01E936F6200F4322000857DE /* BaseHomeViewIndex.m in Sources */,
+				01DE160E202ED54A00DA73D0 /* BaseTransformCircleSpreadViewController.m in Sources */,
+				01DE15EF202E97A900DA73D0 /* BaseTransformDetailViewController.m in Sources */,
 				848EBB2F1F3D4525002170F8 /* RootKeyWindowDataModel.m in Sources */,
+				0111DA8B202D2ACF00459D12 /* BaseTransformViewController.m in Sources */,
 				01E93702200F4361000857DE /* BaseAcctViewModelIndex.m in Sources */,
+				0111DA9C202D364700459D12 /* BaseTransformMagicCell.m in Sources */,
+				01DE15FA202EB7B200DA73D0 /* BaseTransformDetailViewIndex.m in Sources */,
 				848EBB0C1F3D3D57002170F8 /* main.m in Sources */,
+				01DE15F4202E9C1C00DA73D0 /* PublicPageMagicTransformViewModel.m in Sources */,
 				01E936F9200F4332000857DE /* BaseHomeViewModelIndex.m in Sources */,
+				0111DA98202D2FF400459D12 /* BaseTransformMagicViewController.m in Sources */,
 				01E936FF200F4352000857DE /* BaseAcctViewIndex.m in Sources */,
+				01DE160B202ED14E00DA73D0 /* BaseTransformCircleSpreadViewIndex.m in Sources */,
 				019C7C41200C9B3A00C8A423 /* BaseHomeViewController.m in Sources */,
 				019C7C2F200C9A3B00C8A423 /* BaseAcctViewController.m in Sources */,
 				01E936F3200F430C000857DE /* BaseHomeDataModelIndex.m in Sources */,

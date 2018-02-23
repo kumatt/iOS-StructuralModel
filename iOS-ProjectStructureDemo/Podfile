@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
+inhibit_all_warnings!
 #source 'http://BlanBok:MbWQy8Xs@git.coding.net/BlanBok/WKSpecs.git'
 #source 'https://github.com/CocoaPods/Specs.git'
 
@@ -19,7 +20,7 @@ target 'ExampleProjectDemo' do
     pod 'ReactiveObjC'                        #通过RAC简化响应式编程
 
 #    pod 'YYModel'                             #数据模型转换
-#    pod 'SDWebImage'                          #图片的异步加载
+    pod 'SDWebImage'                          #图片的异步加载
 #    pod 'MBProgressHUD'                       #加载动画
 #    pod 'CLImageEditor'                       #图片编辑/仅做使用参考 基于CoreImage的封装
 #    pod 'WKCategory', :git=> 'https://github.com/Blanbok/WKCategory' #一些类的常用拓展方法

@@ -45,11 +45,7 @@
         naVC.tabBarItem.image = [[UIImage imageNamed:obj.normalImage_name]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         naVC.tabBarItem.selectedImage = [[UIImage imageNamed:obj.selectImage_name]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0x666666)} forState:UIControlStateNormal];
-        if (idx == 2) {
-            [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0xc38521)} forState:UIControlStateSelected];
-        }else{
-            [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0x59337b)} forState:UIControlStateSelected];
-        }
+        [naVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : CUSTOM_COLOR_HEX(0x59337b)} forState:UIControlStateSelected];
         
         [self aspect_ViewController:viewController];
         [self addChildViewController:naVC];
@@ -64,7 +60,7 @@
 {
     NSString *localPath = [[NSBundle mainBundle]pathForResource:@"RootControllerConfiguration" ofType:@"plist"];
     NSArray *localData  = [NSArray arrayWithContentsOfFile:localPath];
-    NSArray<NSString*> *classArray = @[@"BaseHomeViewController",@"BaseAcctViewController"];
+    NSArray<NSString*> *classArray = @[@"BaseHomeViewController",@"BaseTransformViewController",@"BaseAcctViewController"];
     NSMutableArray *dataArray = [NSMutableArray new];
     
     if (localData == nil || [localData isKindOfClass:[NSArray class]] == NO) {

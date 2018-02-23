@@ -12,6 +12,14 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>跳转</string>
+		<key>normalImage_name</key>
+		<string>car_normal</string>
+		<key>selectImage_name</key>
+		<string>car_selected</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>我的</string>
 		<key>normalImage_name</key>
 		<string>acct_normal</string>

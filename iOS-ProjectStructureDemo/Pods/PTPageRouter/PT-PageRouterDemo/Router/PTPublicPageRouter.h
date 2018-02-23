@@ -89,4 +89,14 @@ static NSString * _Nullable const PTPublicPageRouterKeyClass        = @"_classNa
  */
 + (void)OpenUrl:(NSURL*_Nonnull)url FormData:(NSDictionary*_Nullable)formData  Animated:(BOOL)animated;
 
+/**
+ 通过本地路径实现跳转
+ 
+ @param url 传入路径
+ @param formData 附加数据
+ @param animated 是否显示跳转动画
+ @param completion 跳转回调
+ */
++ (void)OpenUrl:(NSURL*_Nonnull)url FormData:(NSDictionary*_Nullable)formData  Animated:(BOOL)animated Completion:(void (^ __nullable)(UIViewController* _Nullable toViewController))completion;
+
 @end

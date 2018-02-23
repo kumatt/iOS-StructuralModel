@@ -18,6 +18,9 @@ PODS:
   - Masonry (1.1.0)
   - PTPageRouter (0.0.2)
   - ReactiveObjC (3.0.0)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
   - WKDataManager (0.0.1):
     - AFNetworking
 
@@ -27,6 +30,7 @@ DEPENDENCIES:
   - Masonry
   - PTPageRouter (from `https://github.com/OComme/PT-PageRouter`)
   - ReactiveObjC
+  - SDWebImage
   - WKDataManager
 
 EXTERNAL SOURCES:
@@ -35,7 +39,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PTPageRouter:
-    :commit: 763cb8a0d6c14fa7e7927934350d7a0697002c19
+    :commit: f8c1dd7babf39eb8554bcb26f2d291a1f7738e0a
     :git: https://github.com/OComme/PT-PageRouter
 
 SPEC CHECKSUMS:
@@ -44,8 +48,9 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   PTPageRouter: 569f05e635d9b4b86422489ec35af4f7c44e6540
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   WKDataManager: 0d0f06274af2fb21a4b89bf2f8a7c1f2cf1352fb
 
-PODFILE CHECKSUM: eee757675ba0af7783e62633c329fdf3a9050e5b
+PODFILE CHECKSUM: 8e651eaef0c8d91cf914343ecfe62a4590912018
 
 COCOAPODS: 1.3.1

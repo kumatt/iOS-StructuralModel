@@ -15,6 +15,11 @@
     [PTPublicPageRouter OpenUrl:[self Get_urlWithType:modalType] FormData:entity Animated:animated];
 }
 
++(void)OpenUrlWithModalType:(PublicPageRouterType *)modalType DataEntity:(NSDictionary *)entity Animated:(BOOL)animated Completion:(void (^ _Nullable)(UIViewController * _Nullable))completion
+{
+    [PTPublicPageRouter OpenUrl:[self Get_urlWithType:modalType] FormData:entity Animated:animated Completion:completion];
+}
+
 + (NSURL*)Get_urlWithType:(NSString*)modalType
 {
     NSArray *array = [modalType componentsSeparatedByString:@"&"];

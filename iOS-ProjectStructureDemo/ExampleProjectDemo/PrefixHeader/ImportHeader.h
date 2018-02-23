@@ -13,6 +13,7 @@
 
 #import <ReactiveObjC.h>
 #import <Masonry.h>
+#import <UIImageView+WebCache.h>
 
 #import "PublicPageRouter.h"
 

@@ -12,6 +12,22 @@
 
 + (void)OpenUrl:(NSURL *)url FormData:(NSDictionary *)formData Animated:(BOOL)animated
 {
+    UIViewController *targetVc = [self Get_ViewControllerWithUrl:url FormData:formData];
+    [[self CurrentViewController].navigationController pushViewController:targetVc animated:animated];
+}
+
++ (void)OpenUrl:(NSURL *)url FormData:(NSDictionary *)formData Animated:(BOOL)animated Completion:(void (^ _Nullable)(UIViewController * _Nullable))completion
+{
+    
+    UIViewController<PTPublicPageRouterDelegate> *targetVc = [self Get_ViewControllerWithUrl:url FormData:formData];
+    if (completion) {
+        completion(targetVc);
+    }
+    [[self CurrentViewController].navigationController pushViewController:targetVc animated:animated];
+}
+
++ (UIViewController<PTPublicPageRouterDelegate>*)Get_ViewControllerWithUrl:(NSURL *)url FormData:(NSDictionary *)formData
+{
     NSAssert([url isKindOfClass:[NSURL class]], @"目标路径不可用");
     
     Class targetClass = [self Parse_targetClassWithUrl:url FormData:formData];
@@ -20,8 +36,6 @@
         NSAssert([targetClass conformsToProtocol:@protocol(PTPublicPageRouterDelegate)], @"模块中的目标viewController需遵循跳转协议 PTPublicPageRouterDelegate");
         [targetVc router_setParamentDict:formData];
     }
-    [[self CurrentViewController].navigationController pushViewController:targetVc animated:animated];
-    
     
     NSString *descript = [self Parse_regisistDataWithUrl:url][PTPublicPageRouterKeyDescrip];
     NSMutableDictionary *infoDict = [NSMutableDictionary dictionaryWithDictionary:formData];
@@ -29,6 +43,7 @@
         infoDict[PTPublicPageRouterKeyDescrip] = descript;
     }
     [[NSNotificationCenter defaultCenter]postNotificationName:PTPublicPageRouterNotification object:targetVc userInfo:infoDict];
+    return targetVc;
 }
 
 #pragma mark-parse
