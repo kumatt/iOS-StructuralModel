@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 inhibit_all_warnings!
-#source 'http://BlanBok:MbWQy8Xs@git.coding.net/BlanBok/WKSpecs.git'
+#source 'git@git.coding.net:BlanBok/ProjectOne-Specs.git'
 #source 'https://github.com/CocoaPods/Specs.git'
 
 target 'ExampleProjectDemo' do
