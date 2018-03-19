@@ -23,10 +23,6 @@
     }else{
         return;
     }
-    
-    if ([self.listView respondsToSelector:@selector(reloadData)] == NO) {
-        return;
-    }
 
     @weakify(self);
     [[listView rac_signalForSelector:@selector(reloadData)]subscribeNext:^(RACTuple * _Nullable x) {
@@ -77,7 +73,7 @@
     if (self.emptyView.superview || self.listView == nil) {
         return;
     }
-    [self.emptyView addSubview:self.emptyView];
+    [self.listView addSubview:self.emptyView];
     [self.emptyView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(0);
         //        make.width.equalTo(self.listView.mas_width);
@@ -123,16 +119,17 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+#pragma mark-loadData
 - (void)event_listCell:(id<PublicListViewModelDelegate>)cell upData:(id)data
 {
     NSAssert([cell conformsToProtocol:@protocol(PublicListViewModelDelegate)], @"cell 必须遵循PublicListViewModelDelegate协议");
     NSAssert([cell respondsToSelector:@selector(updata_setObject:)] == NO, @"cell 必须实现PublicListViewModelDelegate协议的代理方法");
     [cell updata_setObject:data];
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    
 }
 
 #pragma mark-refresh

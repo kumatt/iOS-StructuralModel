@@ -23,7 +23,7 @@ target 'ExampleProjectDemo' do
     pod 'SDWebImage'                          #图片的异步加载
 #    pod 'MBProgressHUD'                       #加载动画
 #    pod 'CLImageEditor'                       #图片编辑/仅做使用参考 基于CoreImage的封装
-#    pod 'WKCategory', :git=> 'https://github.com/Blanbok/WKCategory' #一些类的常用拓展方法
+    pod 'WKCategory', :git=> 'https://github.com/Blanbok/WKCategory' #一些类的常用拓展方法
 
 #    pod 'YYKeyboardManager'                   #键盘监听
 #    pod 'TTRangeSlider'                       #自定义silder

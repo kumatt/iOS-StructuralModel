@@ -14,6 +14,7 @@
 #import <ReactiveObjC.h>
 #import <Masonry.h>
 #import <UIImageView+WebCache.h>
+#import <UIViewController+WKController.h>
 
 #import "PublicPageRouter.h"
 

@@ -25,6 +25,15 @@ CGRect StatusRect = [[UIApplication sharedApplication] statusBarFrame];\
 StatusRect.size.height;\
 })
 
+///安全设计区域
+#define CUSTOM_SAFEINSETS ({\
+UIEdgeInsets safeInsets = UIEdgeInsetsZero;\
+if(@available(iOS 11.0, *)){\
+safeInsets = [UIApplication sharedApplication].keyWindow.safeAreaInsets;\
+}\
+safeInsets;\
+})
+
 //底部栏高度
 #define CUSTOM_TABBAR_HEIGHT  ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
 

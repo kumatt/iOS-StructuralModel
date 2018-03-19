@@ -12,6 +12,9 @@
 		0111DA98202D2FF400459D12 /* BaseTransformMagicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111DA97202D2FF400459D12 /* BaseTransformMagicViewController.m */; };
 		0111DA9C202D364700459D12 /* BaseTransformMagicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0111DA9B202D364700459D12 /* BaseTransformMagicCell.m */; };
 		0119105F2018D49E004CE682 /* PublicLocalHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0119105E2018D49E004CE682 /* PublicLocalHost.m */; };
+		0146192D205F45BA00671008 /* PublicImageShowFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146192B205F45BA00671008 /* PublicImageShowFlowLayout.m */; };
+		01461931205F45D600671008 /* PublicImageShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0146192F205F45D600671008 /* PublicImageShowCell.m */; };
+		01461935205F4F1F00671008 /* PublicImageShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01461933205F4F1E00671008 /* PublicImageShowView.m */; };
 		019C7C2F200C9A3B00C8A423 /* BaseAcctViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C2E200C9A3B00C8A423 /* BaseAcctViewController.m */; };
 		019C7C41200C9B3A00C8A423 /* BaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C3F200C9B3A00C8A423 /* BaseHomeViewController.m */; };
 		019C7C4C200C9F7D00C8A423 /* PublicPageRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 019C7C49200C9F7D00C8A423 /* PublicPageRouter.m */; };
@@ -53,6 +56,12 @@
 		0111DA9B202D364700459D12 /* BaseTransformMagicCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTransformMagicCell.m; sourceTree = "<group>"; };
 		0119105D2018D49E004CE682 /* PublicLocalHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicLocalHost.h; sourceTree = "<group>"; };
 		0119105E2018D49E004CE682 /* PublicLocalHost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PublicLocalHost.m; sourceTree = "<group>"; };
+		0146192B205F45BA00671008 /* PublicImageShowFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicImageShowFlowLayout.m; sourceTree = "<group>"; };
+		0146192C205F45BA00671008 /* PublicImageShowFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicImageShowFlowLayout.h; sourceTree = "<group>"; };
+		0146192F205F45D600671008 /* PublicImageShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicImageShowCell.m; sourceTree = "<group>"; };
+		01461930205F45D600671008 /* PublicImageShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicImageShowCell.h; sourceTree = "<group>"; };
+		01461933205F4F1E00671008 /* PublicImageShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicImageShowView.m; sourceTree = "<group>"; };
+		01461934205F4F1E00671008 /* PublicImageShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicImageShowView.h; sourceTree = "<group>"; };
 		019C7C2D200C9A3B00C8A423 /* BaseAcctViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAcctViewController.h; sourceTree = "<group>"; };
 		019C7C2E200C9A3B00C8A423 /* BaseAcctViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAcctViewController.m; sourceTree = "<group>"; };
 		019C7C3F200C9B3A00C8A423 /* BaseHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHomeViewController.m; sourceTree = "<group>"; };
@@ -206,6 +215,51 @@
 			path = localHost;
 			sourceTree = "<group>";
 		};
+		01461929205F459B00671008 /* imageShow */ = {
+			isa = PBXGroup;
+			children = (
+				01461934205F4F1E00671008 /* PublicImageShowView.h */,
+				01461933205F4F1E00671008 /* PublicImageShowView.m */,
+				0146193A205F5F8400671008 /* V */,
+				01461939205F5F7C00671008 /* VM */,
+			);
+			path = imageShow;
+			sourceTree = "<group>";
+		};
+		0146192A205F45A400671008 /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				0146192C205F45BA00671008 /* PublicImageShowFlowLayout.h */,
+				0146192B205F45BA00671008 /* PublicImageShowFlowLayout.m */,
+			);
+			path = layout;
+			sourceTree = "<group>";
+		};
+		0146192E205F45C800671008 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				01461930205F45D600671008 /* PublicImageShowCell.h */,
+				0146192F205F45D600671008 /* PublicImageShowCell.m */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		01461939205F5F7C00671008 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				0146192A205F45A400671008 /* layout */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		0146193A205F5F8400671008 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				0146192E205F45C800671008 /* cell */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
 		019C7C2C200C9A2E00C8A423 /* C */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +395,7 @@
 		019C7C51200CA10100C8A423 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				01461929205F459B00671008 /* imageShow */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -732,16 +787,19 @@
 				01DE160E202ED54A00DA73D0 /* BaseTransformCircleSpreadViewController.m in Sources */,
 				01DE15EF202E97A900DA73D0 /* BaseTransformDetailViewController.m in Sources */,
 				848EBB2F1F3D4525002170F8 /* RootKeyWindowDataModel.m in Sources */,
+				01461935205F4F1F00671008 /* PublicImageShowView.m in Sources */,
 				0111DA8B202D2ACF00459D12 /* BaseTransformViewController.m in Sources */,
 				01E93702200F4361000857DE /* BaseAcctViewModelIndex.m in Sources */,
 				0111DA9C202D364700459D12 /* BaseTransformMagicCell.m in Sources */,
 				01DE15FA202EB7B200DA73D0 /* BaseTransformDetailViewIndex.m in Sources */,
 				848EBB0C1F3D3D57002170F8 /* main.m in Sources */,
+				0146192D205F45BA00671008 /* PublicImageShowFlowLayout.m in Sources */,
 				01DE15F4202E9C1C00DA73D0 /* PublicPageMagicTransformViewModel.m in Sources */,
 				01E936F9200F4332000857DE /* BaseHomeViewModelIndex.m in Sources */,
 				0111DA98202D2FF400459D12 /* BaseTransformMagicViewController.m in Sources */,
 				01E936FF200F4352000857DE /* BaseAcctViewIndex.m in Sources */,
 				01DE160B202ED14E00DA73D0 /* BaseTransformCircleSpreadViewIndex.m in Sources */,
+				01461931205F45D600671008 /* PublicImageShowCell.m in Sources */,
 				019C7C41200C9B3A00C8A423 /* BaseHomeViewController.m in Sources */,
 				019C7C2F200C9A3B00C8A423 /* BaseAcctViewController.m in Sources */,
 				01E936F3200F430C000857DE /* BaseHomeDataModelIndex.m in Sources */,

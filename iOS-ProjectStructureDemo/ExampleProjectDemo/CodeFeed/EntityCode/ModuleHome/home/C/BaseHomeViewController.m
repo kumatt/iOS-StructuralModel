@@ -11,6 +11,8 @@
 #import "BaseHomeViewIndex.h"
 #import "BaseHomeViewModelIndex.h"
 
+#import "PublicImageShowView.h"
+
 @interface BaseHomeViewController ()
 
 @property (nonnull,nonatomic,strong) BaseHomeDataModelIndex *index_dataModel;
@@ -80,5 +82,12 @@
     return _index_viewModel;
 }
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+        NSDictionary *localData = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle]pathForResource:@"LocalHostData" ofType:@"plist"]];
+
+    [PublicImageShowView Show_imageScrollWithDataArray:localData[@"photos"] SelectAt:0 ItemDidScrollOperationBlock:nil];
+}
 
 @end
