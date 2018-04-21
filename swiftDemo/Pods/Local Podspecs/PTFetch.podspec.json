@@ -1,0 +1,24 @@
+{
+  "name": "PTFetch",
+  "version": "0.0.1",
+  "summary": "Encapsulation of network data requests",
+  "homepage": "https://github.com/OComme/PT-Fetch",
+  "license": "MIT",
+  "authors": {
+    "OComme": "a1653913692@icloud.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/OComme/PT-Fetch.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "PT-FetchDemo/PT-Fetch/*.{swift}",
+  "requires_arc": true,
+  "dependencies": {
+    "Alamofire": [
+
+    ]
+  }
+}

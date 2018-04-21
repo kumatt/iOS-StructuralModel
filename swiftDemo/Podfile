@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+target 'OrderTreasure' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+    pod 'WKCategory', :git=> 'https://github.com/OComme/WKCategory'
+    pod 'PTFetch', :git=> 'https://github.com/OComme/PT-Fetch'
+
+    pod 'Aspects'           #面向切面编程（AOP）库
+#    pod 'RxSwift'           #响应式编程库
+#    pod 'ReactiveCocoa'     #响应式编程
+    pod 'Kingfisher'        #异步下载和缓存图片的库
+    pod 'SnapKit'           #约束
+    pod 'Alamofire'         #网络操作库
+    pod 'SwiftyJSON'        #JSON 解析库
+    pod 'DZNEmptyDataSet'   #空白 UITableView 的默认实现
+#    pod 'CryptoSwift'       #加密库, 支持md5,sha1,sha224,sha256...
+#    pod 'Valet'             #钥匙链中存储数据
+#    pod 'SwiftyUserDefaults'#user defaults 帮手
+#    pod 'ImageViewer'       #模仿 Twitter 的图片浏览器
+    #https://www.zhihu.com/question/28816900
+  # Pods for OrderTreasure
+
+end

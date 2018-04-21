@@ -23,7 +23,7 @@
     }else{
         return;
     }
-
+    
     @weakify(self);
     [[listView rac_signalForSelector:@selector(reloadData)]subscribeNext:^(RACTuple * _Nullable x) {
         @strongify(self);
