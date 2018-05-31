@@ -128,7 +128,7 @@
 - (void)event_listCell:(id<PublicListViewModelDelegate>)cell upData:(id)data
 {
     NSAssert([cell conformsToProtocol:@protocol(PublicListViewModelDelegate)], @"cell 必须遵循PublicListViewModelDelegate协议");
-    NSAssert([cell respondsToSelector:@selector(updata_setObject:)] == NO, @"cell 必须实现PublicListViewModelDelegate协议的代理方法");
+    NSAssert([cell respondsToSelector:@selector(updata_setObject:)], @"cell 必须实现PublicListViewModelDelegate协议的代理方法");
     [cell updata_setObject:data];
 }
 
