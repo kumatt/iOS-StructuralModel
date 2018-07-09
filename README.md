@@ -1,4 +1,5 @@
 # iOS-ProjectStructureDemo
+> 关于 `MVVM`，尽可能多的使用面向协议的思想而非`ReactiveCocoa`来实现。
 
 好架构的标准
 - 代码整齐，分类明确，没有common，没有core
