@@ -1,7 +1,9 @@
 # iOS-ProjectStructureDemo
 > 关于 `MVVM`，尽可能多的使用面向协议的思想而非`ReactiveCocoa`来实现。
 
-[0.5版本的`MVVM`(失败的尝试)](https://github.com/OComme/iOS-ProjectStructureDemo/blob/master/README(Old).md)
+[0.1版本的`MVVM`(初始的构建)](https://github.com/OComme/iOS-ProjectStructureDemo/blob/28eefb5dd95c1c9226ef27b51248a8e507343363/README.md)
+
+[0.2版本的`MVVM`(失败的尝试)](https://github.com/OComme/iOS-ProjectStructureDemo/blob/d491a52ff67097fa7483c4708eedd228976c22e4/README.md)
 
 好架构的标准
 - 代码整齐，分类明确，没有common，没有core
