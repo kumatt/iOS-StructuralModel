@@ -1,9 +1,11 @@
 # iOS-ProjectStructureDemo
 > 关于 `MVVM`，尽可能多的使用面向协议的思想而非`ReactiveCocoa`来实现。
 
-[0.1版本的`MVVM`(初始的构建)](https://github.com/OComme/iOS-ProjectStructureDemo/blob/28eefb5dd95c1c9226ef27b51248a8e507343363/README.md)
+[v 0.1 的`MVVM`(初始的构建)](https://github.com/OComme/iOS-ProjectStructureDemo/blob/28eefb5dd95c1c9226ef27b51248a8e507343363/README.md)
 
-[0.2版本的`MVVM`(失败的尝试)](https://github.com/OComme/iOS-ProjectStructureDemo/blob/d491a52ff67097fa7483c4708eedd228976c22e4/README.md)
+[v 0.2 的`MVVM`(失败的尝试)](https://github.com/OComme/iOS-ProjectStructureDemo/blob/d491a52ff67097fa7483c4708eedd228976c22e4/README.md)
+
+[v 1.0 的`MVVM`(稳定的版本)](https://github.com/OComme/iOS-ProjectStructureDemo/blob/4319df69cf5224bf39fd98eb5ca188a18288c4fa/README.md)
 
 好架构的标准
 - 代码整齐，分类明确，没有common，没有core
@@ -35,7 +37,13 @@
 
 2. APP内部添加关于跳转页面的注册表单，包含以下内容。
 
-3. `PTPageRouter`注册用表单地址 ? _className=控制器类名 & _keyPath=目标路径’,以实现跳转。
+3. `PTPageRouter`通过拼接
+
+```Objective-C
+注册用表单地址 ? _className=控制器类名 & _keyPath=目标路径
+```
+
+以实现跳转。
 
 ```Objective-C
 /*
@@ -92,11 +100,17 @@ static NSString * _Nullable const PTPublicPageRouterNotification    = @"_pageRou
 
 其中
 
-`M`层，存放数据模型信息以及被用在显示层之间的数据交换
+`M`层 以 `瘦Model` 为标准,仅用做数据的存取
 
-`V`层，存放显示相关的功能组件，仅提供接口，不直接参与外部的逻辑处理
+`V`层 显示相关的功能组件
 
-`VM`层，存放业务模型信息，负责当前页面的主要逻辑。
+- 对于业务较少的 `View`,做简单的封装,仅暴露必要的接口以方便其展示数据的更新。
+- 对于业务较多，逻辑复杂的 `View`,设计时需遵循 `面向协议` 的思想，将需要定制的 UI 和逻辑，在其 `delegate`和`dataSource`实现
+
+`VM`层 负责逻辑操作，对对应的`View`做数据做绑定或定制
+
+- 若`View`仅暴露一定的数据接口，则其为 `View`和对应的`Model`进行数据绑定；
+- 若`View`使用`面向协议` 的思想来设计，则实现其对应的定制协议，与`View`组合成定制的控件
 
 以上模型均以`Index` 做为访问内部诸项的索引
 
@@ -106,7 +120,7 @@ static NSString * _Nullable const PTPublicPageRouterNotification    = @"_pageRou
 
 存放`.pch`文件及其它进行预编译的文件
 
-例如：重写 `+ (void)load`以进行属性预处理的类。
+例如：重写 `+ (void)load`以进行属性预处理，类方法指针的混用以及UI原型的属性设置等。
 
 # 4. utils
 
@@ -118,9 +132,10 @@ static NSString * _Nullable const PTPublicPageRouterNotification    = @"_pageRou
     ├── <Component>  完全内聚的功能组件（含有自己的M、V、VM的完整组件）
     ├── <Category>   添加便捷调用的拓展方法
     ├── <M>          通用的数据模型
-    ├── <V>          通用的显示层
-    └── <VM>         通用的业务模型
+    ├── <V>          通用的显示层
+    └── <VM>         通用的业务模型
 ```
+其`M、V、VM`的设计参考 `codeFeed`中的对应模块
 
 若是需要本地造测试数据方便开发，可以在`VM`中添加`LocalHost`以便开发及调试
 
