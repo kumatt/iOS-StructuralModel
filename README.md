@@ -1,5 +1,8 @@
 # iOS-ProjectStructureDemo
+[对应的代码规范](https://ocomme.github.io/post/ios-development/objective-c-coding-standard/)
+
 > 关于 `MVVM`，尽可能多的使用面向协议的思想而非`ReactiveCocoa`来实现。
+
 
 [v 0.1 的`MVVM`(初始的构建)](https://github.com/OComme/iOS-ProjectStructureDemo/blob/28eefb5dd95c1c9226ef27b51248a8e507343363/README.md)
 
