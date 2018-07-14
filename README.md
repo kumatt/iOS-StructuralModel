@@ -32,6 +32,8 @@
     └── <Pods（或Carthage）>工程   第三方SDK以及自己做的小工具
 ```
 
+![](Asset/sample.gif)
+
 # 1. router——APP的页面跳转规范
 
 通过已实现的跳转工具[PTPageRouter](https://github.com/OComme/PT-PageRouter)来规范跳转。
