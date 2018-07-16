@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>TestModule</key>
+	<dict>
+		<key>home</key>
+		<dict>
+			<key>name</key>
+			<string>BaseHomeViewController</string>
+			<key>synopsis</key>
+			<string> 这是首页</string>
+		</dict>
+	</dict>
+	<key>TransformModule</key>
+	<dict>
+		<key>magic</key>
+		<dict>
+			<key>name</key>
+			<string>BaseTransformMagicViewController</string>
+			<key>synopsis</key>
+			<string>神奇跳转</string>
+		</dict>
+		<key>detail</key>
+		<dict>
+			<key>name</key>
+			<string>BaseTransformDetailViewController</string>
+			<key>synopsis</key>
+			<string>跳转详情</string>
+			<key>keys_require</key>
+			<dict>
+				<key>title</key>
+				<string>标题信息</string>
+				<key>id</key>
+				<string>信息id</string>
+			</dict>
+		</dict>
+		<key>circleSpread</key>
+		<dict>
+			<key>name</key>
+			<string>BaseTransformCircleSpreadViewController</string>
+			<key>synopsis</key>
+			<string>圆点扩散</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

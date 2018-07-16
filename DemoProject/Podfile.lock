@@ -1,0 +1,67 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Aspects (1.4.1)
+  - Masonry (1.1.0)
+  - PTPageRouter (0.0.3)
+  - ReactiveObjC (3.0.0)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
+  - WKCategory (0.0.1)
+  - WKDataManager (0.0.1):
+    - AFNetworking
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Aspects
+  - Masonry
+  - PTPageRouter (from `https://github.com/OComme/PT-PageRouter`)
+  - ReactiveObjC
+  - SDWebImage
+  - WKCategory (from `https://github.com/Blanbok/WKCategory`)
+  - WKDataManager
+  - YYModel
+
+EXTERNAL SOURCES:
+  PTPageRouter:
+    :git: https://github.com/OComme/PT-PageRouter
+  WKCategory:
+    :git: https://github.com/Blanbok/WKCategory
+
+CHECKOUT OPTIONS:
+  PTPageRouter:
+    :commit: 3540b4690a91a593c3ea83cf91d1dd885593121d
+    :git: https://github.com/OComme/PT-PageRouter
+  WKCategory:
+    :commit: ef76385438644764f529032a5b576834965054bc
+    :git: https://github.com/Blanbok/WKCategory
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  PTPageRouter: 9ea063cfddf9baa09dc23acd63ff1c912e125dee
+  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  WKCategory: 9ca3c20e67d57375d4def5b997ea4d1873598b5f
+  WKDataManager: 0d0f06274af2fb21a4b89bf2f8a7c1f2cf1352fb
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: d57395a64666c800104b9e903a966b26f35ae5e3
+
+COCOAPODS: 1.4.0
