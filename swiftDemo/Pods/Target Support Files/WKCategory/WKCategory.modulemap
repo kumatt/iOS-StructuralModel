@@ -1,6 +1,0 @@
-framework module WKCategory {
-  umbrella header "WKCategory-umbrella.h"
-
-  export *
-  module * { export * }
-}

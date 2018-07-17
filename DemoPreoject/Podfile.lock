@@ -1,0 +1,58 @@
+PODS:
+  - Alamofire (4.7.2)
+  - Aspects (1.4.1)
+  - DZNEmptyDataSet (1.8.1)
+  - HandyJSON (4.1.1)
+  - Kingfisher (4.7.0)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - MJRefresh (3.1.15.3)
+  - SnapKit (4.0.0)
+  - WKCategory (0.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Aspects
+  - DZNEmptyDataSet
+  - HandyJSON
+  - Kingfisher
+  - MagicalRecord
+  - MJRefresh
+  - SnapKit
+  - WKCategory (from `https://github.com/Blanbok/WKCategory`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Aspects
+    - DZNEmptyDataSet
+    - HandyJSON
+    - Kingfisher
+    - MagicalRecord
+    - MJRefresh
+    - SnapKit
+
+EXTERNAL SOURCES:
+  WKCategory:
+    :git: https://github.com/Blanbok/WKCategory
+
+CHECKOUT OPTIONS:
+  WKCategory:
+    :commit: ef76385438644764f529032a5b576834965054bc
+    :git: https://github.com/Blanbok/WKCategory
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  WKCategory: 9ca3c20e67d57375d4def5b997ea4d1873598b5f
+
+PODFILE CHECKSUM: 128cc851180e36634ef1eaa414bd15ea04ce332f
+
+COCOAPODS: 1.5.3

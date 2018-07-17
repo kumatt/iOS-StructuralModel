@@ -1,0 +1,34 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+target 'DemoPreoject' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  
+  pod 'Alamofire'         #数据请求
+#  pod 'PTFetch', :git=> 'https://github.com/OComme/PT-Fetch'
+
+  pod 'Kingfisher'        #图片异步加载
+  pod 'Aspects'           #面向切面编程（AOP）库
+  pod 'SnapKit'           #约束
+  pod 'MJRefresh'         #刷新库
+  pod 'DZNEmptyDataSet'   #空白 UITableView 的默认实现
+  
+  pod 'HandyJSON'         #字典转模型
+  pod 'MagicalRecord'     #coreData使用第三方
+  
+  pod 'WKCategory', :git=> 'https://github.com/Blanbok/WKCategory' #一些类的常用拓展方法
+  
+  #    pod 'RxSwift'           #响应式编程库
+  #    pod 'ReactiveCocoa'     #响应式编程
+  #    pod 'CryptoSwift'       #加密库, 支持md5,sha1,sha224,sha256...
+  #    pod 'Valet'             #钥匙链中存储数据
+  #    pod 'SwiftyUserDefaults'#user defaults 帮手
+  #    pod 'ImageViewer'       #模仿 Twitter 的图片浏览器
+  #https://www.zhihu.com/question/28816900
+  # Pods for OrderTreasure
+
+  # Pods for MenuTreaure
+
+end

@@ -1,4 +1,5 @@
-# iOS-ProjectStructureDemo
+# iOS-StructuralModel
+
 [对应的代码规范](https://ocomme.github.io/post/ios-development/objective-c-coding-standard/)
 
 > 关于 `MVVM`，尽可能多的使用面向协议的思想而非`ReactiveCocoa`来实现。
@@ -24,68 +25,21 @@
 以此记录当前使用的项目构架
 
 ```Objective-C
-    ├── <Router>                 APP的页面跳转规范
-    ├── <CodeFeed>               项目真正的构建内容
+    ├── <Router>                 页面跳转规范
+    ├── <CodeFeed>               项目构建内容
     ├── <PrefixHeader>           预编译部分
-    ├── <Utils>                  仅在本项目中通用的类库。
-    ├── <Supporting Files>       系统配置文件及组成基础构架的文件
-    └── <Pods（或Carthage）>工程   第三方SDK以及自己做的小工具
+    ├── <Utils>                  仅本项目可用工具
+    ├── <Supporting Files>       项目基本配置文件
+    └── <Pods（或Carthage）>工程   通用工具
 ```
 
 ![](Asset/sample.gif)
 
-# 1. router——APP的页面跳转规范
+# 1. Router ——页面跳转规范
 
-通过已实现的跳转工具[PTPageRouter](https://github.com/OComme/PT-PageRouter)来规范跳转。
+使用跳转工具[PTPageRouter](https://github.com/OComme/PT-PageRouter)来规范跳转。
 
-1. 需要跳转的页面需遵循`PTPublicPageRouterDelegate`协议。
-
-2. APP内部添加关于跳转页面的注册表单，包含以下内容。
-
-3. `PTPageRouter`通过拼接
-
-```Objective-C
-注册用表单地址 ? _className=控制器类名 & _keyPath=目标路径
-```
-
-以实现跳转。
-
-```Objective-C
-/*
- example Dict
- <dict>
- 
- <!--介绍信息-->
- <key>_descrip</key>
- <string>关于页面的介绍</string>
- 
- <!--必填参数-->
- <key>_require</key>
- <dict>
- <key>key</key>
- <string>关于“key”的介绍</string>
- </dict>
- 
- <!--选填参数-->
- <key>_option</key>
- <dict>
- <key>key</key>
- <string>关于“key”的介绍</string>
- </dict>
- </dict>
- */
-```
-
-此时，所有通过`PTPageRouter`的跳转均需传入指定数据，跳转的页面需遵循指定协议。对于APP页面留存的统计，可通过监听
-
-```Objective-C
-///页面跳转通知  object为控制器实例  infodict为介绍内容
-static NSString * _Nullable const PTPublicPageRouterNotification    = @"_pageRouter_notice";
-```
-
-来便捷实现。
-
-# 2. codeFeed ——存放APP页面实际构建的代码
+# 2. CodeFeed ——项目构建内容
 
 其内部分
 
@@ -119,17 +73,24 @@ static NSString * _Nullable const PTPublicPageRouterNotification    = @"_pageRou
 
 以上模型均以`Index` 做为访问内部诸项的索引
 
-`C`层，存放'M、V、VM'的容器，暂时也用做`VM`层的补充，存放少量逻辑
+`C`层，存放'M、V、VM'的容器，实现数据、逻辑的定向绑定。
 
-# 3. prefixHeader
+# 3. PrefixHeader -预编译部分
 
-存放`.pch`文件及其它进行预编译的文件
+存放`.pch`文件及其它预编译的文件
 
-例如：重写 `+ (void)load`以进行属性预处理，类方法指针的混用以及UI原型的属性设置等。
+例如：
 
-# 4. utils
+- 宏的定义
+- 常用类的引用
+- UI原型的属性设置
+- 类方法指针的混用以及UI原型的属性设置
 
-存放只适用于当前项目的类（可以通用的类，应该提取出去，放在托管平台进行维护）
+......
+
+# 4. Utils -仅本项目可用工具
+
+只适用于当前项目的工具（可以多项目通用的类，应该提取出去，放在托管平台进行维护）
 
 根据功能可以细分为以下几种：
 
@@ -142,16 +103,14 @@ static NSString * _Nullable const PTPublicPageRouterNotification    = @"_pageRou
 ```
 其`M、V、VM`的设计参考 `codeFeed`中的对应模块
 
-若是需要本地造测试数据方便开发，可以在`VM`中添加`LocalHost`以便开发及调试
+# 5. Supporting Files -项目基本配置文件
 
-# 5. supporting Files
+存放APP的配置文件 `info.plist`、`InfoPlist.strings`、`main.m`、`Appdelegate`
 
-存放APP的配置文件 `info.plist`、`InfoPlist.strings`、`main.m`、`Appdelegate`等
+# 6. Pods（或carthage）-通用工具
 
-窗口的根控制器
+存放第三方工具及自己托管于第三方平台的通用工具
 
-# 6. pods（或carthage）
-
-存放第三方工具及自己托管于第三方平台的工具
+如`AFNetworking`、`Masonry`、`MJRefresh` ......
 
 
