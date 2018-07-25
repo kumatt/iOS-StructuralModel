@@ -64,9 +64,7 @@ static NSString * const reuseIdentifier = @"Cell";
 {
     _tempView = [[collectionView cellForItemAtIndexPath:indexPath]valueForKey:@"imageView_head"];
     
-    PrapPageModel *pageModel = [PrapPageModel new];
-    pageModel.path = @"TransformModule/detail";
-    UIViewController *resultVc = [PTPageRouter PT_getViewControllerForPageModel:pageModel FormData:@{@"title":@"神奇跳转详情",@"id":@(indexPath.item)}];
+    UIViewController *resultVc = [MyPageRouter PT_getViewControllerFromKeyPath:@"TransformModule/detail" FormData:@{@"title":@"神奇跳转详情",@"id":@(indexPath.item)}];
     self.navigationController.delegate = (id)resultVc;
     [self.navigationController pushViewController:resultVc animated:YES];
     

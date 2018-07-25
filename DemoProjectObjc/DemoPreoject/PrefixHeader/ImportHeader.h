@@ -18,7 +18,7 @@
 #import <UIViewController+WKController.h>
 #import <PTPageRouter.h>
 
-#import "PrapPageModel.h"
+#import "MyPageRouter.h"
 
 
 #endif /* ImportHeader_h */

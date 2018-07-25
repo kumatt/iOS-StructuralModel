@@ -38,16 +38,12 @@ static NSString *_Nonnull const ReuseIdentifier = @"_transformCell";
     switch (indexPath.row) {
         case 0:
         {
-            PrapPageModel *pageModel = [PrapPageModel new];
-            pageModel.path = @"TransformModule/magic";
-            [self.navigationController pushViewController:[PTPageRouter PT_getViewControllerForPageModel:pageModel] animated:YES];
+            [self.navigationController pushViewController:[MyPageRouter PT_getViewControllerFromKeyPath:@"TransformModule/magic"] animated:YES];
         }
             break;
         case 3:
         {
-            PrapPageModel *pageModel = [PrapPageModel new];
-            pageModel.path = @"TransformModule/circleSpread";
-            [self.navigationController pushViewController:[PTPageRouter PT_getViewControllerForPageModel:pageModel] animated:YES];
+            [self.navigationController pushViewController:[MyPageRouter PT_getViewControllerFromKeyPath:@"TransformModule/circleSpread"] animated:YES];
         }
         default:
             break;

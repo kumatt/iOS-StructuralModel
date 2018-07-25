@@ -8,9 +8,9 @@ target 'DemoPreoject' do
 # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
 # use_frameworks!
     
-    pod 'AFNetworking'                        #网络请求
-    pod 'WKDataManager'                       #网络请求AFNetworking二次封装
-#
+    pod 'PTPageRouter', :git=> 'https://github.com/OComme/PT-PageRouter'  #页面跳转规范
+    pod 'PTFetchObjc', :git=> 'https://github.com/OComme/PT-FetchObjc'    #数据请求
+
     pod 'Masonry'                             #设置约束
 #    pod 'MJRefresh'                           #scrollview上下拉刷新
 #    pod 'SAMKeychain'                          #钥匙串访问存储账户密码
@@ -32,6 +32,5 @@ target 'DemoPreoject' do
 #    pod 'SDCycleScrollView'                   #轮播图
 #    pod 'CocoaLumberjack'                     #更高级的 log 功能
 
-    pod 'PTPageRouter', :git=> 'https://github.com/OComme/PT-PageRouter'  #页面跳转规范
 
 end
