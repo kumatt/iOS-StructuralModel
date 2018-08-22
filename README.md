@@ -2,7 +2,7 @@
 
 [对应的代码规范](https://ocomme.github.io/post/ios-development/objective-c-coding-standard/)
 
-> 关于 `MVVM`，尽可能多的使用面向协议的思想而非`ReactiveCocoa`来实现。
+> 关于 `MVVM`，尽可能多的使用面向协议的思想来实现。
 
 
 [v 0.1 的`MVVM`(初始的构建)](https://github.com/OComme/iOS-ProjectStructureDemo/blob/28eefb5dd95c1c9226ef27b51248a8e507343363/README.md)
@@ -59,17 +59,17 @@
 
 其中
 
-`M`层 以 `瘦Model` 为标准,仅用做数据的存取
+`M`层 以 `瘦Model` 为标准,仅用做数据的存取，其辅以`ModelLayer`用做数据的存取操作逻辑
 
 `V`层 显示相关的功能组件
 
 - 对于业务较少的 `View`,做简单的封装,仅暴露必要的接口以方便其展示数据的更新。
-- 对于业务较多，逻辑复杂的 `View`,设计时需遵循 `面向协议` 的思想，将需要定制的 UI 和逻辑，在其 `delegate`和`dataSource`实现
+- 对于业务较多，逻辑复杂的 `View`,设计时需遵循 `面向协议` 的思想，将需要定制的 UI 和逻辑，通过 `delegate`和`dataSource`实现
 
-`VM`层 负责逻辑操作，对对应的`View`做数据做绑定或定制
+`VM`层 负责逻辑操作，对`View`做定向的数据做绑定和定制
 
 - 若`View`仅暴露一定的数据接口，则其为 `View`和对应的`Model`进行数据绑定；
-- 若`View`使用`面向协议` 的思想来设计，则实现其对应的定制协议，与`View`组合成定制的控件
+- 若`View`使用`面向协议`的思想来设计，则实现其协议方法，实现`View`的定制
 
 以上模型均以`Index` 做为访问内部诸项的索引
 
@@ -109,7 +109,7 @@
 
 # 6. Pods（或carthage）-通用工具
 
-存放第三方工具及自己托管于第三方平台的通用工具
+管理通用的工具类
 
 如`AFNetworking`、`Masonry`、`MJRefresh` ......
 
