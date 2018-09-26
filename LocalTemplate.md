@@ -8,23 +8,30 @@
 
 每创建一个类就重写一遍显然很繁琐，这个时候就要用到Xcode的自定义模板功能。
 
-这里创建了两个模版，[基于系统 Cocoa Touch Class 初始模版修改](./Local Template/MVVM Template.xctemplate)和[MVVM 文件夹模块模版](./Local Template/Cocoa Touch Class.xctemplate)
+这里创建了两个模版
+
+[基于系统 Cocoa Touch Class 初始模版修改](./Local%20Template/MVVM%20Template.xctemplate)
+
+和
+
+[MVVM 文件夹模块模版](./Local%20Template/Cocoa%20Touch%20Class.xctemplate)
 
 ## 使用的方法
 
-将 [Local Template](Local Template)放置到[文件模版路径](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File Templates)中
+将 [Local Template](Local%20Template)放置到[文件模版路径](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File%20Templates)中
 
 在Xcode中创建 new file，即可看到新的模版样式
-[](./Asset/template_01.png)
+![](Asset/template_01.png)
 
 使用方式同系统模版
 
 ## 目标路径
 
-[文件模板路径1](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File Templates/Source)
-[文件模板路径2](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates/
-)
-[工程模板路径](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project Templates/iOS/Application)
+[文件模板路径1](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File%20Templates/Source)
+
+[文件模板路径2](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File%20Templates/)
+
+[工程模板路径](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application)
 
 ## 常用的宏
 
