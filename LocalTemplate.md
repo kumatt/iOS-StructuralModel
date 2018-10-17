@@ -44,7 +44,7 @@
 | `___COPYRIGHT___`|版权|
 | `___FILEBASENAME___`|不带后缀的文件名|
 | `___FILEBASENAMEASIDENTIFIER___`|不带后缀的 VC 文件名|
-| `___VARIABLE_productName___`|模版名|
+| `___VARIABLE_productName___`|输入的模版名|
 
 ## 需要修改的字段
 
