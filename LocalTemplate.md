@@ -27,11 +27,11 @@
 
 ## 目标路径
 
-[文件模板路径1](file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File%20Templates/Source)
+文件模板路径1——`/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File%20Templates/Source`
 
-[文件模板路径2](file:///Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File%20Templates/)
+文件模板路径2——`/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File%20Templates/`
 
-[工程模板路径](file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application)
+工程模板路径——`/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application`
 
 ## 常用的宏
 
