@@ -49,13 +49,15 @@
  */
 + (void)init_setHookSelector
 {
-    if (@available(iOS 11, *)) {
-        return ;
-    }
     [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo){
         UIViewController *vc = aspectInfo.instance;
         vc.automaticallyAdjustsScrollViewInsets = NO;
     } error:nil];
+    
+    [UINavigationController aspect_hookSelector:@selector(pushViewController:animated:) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> aspectInfo){
+        UIViewController *vc = aspectInfo.arguments.firstObject;
+        vc.hidesBottomBarWhenPushed = YES;
+    } error:nil] ;
     
     [UIViewController aspect_hookSelector:@selector(viewDidLoad) withOptions:AspectPositionInstead usingBlock:(NSNumber*)^(id<AspectInfo> aspectInfo){
         return @(UIInterfaceOrientationMaskAllButUpsideDown);
