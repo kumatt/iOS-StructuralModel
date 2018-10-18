@@ -18,7 +18,7 @@ class BaseAcctInfoView: UIView {
     private let imageView_head = UIImageView.init()
     
     /// 头像按钮
-    private let button_head = UIButton.init(type: UIButtonType.custom)
+    private let button_head = UIButton.init(type: UIButton.ButtonType.custom)
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -77,7 +77,7 @@ class BaseAcctInfoView: UIView {
             make.size.equalTo(CGSize.init(width: 67, height: 67))
         }
         self.imageView_head.snp.makeConstraints { (make) in
-            make.edges.equalTo(UIEdgeInsetsMake(4, 4, 4, 4))
+            make.edges.equalTo(UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4))
         }
 
     }

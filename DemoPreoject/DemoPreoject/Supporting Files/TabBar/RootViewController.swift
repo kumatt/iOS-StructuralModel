@@ -50,61 +50,16 @@ class RootViewController: UITabBarController {
             naVc.navigationBar.barTintColor = color_backGround
 
             vc.title = dict[key_title]!
-            naVc.tabBarItem.image = UIImage.init(named: dict[key_normalImage]!)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-            naVc.tabBarItem.selectedImage = UIImage.init(named: dict[key_selectImage]!)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-           
-            naVc.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:UIColor.init(red: 155/255, green: 155/255, blue: 155/255, alpha: 1),NSAttributedStringKey.font:UIFont.systemFont(ofSize: 11)], for: UIControlState.normal)
-        naVc.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor:UIColor.init(red: 255/255, green: 120/255, blue: 64/255, alpha: 1),NSAttributedStringKey.font:UIFont.systemFont(ofSize: 11)], for: UIControlState.selected)
+            vc.hidesBottomBarWhenPushed = false
+            
+            naVc.tabBarItem.image = UIImage.init(named: dict[key_normalImage]!)!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+            naVc.tabBarItem.selectedImage = UIImage.init(named: dict[key_selectImage]!)?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
 
-            self.hook_viewController(viewController: vc)
-            self.addChildViewController(naVc)
-        }
-    }
-    
-    /// 在控制器跳转时，相应的设置 tabBar 的显隐
-    func hook_viewController(viewController:UIViewController) {
-        
-        let block_viewWillAppear: @convention(block) (AnyObject?) -> Void = {
-            info in
-            self.setTabBarHidden(isHidden: false)
-            }
-        do {
-            try viewController.aspect_hook(#selector(viewWillAppear(_:)), with: AspectOptions.init(rawValue: 0), usingBlock: block_viewWillAppear as AnyObject)
-        } catch  {
-            print(error)
-        }
-        
-        
-        let block_viewWillDisAppear: @convention(block) (AspectInfo) -> Void = {
-            info in
-            let control = info.instance()
-            if let vc = control as? UIViewController{
-                if vc.isKind(of: UINavigationController.classForCoder()){
-                    self.setTabBarHidden(isHidden: (((vc as! UINavigationController).viewControllers.count) > 1))
-                }else if (vc.navigationController != nil){
-                    self.setTabBarHidden(isHidden: ((vc.navigationController?.viewControllers.count)! > 1))
-                }
-            }
-        }
-        do {
-            try viewController.aspect_hook(#selector(viewWillDisappear(_:)), with: AspectOptions.init(rawValue: 0), usingBlock: block_viewWillDisAppear as AnyObject)
-        } catch  {
-            print(error)
+            naVc.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.init(red: 155/255, green: 155/255, blue: 155/255, alpha: 1),NSAttributedString.Key.font:UIFont.systemFont(ofSize: 11)], for: UIControl.State.normal)
+            naVc.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.init(red: 255/255, green: 120/255, blue: 64/255, alpha: 1),NSAttributedString.Key.font:UIFont.systemFont(ofSize: 11)], for: UIControl.State.selected)
+
+            addChild(naVc)
         }
     }
 
-    /// 底部栏的显隐
-    func setTabBarHidden(isHidden:Bool) {
-        if self.isTabBarHidden == isHidden {
-            return
-        }
-        self.isTabBarHidden = isHidden
-        if #available(iOS 11.0, *) {
-            self.tabBar.isHidden = isHidden
-            return
-        }
-//        UIView.animate(withDuration: UINavigationControllerHideShowBarDuration, animations: {() in
-//            self.tabBar.frame = CGRect.init(x: 0, y: UIScreen.main.bounds.size.height-49, width: UIScreen.main.bounds.size.width, height: 49)
-//        }
-    }
 }

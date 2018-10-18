@@ -43,4 +43,8 @@ class BaseOrderViewController: UIViewController {
         
     }
 
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.navigationController?.pushViewController(BaseOrderViewController(), animated: true)
+
+    }
 }

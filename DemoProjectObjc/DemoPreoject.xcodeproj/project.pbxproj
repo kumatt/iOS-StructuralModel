@@ -673,7 +673,7 @@
 				TargetAttributes = {
 					848EBAED1F3D3CE6002170F8 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = FFC452564N;
+						DevelopmentTeam = FX9H54S9HE;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -906,7 +906,7 @@
 			baseConfigurationReference = 1612D74C3096FA5BB949A2DD /* Pods-DemoPreoject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FFC452564N;
+				DEVELOPMENT_TEAM = FX9H54S9HE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/PrefixHeader/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DemoPreoject/Supporting Files/Info.plist";
@@ -932,7 +932,7 @@
 			baseConfigurationReference = 2030CC77D5136A0987625E4A /* Pods-DemoPreoject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FFC452564N;
+				DEVELOPMENT_TEAM = FX9H54S9HE;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/PrefixHeader/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/DemoPreoject/Supporting Files/Info.plist";

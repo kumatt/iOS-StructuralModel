@@ -45,7 +45,7 @@ class PublicOrderTreasureConfigure: NSObject {
 
         //iOS11 解决SafeArea的问题，同时能解决pop时上级页面scrollView抖动的问题
         if #available(iOS 11.0, *) {
-            UIScrollView.appearance().contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never//iOS11 解决SafeArea的问题，同时能解决pop时上级页面scrollView抖动的问题
+            UIScrollView.appearance().contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never//iOS11 解决SafeArea的问题，同时能解决pop时上级页面scrollView抖动的问题
         }
         
         UINavigationBar.appearance().isTranslucent = false;
@@ -56,19 +56,19 @@ class PublicOrderTreasureConfigure: NSObject {
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = resultImage!
         
         UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white,NSAttributedStringKey.font:UIFont.systemFont(ofSize: 17)]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 17)]
 
         ///将title 文字的颜色改为透明
         UIBarButtonItem.appearance().setTitleTextAttributes(
-        [NSAttributedStringKey.foregroundColor:UIColor.clear],for: UIControlState.normal)
+            [NSAttributedString.Key.foregroundColor:UIColor.clear],for: UIControl.State.normal)
         UIBarButtonItem.appearance().setTitleTextAttributes(
-            [NSAttributedStringKey.foregroundColor:UIColor.clear],for: UIControlState.selected)
+            [NSAttributedString.Key.foregroundColor:UIColor.clear],for: UIControl.State.selected)
         UIBarButtonItem.appearance().setTitleTextAttributes(
-            [NSAttributedStringKey.foregroundColor:UIColor.clear],for: UIControlState.disabled)
+            [NSAttributedString.Key.foregroundColor:UIColor.clear],for: UIControl.State.disabled)
         UIBarButtonItem.appearance().setTitleTextAttributes(
-            [NSAttributedStringKey.foregroundColor:UIColor.clear],for: UIControlState.highlighted)
+            [NSAttributedString.Key.foregroundColor:UIColor.clear],for: UIControl.State.highlighted)
         UIBarButtonItem.appearance().setTitleTextAttributes(
-            [NSAttributedStringKey.foregroundColor:UIColor.clear],for: UIControlState.focused)
+            [NSAttributedString.Key.foregroundColor:UIColor.clear],for: UIControl.State.focused)
         
         guard #available(iOS 11.0, *) else {
             return
@@ -81,6 +81,17 @@ class PublicOrderTreasureConfigure: NSObject {
         do {
             try UIViewController.aspect_hook(#selector(UIViewController.viewDidLoad), with: AspectOptions.positionBefore, usingBlock: block_viewDidLoad as AnyObject)
         } catch  {
+            print(error)
+        }
+        
+        let block_pushVc: @convention(block) (AspectInfo?) -> Void = {
+            info in
+            let control = info?.arguments()?.first as? UIViewController
+            control?.hidesBottomBarWhenPushed = true
+        }
+        do{
+            try UINavigationController.aspect_hook(#selector(UINavigationController.pushViewController(_:animated:)), with: AspectOptions.positionBefore, usingBlock: block_pushVc as AnyObject)
+        }catch{
             print(error)
         }
     }
