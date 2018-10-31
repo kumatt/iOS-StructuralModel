@@ -4,7 +4,7 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
     
-//MARK:init function
+// MARK : - init function
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commit_init()
@@ -20,7 +20,7 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
         self.subView_layout()
     }
     
-//MARK:subview function
+// MARK: - subview function
     func subView_add() {
         
     }

@@ -10,7 +10,7 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
         self.subView_layout()
     }
     
-    //MARK:subview function
+    // MARK: - subview function
     func subView_add() {
         
     }

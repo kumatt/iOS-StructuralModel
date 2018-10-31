@@ -10,6 +10,8 @@ class ___FILEBASENAME___: NSObject {
     
     // MARK: - subView init
     func setContainer(_ container: UIView) {
+        self.container = container
+        
         self.subView_load()
         self.subView_layout()
     }
