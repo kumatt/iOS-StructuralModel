@@ -4,12 +4,30 @@
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
-#pragma mark-subView init
-- (void)prepareForReuse
+#pragma mark- init
+- (instancetype)initWithFrame:(CGRect)frame
 {
-    
+    if (self = [super initWithFrame:frame]) {
+        [self commit_init];
+    }
+    return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        [self commit_init];
+    }
+    return self;
+}
+
+- (void)commit_init
+{
+    [self subView_add];
+    [self subView_layout];
+}
+
+#pragma mark- subView
 - (void)subView_add
 {
     

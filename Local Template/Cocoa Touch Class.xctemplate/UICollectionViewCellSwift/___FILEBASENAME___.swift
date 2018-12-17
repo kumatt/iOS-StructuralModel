@@ -4,28 +4,28 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
     
-// MARK : - init function
+    // MARK : - init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.commit_init()
+        commit_init()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.commit_init()
+        commit_init()
     }
     
-    func commit_init() {
-        self.subView_add()
-        self.subView_layout()
+    private func commit_init() {
+        subView_add()
+        subView_layout()
     }
     
-// MARK: - subview function
-    func subView_add() {
+    // MARK: - subview
+    private func subView_add() {
         
     }
     
-    func subView_layout() {
+    private func subView_layout() {
         
     }
 }

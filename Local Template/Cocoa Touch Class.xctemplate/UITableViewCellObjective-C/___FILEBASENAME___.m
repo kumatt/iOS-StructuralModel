@@ -4,7 +4,7 @@
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
-#pragma mark-subView init
+#pragma mark- init
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -19,6 +19,7 @@
     [self subView_layout];
 }
 
+#pragma mark- subView
 - (void)subView_add
 {
     

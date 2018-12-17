@@ -1,4 +1,5 @@
 //___FILEHEADER___
+//___VARIABLE_productName___显示部分索引
 
 #import <UIKit/UIKit.h>
 

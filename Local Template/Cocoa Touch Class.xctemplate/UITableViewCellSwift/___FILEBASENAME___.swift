@@ -4,7 +4,7 @@ import UIKit
 
 class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
 
-    // MARK: - init function
+    // MARK: - init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.commit_init()
@@ -15,17 +15,17 @@ class ___FILEBASENAMEASIDENTIFIER___: ___VARIABLE_cocoaTouchSubclass___ {
         self.commit_init()
     }
     
-    func commit_init() {
+    private func commit_init() {
         self.subView_add()
         self.subView_layout()
     }
     
-    // MARK: - subview function
-    func subView_add() {
+    // MARK: - subview
+    private func subView_add() {
         
     }
     
-    func subView_layout() {
+    private func subView_layout() {
         
     }
     

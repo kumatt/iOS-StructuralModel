@@ -1,14 +1,15 @@
 //___FILEHEADER___
+//___VARIABLE_productName___生命周期控制及业务中转站
 
 import UIKit
 
 class ___FILEBASENAME___: UIViewController {
 
-    let index_Model:___VARIABLE_productName___ModelIndex = ___VARIABLE_productName___ModelIndex.init()
+    private let index_Model:___VARIABLE_productName___ModelIndex = ___VARIABLE_productName___ModelIndex.init()
     
-    let index_view:___VARIABLE_productName___ViewIndex = ___VARIABLE_productName___ViewIndex.init()
+    private let index_view:___VARIABLE_productName___ViewIndex = ___VARIABLE_productName___ViewIndex.init()
 
-    let index_viewModel:___VARIABLE_productName___ViewModelIndex = ___VARIABLE_productName___ViewModelIndex.init()
+    private let index_viewModel:___VARIABLE_productName___ViewModelIndex = ___VARIABLE_productName___ViewModelIndex.init()
 
     
     // MARK: - life cycle
@@ -16,35 +17,25 @@ class ___FILEBASENAME___: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.setindex_Model()
-        self.setIndex_view()
-        self.setIndex_viewModel()
+        setindex_Model()
+        setIndex_view()
+        setIndex_viewModel()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    // MARK: - subView configure
-    func setindex_Model() {
+    // MARK: - init
+    /// 数据模型初始配置
+    private func setindex_Model() {
         
     }
     
-    func setIndex_view() {
-        
+    /// 显示层初始配置
+    private func setIndex_view() {
         self.index_view.setContainer(self.view)
 
     }
     
-    func setIndex_viewModel() {
+    /// 配置逻辑及业务逻辑初始配置
+    private func setIndex_viewModel() {
         
     }
-
 }

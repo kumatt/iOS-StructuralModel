@@ -4,7 +4,7 @@
 
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
-#pragma mark-subView init
+#pragma mark- init
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
@@ -27,6 +27,7 @@
     [self subView_layout];
 }
 
+#pragma mark- subView
 - (void)subView_add
 {
     

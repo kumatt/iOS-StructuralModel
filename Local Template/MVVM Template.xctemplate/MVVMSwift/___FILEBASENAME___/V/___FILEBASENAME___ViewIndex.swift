@@ -1,26 +1,27 @@
 //___FILEHEADER___
+//___VARIABLE_productName___显示部分索引
 
 import UIKit
 
 class ___FILEBASENAME___: NSObject {
 
     /// view container
-    var container:UIView?
+    private(set) var container:UIView?
     
     
     // MARK: - subView init
     func setContainer(_ container: UIView) {
         self.container = container
         
-        self.subView_load()
-        self.subView_layout()
+        subView_load()
+        subView_layout()
     }
 
-    func subView_load() {
+    private func subView_load() {
         
     }
     
-    func subView_layout() {
+    private func subView_layout() {
         
     }
     

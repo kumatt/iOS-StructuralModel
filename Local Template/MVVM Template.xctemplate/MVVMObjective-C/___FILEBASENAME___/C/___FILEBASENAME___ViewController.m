@@ -32,23 +32,26 @@
     [self setIndex_viewModel];
 }
 
-#pragma mark-init
+#pragma mark- init
+// 数据模型初始配置
 - (void)setindex_Model
 {
     
 }
 
+// 显示层初始配置
 - (void)setIndex_view
 {
     self.index_view.container = self.view;
 }
 
+// 配置逻辑及业务逻辑初始配置
 - (void)setIndex_viewModel
 {
     
 }
 
-#pragma mark-lazyload
+#pragma mark- lazyload
 - (___VARIABLE_productName___ModelIndex *)index_Model
 {
     if (_index_Model == nil) {
