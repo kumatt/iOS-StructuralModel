@@ -8,50 +8,68 @@
 
 import UIKit
 
-@objc protocol PublicListViewModelProtocol {
+/// cell 刷新数据协议
+protocol PublicListViewModelProtocol: NSObjectProtocol {
     func updata_setObject(obj:AnyObject)
 }
 
 class PublicListViewModel: NSObject,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource {
-    static let Identifier = "reuse_cell"
     
-    var dataSource:Array<Any>? = Array.init()
-    private(set) var listView:UIScrollView?
+    /// 复用标识
+    public enum PublicListReuseIdentifier: String {
+        case cell   = "reuse_cell"
+        case none   = "reuse_noneCell"
+        case header = "reuse_header"
+        case footer = "reuse_footer"
+    }
+    
+    /// 数据源
+    var dataSource:Array<Any> = Array.init()
+    
+    /// 列表视图
+    var listView:UIScrollView?
     
     func setListView(_ listV:UIScrollView) {
-        if let tableView:UITableView = listV as? UITableView {
-            tableView.delegate = self
-            tableView.dataSource = self
-        }else if let collectionView:UICollectionView = listV as? UICollectionView{
-            collectionView.delegate = self
-            collectionView.dataSource = self
-        }
+        resetListDelegate()
         self.listView = listV
+        resetListDelegate(self)
+    }
+    
+    /// 设置代理
+    func resetListDelegate(_ delegate: PublicListViewModel? = nil) {
+        if let tableView:UITableView = self.listView as? UITableView {
+            tableView.delegate = delegate
+            tableView.dataSource = delegate
+            return
+        }
+        if let collectionView:UICollectionView = self.listView as? UICollectionView{
+            collectionView.delegate = delegate
+            collectionView.dataSource = delegate
+            return
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (dataSource?.count)!
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: PublicListViewModel.Identifier)!
-        assert(cell.conforms(to: PublicListViewModelProtocol.self), "UITableViewCell 需遵循 PublicListViewModelProtocol 协议")
-        (cell as! PublicListViewModelProtocol).updata_setObject(obj: self.dataSource![indexPath.row] as AnyObject)
+        let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: PublicListReuseIdentifier.cell.rawValue)!
+        assert(((cell as? PublicListViewModelProtocol) != nil), "UITableViewCell 需遵循 PublicListViewModelProtocol 协议")
+        (cell as? PublicListViewModelProtocol)?.updata_setObject(obj: self.dataSource[indexPath.row] as AnyObject)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (dataSource?.count)!
+        return dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: PublicListViewModel.Identifier, for: indexPath)
-        assert(cell.conforms(to: PublicListViewModelProtocol.self), "UICollectionViewCell 需遵循 PublicListViewModelProtocol 协议")
+        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: PublicListReuseIdentifier.cell.rawValue, for: indexPath)
+        assert((cell as? PublicListViewModelProtocol) != nil, "UICollectionViewCell 需遵循 PublicListViewModelProtocol 协议")
 
-        (cell as! PublicListViewModelProtocol).updata_setObject(obj: self.dataSource![indexPath.item] as AnyObject)
+        (cell as? PublicListViewModelProtocol)?.updata_setObject(obj: self.dataSource[indexPath.item] as AnyObject)
         return cell
     }
-    
-
 }

@@ -18,16 +18,7 @@ public let Custom_safeInsets = {() -> UIEdgeInsets in
     return _safeInsets
 }()
 
-/// 菜单变化的通知
-public let Custom_Notification_MenuDataChange = "__custom_menuUpdata"
-
-/// 颜色便捷设置 与UI工具一致
-func RGBA(_ red:CGFloat,_ green:CGFloat,_ blue:CGFloat,_ alpha:CGFloat) -> UIColor {
-    return UIColor.init(red: CGFloat(red/255.0), green: CGFloat(green/255.0), blue: CGFloat(blue/255.0), alpha: alpha)
-}
-
 class PublicOrderTreasureConfigure: NSObject {
-    
     
     /// 预设置内容
     class func load_prefixHeader() {
@@ -35,20 +26,14 @@ class PublicOrderTreasureConfigure: NSObject {
         /// 初始化数据库
 //        MagicalRecord.setupCoreDataStack(withStoreNamed: "MenuData.sqlite")
         
-        
-        UITextField.appearance().tintColor = RGBA(255, 120, 64, 1)
+        UITextField.appearance().tintColor = UIColor.rgbColor(255, 120, 64, 1)
         
         ///  解决iOS11，仅实现heightForHeaderInSection，没有实现viewForHeaderInSection方法时,section间距大的问题
         UITableView.appearance().estimatedRowHeight = 0
         UITableView.appearance().estimatedSectionHeaderHeight = 0
         UITableView.appearance().estimatedSectionFooterHeight = 0
-
-        //iOS11 解决SafeArea的问题，同时能解决pop时上级页面scrollView抖动的问题
-        if #available(iOS 11.0, *) {
-            UIScrollView.appearance().contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never//iOS11 解决SafeArea的问题，同时能解决pop时上级页面scrollView抖动的问题
-        }
         
-        UINavigationBar.appearance().isTranslucent = false;
+        UINavigationBar.appearance().isTranslucent = false
         
         //自定义返回按钮
         let resultImage = UIImage.init(named: "back")
@@ -70,18 +55,21 @@ class PublicOrderTreasureConfigure: NSObject {
         UIBarButtonItem.appearance().setTitleTextAttributes(
             [NSAttributedString.Key.foregroundColor:UIColor.clear],for: UIControl.State.focused)
         
-        guard #available(iOS 11.0, *) else {
-            return
-        }
-        let block_viewDidLoad: @convention(block) (AnyObject?) -> Void = {
-            info in
-            let control = info?.instance() as! UIViewController
-            control.automaticallyAdjustsScrollViewInsets = false
-        }
-        do {
-            try UIViewController.aspect_hook(#selector(UIViewController.viewDidLoad), with: AspectOptions.positionBefore, usingBlock: block_viewDidLoad as AnyObject)
-        } catch  {
-            print(error)
+        
+        //iOS11 解决SafeArea的问题，同时能解决pop时上级页面scrollView抖动的问题
+        if #available(iOS 11.0, *) {
+            UIScrollView.appearance().contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never//iOS11 解决SafeArea的问题，同时能解决pop时上级页面scrollView抖动的问题
+        }else{
+            let block_viewDidLoad: @convention(block) (AnyObject?) -> Void = {
+                info in
+                let control = info?.instance() as! UIViewController
+                control.automaticallyAdjustsScrollViewInsets = false
+            }
+            do {
+                try UIViewController.aspect_hook(#selector(UIViewController.viewDidLoad), with: AspectOptions.positionBefore, usingBlock: block_viewDidLoad as AnyObject)
+            } catch  {
+                print(error)
+            }
         }
         
         let block_pushVc: @convention(block) (AspectInfo?) -> Void = {
@@ -94,7 +82,57 @@ class PublicOrderTreasureConfigure: NSObject {
         }catch{
             print(error)
         }
+        
     }
-    
 }
 
+/// color 的拓展
+extension UIColor{
+    /// rgb 颜色
+    public class func rgbColor(_ red:CGFloat,_ green:CGFloat,_ blue:CGFloat,_ alpha:CGFloat) -> UIColor {
+        return UIColor.init(red: CGFloat(red/255.0), green: CGFloat(green/255.0), blue: CGFloat(blue/255.0), alpha: alpha)
+    }
+    
+    /// 16 进制颜色
+    public class func hexadecimalColor(hexadecimal:String)->UIColor{
+        var cstr = hexadecimal.trimmingCharacters(in:  CharacterSet.whitespacesAndNewlines).uppercased() as NSString
+        if(cstr.length < 6){
+            return UIColor.clear
+        }
+        if(cstr.hasPrefix("0X")){
+            cstr = cstr.substring(from: 2) as NSString
+        }
+        if(cstr.hasPrefix("#")){
+            cstr = cstr.substring(from: 1) as NSString
+        }
+        if(cstr.length != 6){
+            return UIColor.clear
+        }
+        var range = NSRange.init()
+        range.location = 0
+        range.length = 2
+        //r
+        let rStr = cstr.substring(with: range)
+        //g
+        range.location = 2
+        let gStr = cstr.substring(with: range)
+        //b
+        range.location = 4
+        let bStr = cstr.substring(with: range)
+        var r :UInt32 = 0x0
+        var g :UInt32 = 0x0
+        var b :UInt32 = 0x0
+        Scanner.init(string: rStr).scanHexInt32(&r)
+        Scanner.init(string: gStr).scanHexInt32(&g)
+        Scanner.init(string: bStr).scanHexInt32(&b)
+        return UIColor.init(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1)
+    }
+}
+
+extension PublicOrderTreasureConfigure{
+    /// 自定义通知
+    public enum CustomNotification: String {
+        /// 菜单变化
+        case menuDataChange = "__custom_menuUpdata"
+    }
+}

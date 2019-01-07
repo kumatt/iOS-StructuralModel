@@ -8,7 +8,7 @@ PODS:
     - MagicalRecord/Core (= 2.3.2)
   - MagicalRecord/Core (2.3.2)
   - MJRefresh (3.1.15.7)
-  - SnapKit (4.0.1)
+  - SnapKit (4.2.0)
   - WKCategory (0.0.1)
 
 DEPENDENCIES:
@@ -50,7 +50,7 @@ SPEC CHECKSUMS:
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   WKCategory: 9ca3c20e67d57375d4def5b997ea4d1873598b5f
 
 PODFILE CHECKSUM: 128cc851180e36634ef1eaa414bd15ea04ce332f

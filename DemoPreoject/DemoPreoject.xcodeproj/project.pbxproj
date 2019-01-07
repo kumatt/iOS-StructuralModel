@@ -12,21 +12,14 @@
 		01CB0B0C20A3613E004AD4B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CB0B0B20A3613E004AD4B8 /* Assets.xcassets */; };
 		01CB0B0F20A3613E004AD4B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CB0B0D20A3613E004AD4B8 /* LaunchScreen.storyboard */; };
 		01CB0B1D20A364DB004AD4B8 /* PublicOrderTreasureConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B1C20A364DB004AD4B8 /* PublicOrderTreasureConfigure.swift */; };
-		01CB0B2120A364E5004AD4B8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B2020A364E5004AD4B8 /* RootViewController.swift */; };
 		01CB0B2D20A364EC004AD4B8 /* PublicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B2420A364EC004AD4B8 /* PublicListViewModel.swift */; };
-		01CB0BD420A364F6004AD4B8 /* BaseAcctViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B3E20A364F6004AD4B8 /* BaseAcctViewController.swift */; };
-		01CB0BD720A364F6004AD4B8 /* BaseAcctInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B4220A364F6004AD4B8 /* BaseAcctInfoView.swift */; };
-		01CB0BDA20A364F6004AD4B8 /* BaseOrderViewModelIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B4A20A364F6004AD4B8 /* BaseOrderViewModelIndex.swift */; };
-		01CB0BDC20A364F6004AD4B8 /* BaseOrderDataModelIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B4F20A364F6004AD4B8 /* BaseOrderDataModelIndex.swift */; };
-		01CB0BDD20A364F6004AD4B8 /* BaseOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B5120A364F6004AD4B8 /* BaseOrderViewController.swift */; };
-		01CB0BE220A364F6004AD4B8 /* BaseOrderViewIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B5A20A364F6004AD4B8 /* BaseOrderViewIndex.swift */; };
-		01CB0C0920A364F6004AD4B8 /* BaseBarViewModelIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0BB620A364F6004AD4B8 /* BaseBarViewModelIndex.swift */; };
-		01CB0C0B20A364F6004AD4B8 /* BaseBarDataModelIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0BBB20A364F6004AD4B8 /* BaseBarDataModelIndex.swift */; };
-		01CB0C0C20A364F6004AD4B8 /* BaseBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0BBD20A364F6004AD4B8 /* BaseBarViewController.swift */; };
 		01CB0C2420A49ED8004AD4B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01CB0C2320A49ED8004AD4B8 /* InfoPlist.strings */; };
-		04F0006E20FD91DA00180CAB /* BaseBarViewIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0006D20FD91DA00180CAB /* BaseBarViewIndex.swift */; };
-		04F0007620FD981700180CAB /* BaseAcctViewIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0007520FD981700180CAB /* BaseAcctViewIndex.swift */; };
 		367108FB66FAF7E253997518 /* Pods_DemoPreoject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6239DB35AFADFFD87162994 /* Pods_DemoPreoject.framework */; };
+		49BB866221E330CE0062F791 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB866121E330CE0062F791 /* BaseTabBarViewController.swift */; };
+		49BB867021E331ED0062F791 /* BaseHomeViewModelIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB866921E331ED0062F791 /* BaseHomeViewModelIndex.swift */; };
+		49BB867121E331ED0062F791 /* BaseHomeModelIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB866B21E331ED0062F791 /* BaseHomeModelIndex.swift */; };
+		49BB867221E331ED0062F791 /* BaseHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB866D21E331ED0062F791 /* BaseHomeViewController.swift */; };
+		49BB867321E331ED0062F791 /* BaseHomeViewIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB866F21E331ED0062F791 /* BaseHomeViewIndex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,23 +30,16 @@
 		01CB0B0E20A3613E004AD4B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01CB0B1020A3613E004AD4B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01CB0B1C20A364DB004AD4B8 /* PublicOrderTreasureConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicOrderTreasureConfigure.swift; sourceTree = "<group>"; };
-		01CB0B2020A364E5004AD4B8 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		01CB0B2420A364EC004AD4B8 /* PublicListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicListViewModel.swift; sourceTree = "<group>"; };
-		01CB0B3E20A364F6004AD4B8 /* BaseAcctViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAcctViewController.swift; sourceTree = "<group>"; };
-		01CB0B4220A364F6004AD4B8 /* BaseAcctInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAcctInfoView.swift; sourceTree = "<group>"; };
-		01CB0B4A20A364F6004AD4B8 /* BaseOrderViewModelIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOrderViewModelIndex.swift; sourceTree = "<group>"; };
-		01CB0B4F20A364F6004AD4B8 /* BaseOrderDataModelIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOrderDataModelIndex.swift; sourceTree = "<group>"; };
-		01CB0B5120A364F6004AD4B8 /* BaseOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOrderViewController.swift; sourceTree = "<group>"; };
-		01CB0B5A20A364F6004AD4B8 /* BaseOrderViewIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOrderViewIndex.swift; sourceTree = "<group>"; };
-		01CB0BB620A364F6004AD4B8 /* BaseBarViewModelIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBarViewModelIndex.swift; sourceTree = "<group>"; };
-		01CB0BBB20A364F6004AD4B8 /* BaseBarDataModelIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBarDataModelIndex.swift; sourceTree = "<group>"; };
-		01CB0BBD20A364F6004AD4B8 /* BaseBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBarViewController.swift; sourceTree = "<group>"; };
 		01CB0C1720A3651E004AD4B8 /* PublicMenuTreaureBridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PublicMenuTreaureBridgeHeader.h; sourceTree = "<group>"; };
 		01CB0C1820A3654E004AD4B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		01CB0C1920A3654F004AD4B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		01CB0C2320A49ED8004AD4B8 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
-		04F0006D20FD91DA00180CAB /* BaseBarViewIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBarViewIndex.swift; sourceTree = "<group>"; };
-		04F0007520FD981700180CAB /* BaseAcctViewIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAcctViewIndex.swift; sourceTree = "<group>"; };
+		49BB866121E330CE0062F791 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
+		49BB866921E331ED0062F791 /* BaseHomeViewModelIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHomeViewModelIndex.swift; sourceTree = "<group>"; };
+		49BB866B21E331ED0062F791 /* BaseHomeModelIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHomeModelIndex.swift; sourceTree = "<group>"; };
+		49BB866D21E331ED0062F791 /* BaseHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHomeViewController.swift; sourceTree = "<group>"; };
+		49BB866F21E331ED0062F791 /* BaseHomeViewIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHomeViewIndex.swift; sourceTree = "<group>"; };
 		74FF247EBBECAC3F101A3B39 /* Pods-DemoPreoject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoPreoject.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoPreoject/Pods-DemoPreoject.release.xcconfig"; sourceTree = "<group>"; };
 		A6239DB35AFADFFD87162994 /* Pods_DemoPreoject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoPreoject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5491D1622883C3F2EE61AD2 /* Pods-DemoPreoject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoPreoject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoPreoject/Pods-DemoPreoject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,26 +104,14 @@
 				01CB0B1020A3613E004AD4B8 /* Info.plist */,
 				01CB0C2320A49ED8004AD4B8 /* InfoPlist.strings */,
 				01CB0B0420A36137004AD4B8 /* AppDelegate.swift */,
-				01CB0B1F20A364E5004AD4B8 /* TabBar */,
+				49BB866121E330CE0062F791 /* BaseTabBarViewController.swift */,
 			);
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		01CB0B1F20A364E5004AD4B8 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B2020A364E5004AD4B8 /* RootViewController.swift */,
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		01CB0B2220A364EC004AD4B8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				04F0006720FD907A00180CAB /* Component */,
-				04F0006820FD908400180CAB /* Category */,
-				04F0006620FD907400180CAB /* M */,
-				01CB0B2720A364EC004AD4B8 /* V */,
 				01CB0B2320A364EC004AD4B8 /* VM */,
 			);
 			path = Utils;
@@ -151,13 +125,6 @@
 			path = VM;
 			sourceTree = "<group>";
 		};
-		01CB0B2720A364EC004AD4B8 /* V */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = V;
-			sourceTree = "<group>";
-		};
 		01CB0B3120A364F6004AD4B8 /* CodeFeed */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,188 +134,10 @@
 			path = CodeFeed;
 			sourceTree = "<group>";
 		};
-		01CB0B3220A364F6004AD4B8 /* ModuleAcct */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B3C20A364F6004AD4B8 /* Acct */,
-			);
-			path = ModuleAcct;
-			sourceTree = "<group>";
-		};
-		01CB0B3C20A364F6004AD4B8 /* Acct */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B3D20A364F6004AD4B8 /* C */,
-				01CB0B3F20A364F6004AD4B8 /* V */,
-			);
-			path = Acct;
-			sourceTree = "<group>";
-		};
-		01CB0B3D20A364F6004AD4B8 /* C */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B3E20A364F6004AD4B8 /* BaseAcctViewController.swift */,
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		01CB0B3F20A364F6004AD4B8 /* V */ = {
-			isa = PBXGroup;
-			children = (
-				04F0007420FD980200180CAB /* index */,
-				04F0007320FD97F900180CAB /* header */,
-			);
-			path = V;
-			sourceTree = "<group>";
-		};
-		01CB0B4420A364F6004AD4B8 /* ModuleOrder */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B4520A364F6004AD4B8 /* Order */,
-			);
-			path = ModuleOrder;
-			sourceTree = "<group>";
-		};
-		01CB0B4520A364F6004AD4B8 /* Order */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B5020A364F6004AD4B8 /* C */,
-				01CB0B4B20A364F6004AD4B8 /* M */,
-				01CB0B5220A364F6004AD4B8 /* V */,
-				01CB0B4620A364F6004AD4B8 /* VM */,
-			);
-			path = Order;
-			sourceTree = "<group>";
-		};
-		01CB0B4620A364F6004AD4B8 /* VM */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B4920A364F6004AD4B8 /* index */,
-			);
-			path = VM;
-			sourceTree = "<group>";
-		};
-		01CB0B4920A364F6004AD4B8 /* index */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B4A20A364F6004AD4B8 /* BaseOrderViewModelIndex.swift */,
-			);
-			path = index;
-			sourceTree = "<group>";
-		};
-		01CB0B4B20A364F6004AD4B8 /* M */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B4E20A364F6004AD4B8 /* index */,
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		01CB0B4E20A364F6004AD4B8 /* index */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B4F20A364F6004AD4B8 /* BaseOrderDataModelIndex.swift */,
-			);
-			path = index;
-			sourceTree = "<group>";
-		};
-		01CB0B5020A364F6004AD4B8 /* C */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B5120A364F6004AD4B8 /* BaseOrderViewController.swift */,
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		01CB0B5220A364F6004AD4B8 /* V */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B5920A364F6004AD4B8 /* index */,
-			);
-			path = V;
-			sourceTree = "<group>";
-		};
-		01CB0B5920A364F6004AD4B8 /* index */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B5A20A364F6004AD4B8 /* BaseOrderViewIndex.swift */,
-			);
-			path = index;
-			sourceTree = "<group>";
-		};
-		01CB0B5B20A364F6004AD4B8 /* ModuleBar */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0BAF20A364F6004AD4B8 /* Bar */,
-			);
-			path = ModuleBar;
-			sourceTree = "<group>";
-		};
-		01CB0BAF20A364F6004AD4B8 /* Bar */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0BBC20A364F6004AD4B8 /* C */,
-				01CB0BB720A364F6004AD4B8 /* M */,
-				01CB0BBE20A364F6004AD4B8 /* V */,
-				01CB0BB020A364F6004AD4B8 /* VM */,
-			);
-			path = Bar;
-			sourceTree = "<group>";
-		};
-		01CB0BB020A364F6004AD4B8 /* VM */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0BB520A364F6004AD4B8 /* Index */,
-			);
-			path = VM;
-			sourceTree = "<group>";
-		};
-		01CB0BB520A364F6004AD4B8 /* Index */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0BB620A364F6004AD4B8 /* BaseBarViewModelIndex.swift */,
-			);
-			path = Index;
-			sourceTree = "<group>";
-		};
-		01CB0BB720A364F6004AD4B8 /* M */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0BBA20A364F6004AD4B8 /* index */,
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		01CB0BBA20A364F6004AD4B8 /* index */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0BBB20A364F6004AD4B8 /* BaseBarDataModelIndex.swift */,
-			);
-			path = index;
-			sourceTree = "<group>";
-		};
-		01CB0BBC20A364F6004AD4B8 /* C */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0BBD20A364F6004AD4B8 /* BaseBarViewController.swift */,
-			);
-			path = C;
-			sourceTree = "<group>";
-		};
-		01CB0BBE20A364F6004AD4B8 /* V */ = {
-			isa = PBXGroup;
-			children = (
-				04F0006920FD91A300180CAB /* index */,
-			);
-			path = V;
-			sourceTree = "<group>";
-		};
 		04F0006420FD8D6900180CAB /* EntityCode */ = {
 			isa = PBXGroup;
 			children = (
-				01CB0B3220A364F6004AD4B8 /* ModuleAcct */,
-				01CB0B4420A364F6004AD4B8 /* ModuleOrder */,
-				01CB0B5B20A364F6004AD4B8 /* ModuleBar */,
+				49BB866321E331B30062F791 /* ModuleHome */,
 			);
 			path = EntityCode;
 			sourceTree = "<group>";
@@ -358,51 +147,6 @@
 			children = (
 			);
 			path = PublicCode;
-			sourceTree = "<group>";
-		};
-		04F0006620FD907400180CAB /* M */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = M;
-			sourceTree = "<group>";
-		};
-		04F0006720FD907A00180CAB /* Component */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Component;
-			sourceTree = "<group>";
-		};
-		04F0006820FD908400180CAB /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		04F0006920FD91A300180CAB /* index */ = {
-			isa = PBXGroup;
-			children = (
-				04F0006D20FD91DA00180CAB /* BaseBarViewIndex.swift */,
-			);
-			path = index;
-			sourceTree = "<group>";
-		};
-		04F0007320FD97F900180CAB /* header */ = {
-			isa = PBXGroup;
-			children = (
-				01CB0B4220A364F6004AD4B8 /* BaseAcctInfoView.swift */,
-			);
-			path = header;
-			sourceTree = "<group>";
-		};
-		04F0007420FD980200180CAB /* index */ = {
-			isa = PBXGroup;
-			children = (
-				04F0007520FD981700180CAB /* BaseAcctViewIndex.swift */,
-			);
-			path = index;
 			sourceTree = "<group>";
 		};
 		21ACA7D570C9BD0E95F4A736 /* Pods */ = {
@@ -420,6 +164,57 @@
 				A6239DB35AFADFFD87162994 /* Pods_DemoPreoject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49BB866321E331B30062F791 /* ModuleHome */ = {
+			isa = PBXGroup;
+			children = (
+				49BB866721E331ED0062F791 /* home */,
+			);
+			path = ModuleHome;
+			sourceTree = "<group>";
+		};
+		49BB866721E331ED0062F791 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				49BB866C21E331ED0062F791 /* C */,
+				49BB866A21E331ED0062F791 /* M */,
+				49BB866E21E331ED0062F791 /* V */,
+				49BB866821E331ED0062F791 /* VM */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		49BB866821E331ED0062F791 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				49BB866921E331ED0062F791 /* BaseHomeViewModelIndex.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		49BB866A21E331ED0062F791 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				49BB866B21E331ED0062F791 /* BaseHomeModelIndex.swift */,
+			);
+			path = M;
+			sourceTree = "<group>";
+		};
+		49BB866C21E331ED0062F791 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				49BB866D21E331ED0062F791 /* BaseHomeViewController.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		49BB866E21E331ED0062F791 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				49BB866F21E331ED0062F791 /* BaseHomeViewIndex.swift */,
+			);
+			path = V;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,20 +351,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				01CB0B1D20A364DB004AD4B8 /* PublicOrderTreasureConfigure.swift in Sources */,
-				01CB0BDA20A364F6004AD4B8 /* BaseOrderViewModelIndex.swift in Sources */,
-				01CB0BE220A364F6004AD4B8 /* BaseOrderViewIndex.swift in Sources */,
+				49BB867321E331ED0062F791 /* BaseHomeViewIndex.swift in Sources */,
+				49BB867221E331ED0062F791 /* BaseHomeViewController.swift in Sources */,
 				01CB0B2D20A364EC004AD4B8 /* PublicListViewModel.swift in Sources */,
-				01CB0C0920A364F6004AD4B8 /* BaseBarViewModelIndex.swift in Sources */,
-				01CB0B2120A364E5004AD4B8 /* RootViewController.swift in Sources */,
-				01CB0BD720A364F6004AD4B8 /* BaseAcctInfoView.swift in Sources */,
-				04F0007620FD981700180CAB /* BaseAcctViewIndex.swift in Sources */,
-				04F0006E20FD91DA00180CAB /* BaseBarViewIndex.swift in Sources */,
+				49BB867121E331ED0062F791 /* BaseHomeModelIndex.swift in Sources */,
 				01CB0B0520A36137004AD4B8 /* AppDelegate.swift in Sources */,
-				01CB0C0C20A364F6004AD4B8 /* BaseBarViewController.swift in Sources */,
-				01CB0BD420A364F6004AD4B8 /* BaseAcctViewController.swift in Sources */,
-				01CB0C0B20A364F6004AD4B8 /* BaseBarDataModelIndex.swift in Sources */,
-				01CB0BDD20A364F6004AD4B8 /* BaseOrderViewController.swift in Sources */,
-				01CB0BDC20A364F6004AD4B8 /* BaseOrderDataModelIndex.swift in Sources */,
+				49BB866221E330CE0062F791 /* BaseTabBarViewController.swift in Sources */,
+				49BB867021E331ED0062F791 /* BaseHomeViewModelIndex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
