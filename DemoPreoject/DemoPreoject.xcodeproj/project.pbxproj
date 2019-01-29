@@ -128,7 +128,6 @@
 		01CB0B3120A364F6004AD4B8 /* CodeFeed */ = {
 			isa = PBXGroup;
 			children = (
-				04F0006520FD8D6D00180CAB /* PublicCode */,
 				04F0006420FD8D6900180CAB /* EntityCode */,
 			);
 			path = CodeFeed;
@@ -140,13 +139,6 @@
 				49BB866321E331B30062F791 /* ModuleHome */,
 			);
 			path = EntityCode;
-			sourceTree = "<group>";
-		};
-		04F0006520FD8D6D00180CAB /* PublicCode */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PublicCode;
 			sourceTree = "<group>";
 		};
 		21ACA7D570C9BD0E95F4A736 /* Pods */ = {
