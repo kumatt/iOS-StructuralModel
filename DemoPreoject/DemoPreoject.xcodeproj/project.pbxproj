@@ -15,6 +15,10 @@
 		01CB0B2D20A364EC004AD4B8 /* PublicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B2420A364EC004AD4B8 /* PublicListViewModel.swift */; };
 		01CB0C2420A49ED8004AD4B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01CB0C2320A49ED8004AD4B8 /* InfoPlist.strings */; };
 		367108FB66FAF7E253997518 /* Pods_DemoPreoject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6239DB35AFADFFD87162994 /* Pods_DemoPreoject.framework */; };
+		498331F3220048AA00B000B1 /* PublicColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498331F2220048AA00B000B1 /* PublicColorExtension.swift */; };
+		498331F522004B0E00B000B1 /* PublicNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498331F422004B0E00B000B1 /* PublicNotificationName.swift */; };
+		498331F92200514F00B000B1 /* PublicViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498331F82200514F00B000B1 /* PublicViewControllerExtension.swift */; };
+		498331FC2200518000B000B1 /* PublicViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498331FB2200518000B000B1 /* PublicViewExtension.swift */; };
 		49BB866221E330CE0062F791 /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB866121E330CE0062F791 /* BaseTabBarViewController.swift */; };
 		49BB867021E331ED0062F791 /* BaseHomeViewModelIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB866921E331ED0062F791 /* BaseHomeViewModelIndex.swift */; };
 		49BB867121E331ED0062F791 /* BaseHomeModelIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB866B21E331ED0062F791 /* BaseHomeModelIndex.swift */; };
@@ -35,6 +39,10 @@
 		01CB0C1820A3654E004AD4B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		01CB0C1920A3654F004AD4B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		01CB0C2320A49ED8004AD4B8 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		498331F2220048AA00B000B1 /* PublicColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicColorExtension.swift; sourceTree = "<group>"; };
+		498331F422004B0E00B000B1 /* PublicNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicNotificationName.swift; sourceTree = "<group>"; };
+		498331F82200514F00B000B1 /* PublicViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicViewControllerExtension.swift; sourceTree = "<group>"; };
+		498331FB2200518000B000B1 /* PublicViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicViewExtension.swift; sourceTree = "<group>"; };
 		49BB866121E330CE0062F791 /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		49BB866921E331ED0062F791 /* BaseHomeViewModelIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHomeViewModelIndex.swift; sourceTree = "<group>"; };
 		49BB866B21E331ED0062F791 /* BaseHomeModelIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseHomeModelIndex.swift; sourceTree = "<group>"; };
@@ -92,8 +100,10 @@
 		01CB0B1B20A364DB004AD4B8 /* PrefixHeader */ = {
 			isa = PBXGroup;
 			children = (
+				498331FA2200515E00B000B1 /* extension */,
 				01CB0B1C20A364DB004AD4B8 /* PublicOrderTreasureConfigure.swift */,
 				01CB0C1720A3651E004AD4B8 /* PublicMenuTreaureBridgeHeader.h */,
+				498331F422004B0E00B000B1 /* PublicNotificationName.swift */,
 			);
 			path = PrefixHeader;
 			sourceTree = "<group>";
@@ -156,6 +166,16 @@
 				A6239DB35AFADFFD87162994 /* Pods_DemoPreoject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		498331FA2200515E00B000B1 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				498331F2220048AA00B000B1 /* PublicColorExtension.swift */,
+				498331F82200514F00B000B1 /* PublicViewControllerExtension.swift */,
+				498331FB2200518000B000B1 /* PublicViewExtension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		49BB866321E331B30062F791 /* ModuleHome */ = {
@@ -344,12 +364,16 @@
 			files = (
 				01CB0B1D20A364DB004AD4B8 /* PublicOrderTreasureConfigure.swift in Sources */,
 				49BB867321E331ED0062F791 /* BaseHomeViewIndex.swift in Sources */,
+				498331F3220048AA00B000B1 /* PublicColorExtension.swift in Sources */,
 				49BB867221E331ED0062F791 /* BaseHomeViewController.swift in Sources */,
 				01CB0B2D20A364EC004AD4B8 /* PublicListViewModel.swift in Sources */,
 				49BB867121E331ED0062F791 /* BaseHomeModelIndex.swift in Sources */,
 				01CB0B0520A36137004AD4B8 /* AppDelegate.swift in Sources */,
 				49BB866221E330CE0062F791 /* BaseTabBarViewController.swift in Sources */,
+				498331F92200514F00B000B1 /* PublicViewControllerExtension.swift in Sources */,
+				498331F522004B0E00B000B1 /* PublicNotificationName.swift in Sources */,
 				49BB867021E331ED0062F791 /* BaseHomeViewModelIndex.swift in Sources */,
+				498331FC2200518000B000B1 /* PublicViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

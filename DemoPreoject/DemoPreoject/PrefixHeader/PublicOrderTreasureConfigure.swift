@@ -8,6 +8,10 @@
 // 配置部分
 
 import UIKit
+@_exported import SnapKit
+@_exported import MagicalRecord
+@_exported import Aspects
+@_exported import MJRefresh
 
 /// 页面的安全绘图区域
 public let Custom_safeInsets = {() -> UIEdgeInsets in
@@ -26,7 +30,7 @@ class PublicOrderTreasureConfigure: NSObject {
         /// 初始化数据库
 //        MagicalRecord.setupCoreDataStack(withStoreNamed: "MenuData.sqlite")
         
-        UITextField.appearance().tintColor = UIColor.rgbColor(255, 120, 64, 1)
+        UITextField.appearance().tintColor = UIColor.my.rgba(255, 120, 64, 1)
         
         ///  解决iOS11，仅实现heightForHeaderInSection，没有实现viewForHeaderInSection方法时,section间距大的问题
         UITableView.appearance().estimatedRowHeight = 0
@@ -58,7 +62,7 @@ class PublicOrderTreasureConfigure: NSObject {
         
         //iOS11 解决SafeArea的问题，同时能解决pop时上级页面scrollView抖动的问题
         if #available(iOS 11.0, *) {
-            UIScrollView.appearance().contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never//iOS11 解决SafeArea的问题，同时能解决pop时上级页面scrollView抖动的问题
+            UIScrollView.appearance().contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
         }else{
             let block_viewDidLoad: @convention(block) (AnyObject?) -> Void = {
                 info in
@@ -72,6 +76,7 @@ class PublicOrderTreasureConfigure: NSObject {
             }
         }
         
+        /// push 之后隐藏 tabBar
         let block_pushVc: @convention(block) (AspectInfo?) -> Void = {
             info in
             let control = info?.arguments()?.first as? UIViewController
@@ -83,56 +88,5 @@ class PublicOrderTreasureConfigure: NSObject {
             print(error)
         }
         
-    }
-}
-
-/// color 的拓展
-extension UIColor{
-    /// rgb 颜色
-    public class func rgbColor(_ red:CGFloat,_ green:CGFloat,_ blue:CGFloat,_ alpha:CGFloat) -> UIColor {
-        return UIColor.init(red: CGFloat(red/255.0), green: CGFloat(green/255.0), blue: CGFloat(blue/255.0), alpha: alpha)
-    }
-    
-    /// 16 进制颜色
-    public class func hexadecimalColor(hexadecimal:String)->UIColor{
-        var cstr = hexadecimal.trimmingCharacters(in:  CharacterSet.whitespacesAndNewlines).uppercased() as NSString
-        if(cstr.length < 6){
-            return UIColor.clear
-        }
-        if(cstr.hasPrefix("0X")){
-            cstr = cstr.substring(from: 2) as NSString
-        }
-        if(cstr.hasPrefix("#")){
-            cstr = cstr.substring(from: 1) as NSString
-        }
-        if(cstr.length != 6){
-            return UIColor.clear
-        }
-        var range = NSRange.init()
-        range.location = 0
-        range.length = 2
-        //r
-        let rStr = cstr.substring(with: range)
-        //g
-        range.location = 2
-        let gStr = cstr.substring(with: range)
-        //b
-        range.location = 4
-        let bStr = cstr.substring(with: range)
-        var r :UInt32 = 0x0
-        var g :UInt32 = 0x0
-        var b :UInt32 = 0x0
-        Scanner.init(string: rStr).scanHexInt32(&r)
-        Scanner.init(string: gStr).scanHexInt32(&g)
-        Scanner.init(string: bStr).scanHexInt32(&b)
-        return UIColor.init(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1)
-    }
-}
-
-extension PublicOrderTreasureConfigure{
-    /// 自定义通知
-    public enum CustomNotification: String {
-        /// 菜单变化
-        case menuDataChange = "__custom_menuUpdata"
     }
 }

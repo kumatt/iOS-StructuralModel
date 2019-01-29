@@ -9,17 +9,9 @@
 #ifndef PublicMenuTreaureBridgeHeader_h
 #define PublicMenuTreaureBridgeHeader_h
 
-
-#import <MJRefresh/MJRefresh.h>
-
-#import <Aspects/Aspects.h>
-
 #import <WKCategory/UIViewController+WKController.h>
 #import <WKCategory/NSString+WKApplicabilityJudgment.h>
 
-#import <MagicalRecord/MagicalRecord.h>
-
-#import <SnapKit/SnapKit-umbrella.h>
 //#import <ReactiveCocoa/ReactiveCocoa.h>
 
 #endif /* PublicMenuTreaureBridgeHeader_h */
