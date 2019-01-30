@@ -15,6 +15,8 @@
 		01CB0B2D20A364EC004AD4B8 /* PublicListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CB0B2420A364EC004AD4B8 /* PublicListViewModel.swift */; };
 		01CB0C2420A49ED8004AD4B8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01CB0C2320A49ED8004AD4B8 /* InfoPlist.strings */; };
 		367108FB66FAF7E253997518 /* Pods_DemoPreoject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6239DB35AFADFFD87162994 /* Pods_DemoPreoject.framework */; };
+		497FD99A22014273009432A3 /* PublicAcctManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FD99922014273009432A3 /* PublicAcctManager.swift */; };
+		497FD99D2201437C009432A3 /* PublicAcctModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FD99C2201437C009432A3 /* PublicAcctModel.swift */; };
 		498331F3220048AA00B000B1 /* PublicColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498331F2220048AA00B000B1 /* PublicColorExtension.swift */; };
 		498331F522004B0E00B000B1 /* PublicNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498331F422004B0E00B000B1 /* PublicNotificationName.swift */; };
 		498331F92200514F00B000B1 /* PublicViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498331F82200514F00B000B1 /* PublicViewControllerExtension.swift */; };
@@ -39,6 +41,8 @@
 		01CB0C1820A3654E004AD4B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		01CB0C1920A3654F004AD4B8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		01CB0C2320A49ED8004AD4B8 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		497FD99922014273009432A3 /* PublicAcctManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAcctManager.swift; sourceTree = "<group>"; };
+		497FD99C2201437C009432A3 /* PublicAcctModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAcctModel.swift; sourceTree = "<group>"; };
 		498331F2220048AA00B000B1 /* PublicColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicColorExtension.swift; sourceTree = "<group>"; };
 		498331F422004B0E00B000B1 /* PublicNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicNotificationName.swift; sourceTree = "<group>"; };
 		498331F82200514F00B000B1 /* PublicViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicViewControllerExtension.swift; sourceTree = "<group>"; };
@@ -101,9 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				498331FA2200515E00B000B1 /* extension */,
-				01CB0B1C20A364DB004AD4B8 /* PublicOrderTreasureConfigure.swift */,
+				497FD99622014158009432A3 /* configure */,
 				01CB0C1720A3651E004AD4B8 /* PublicMenuTreaureBridgeHeader.h */,
-				498331F422004B0E00B000B1 /* PublicNotificationName.swift */,
 			);
 			path = PrefixHeader;
 			sourceTree = "<group>";
@@ -122,6 +125,7 @@
 		01CB0B2220A364EC004AD4B8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				497FD99722014190009432A3 /* component */,
 				01CB0B2320A364EC004AD4B8 /* VM */,
 			);
 			path = Utils;
@@ -166,6 +170,40 @@
 				A6239DB35AFADFFD87162994 /* Pods_DemoPreoject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		497FD99622014158009432A3 /* configure */ = {
+			isa = PBXGroup;
+			children = (
+				01CB0B1C20A364DB004AD4B8 /* PublicOrderTreasureConfigure.swift */,
+				498331F422004B0E00B000B1 /* PublicNotificationName.swift */,
+			);
+			path = configure;
+			sourceTree = "<group>";
+		};
+		497FD99722014190009432A3 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				497FD998220141A6009432A3 /* acct */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		497FD998220141A6009432A3 /* acct */ = {
+			isa = PBXGroup;
+			children = (
+				497FD99922014273009432A3 /* PublicAcctManager.swift */,
+				497FD99B2201435C009432A3 /* M */,
+			);
+			path = acct;
+			sourceTree = "<group>";
+		};
+		497FD99B2201435C009432A3 /* M */ = {
+			isa = PBXGroup;
+			children = (
+				497FD99C2201437C009432A3 /* PublicAcctModel.swift */,
+			);
+			path = M;
 			sourceTree = "<group>";
 		};
 		498331FA2200515E00B000B1 /* extension */ = {
@@ -316,7 +354,6 @@
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MagicalRecord/MagicalRecord.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/WKCategory/WKCategory.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -330,7 +367,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MagicalRecord.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WKCategory.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -367,9 +403,11 @@
 				498331F3220048AA00B000B1 /* PublicColorExtension.swift in Sources */,
 				49BB867221E331ED0062F791 /* BaseHomeViewController.swift in Sources */,
 				01CB0B2D20A364EC004AD4B8 /* PublicListViewModel.swift in Sources */,
+				497FD99A22014273009432A3 /* PublicAcctManager.swift in Sources */,
 				49BB867121E331ED0062F791 /* BaseHomeModelIndex.swift in Sources */,
 				01CB0B0520A36137004AD4B8 /* AppDelegate.swift in Sources */,
 				49BB866221E330CE0062F791 /* BaseTabBarViewController.swift in Sources */,
+				497FD99D2201437C009432A3 /* PublicAcctModel.swift in Sources */,
 				498331F92200514F00B000B1 /* PublicViewControllerExtension.swift in Sources */,
 				498331F522004B0E00B000B1 /* PublicNotificationName.swift in Sources */,
 				49BB867021E331ED0062F791 /* BaseHomeViewModelIndex.swift in Sources */,

@@ -9,9 +9,6 @@
 #ifndef PublicMenuTreaureBridgeHeader_h
 #define PublicMenuTreaureBridgeHeader_h
 
-#import <WKCategory/UIViewController+WKController.h>
-#import <WKCategory/NSString+WKApplicabilityJudgment.h>
-
 //#import <ReactiveCocoa/ReactiveCocoa.h>
 
 #endif /* PublicMenuTreaureBridgeHeader_h */

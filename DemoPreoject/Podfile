@@ -15,10 +15,8 @@ target 'DemoPreoject' do
   pod 'MJRefresh'         #刷新库
   pod 'DZNEmptyDataSet'   #空白 UITableView 的默认实现
   
-  pod 'HandyJSON'         #字典转模型
-  pod 'MagicalRecord'     #coreData使用第三方
-  
-  pod 'WKCategory', :git=> 'https://github.com/Blanbok/WKCategory' #一些类的常用拓展方法
+  pod 'HandyJSON'         #JSON解析
+  pod 'MagicalRecord'     #coreData使用第三方  
   
   #    pod 'RxSwift'           #响应式编程库
   #    pod 'ReactiveCocoa'     #响应式编程

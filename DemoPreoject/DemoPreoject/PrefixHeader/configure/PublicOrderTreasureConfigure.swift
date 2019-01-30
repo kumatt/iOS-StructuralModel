@@ -12,6 +12,8 @@ import UIKit
 @_exported import MagicalRecord
 @_exported import Aspects
 @_exported import MJRefresh
+@_exported import HandyJSON
+
 
 /// 页面的安全绘图区域
 public let Custom_safeInsets = {() -> UIEdgeInsets in
