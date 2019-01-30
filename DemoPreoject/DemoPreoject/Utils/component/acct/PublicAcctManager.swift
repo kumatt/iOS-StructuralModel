@@ -2,7 +2,7 @@
 //  PublicAcctManager.swift
 //  DemoPreoject
 //
-//  Created by 小虎 on 2019/1/30.
+//  Created by OComme on 2019/1/30.
 //  Copyright © 2019 OComme. All rights reserved.
 //
 //  账号管理类

@@ -2,8 +2,8 @@
 //  PublicOrderTreasureConfigure.swift
 //  OrderTreasure
 //
-//  Created by ZhangJian on 2018/4/20.
-//  Copyright © 2018年 ZhangJian. All rights reserved.
+//  Created by OComme on 2018/4/20.
+//  Copyright © 2018年 OComme. All rights reserved.
 //
 // 配置部分
 
