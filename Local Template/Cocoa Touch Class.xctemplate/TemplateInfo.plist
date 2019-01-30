@@ -54,6 +54,7 @@
 				<string>UIViewController</string>
 				<string>UITableViewController</string>
 				<string>UITableViewCell</string>
+				<string>UITableViewHeaderFooterView</string>
 				<string>UICollectionViewController</string>
 				<string>UICollectionViewCell</string>
 				<string>UICollectionReusableView</string>
@@ -66,6 +67,8 @@
 				<string>TableViewController</string>
 				<key>UITableViewCell</key>
 				<string>TableViewCell</string>
+				<key>UITableViewHeaderFooterView</key>
+				<string>TableViewHeaderFooterView</string>
 				<key>UICollectionViewController</key>
 				<string>CollectionViewController</string>
 				<key>UICollectionViewCell</key>
@@ -90,6 +93,7 @@
 					<string>UIViewController</string>
 					<string>UITableViewController</string>
 					<string>UITableViewCell</string>
+					<string>UITableViewHeaderFooterView</string>
 					<string>UICollectionViewController</string>
 					<string>UICollectionViewCell</string>
 					<string>UICollectionReusableView</string>
